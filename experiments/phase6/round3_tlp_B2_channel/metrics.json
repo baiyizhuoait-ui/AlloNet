@@ -1,0 +1,20 @@
+{
+  "stage": "tlp_finetune",
+  "arm": "channel",
+  "preset": "small",
+  "params": 121815,
+  "extra_params": 263,
+  "epochs": 3,
+  "num_images": 69863,
+  "batch_size": 16,
+  "seed": 0,
+  "lr": 0.0001,
+  "dc": 13,
+  "final_avg_loss": 0.10854723538471317,
+  "final_da_loss": 0.056912821135643665,
+  "final_lane_loss": 0.05163441425546888,
+  "wall_min": 56.56,
+  "peak_gpu_mem_mib": 4432.7,
+  "max_steps": 0,
+  "step0_max_delta": 0.0
+}

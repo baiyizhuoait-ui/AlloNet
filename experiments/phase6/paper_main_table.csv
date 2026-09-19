@@ -1,0 +1,7 @@
+model,budget,params_M,flops_G,mAP50,mAP50_95,da_mIoU,lane_mIoU,lane_fg_iou,source
+TriLiteNet tiny,official,0.151,1.8,0.4953,,0.8796,0.5914,0.1952,"official weights, our protocol"
+TwinLiteNetPlus nano,official,0.033,1.9,,,0.8634,0.5866,0.1859,"official weights, our protocol"
+TriLiteNet small,official,0.592,6.6,0.6326,,0.9053,0.6037,0.2198,"official weights, our protocol"
+Ours (Model B),100ep,0.1926,1.1656,0.5382,0.2451,0.8673,0.5978,0.2187,experiments/phase6/final/B100_eval/metrics.json
+Ours (Model B),40ep,0.1926,1.1656,0.5198,0.2314,0.8594,0.5992,0.2203,experiments/phase6/round4/r4_R4R2thin40_eval/metrics.json
+Ours (Model B),20ep,0.1926,1.1656,0.4954,0.2146,0.8528,0.5946,0.2121,experiments/phase6/round4/r4_R4R2thin_eval/metrics.json

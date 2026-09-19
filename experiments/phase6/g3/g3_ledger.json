@@ -1,0 +1,114 @@
+{
+  "rules": {
+    "budget_tol": 0.05,
+    "min_metrics_for_dominance": 4,
+    "ruler_sigma": 2.0
+  },
+  "metrics": [
+    "mAP50",
+    "mAP50_95",
+    "da_mIoU",
+    "da_fg",
+    "lane_mIoU",
+    "lane_fg"
+  ],
+  "arch": {
+    "a1": {
+      "status": "SCORED",
+      "verdict": "PARTIAL",
+      "budget_gate_pass": true,
+      "metrics_won": 2,
+      "params_rel": 0.000331235508446469,
+      "flops_rel": -0.2919718512135574,
+      "ruler": null,
+      "cells": {
+        "base": {
+          "z": 16,
+          "params_M": 0.2014,
+          "flops_G": 1.0796,
+          "enc": "dws|base",
+          "mAP50": 0.4996,
+          "mAP50_95": 0.2198,
+          "da_mIoU": 0.8505,
+          "da_fg": 0.7637,
+          "lane_mIoU": 0.5853,
+          "lane_fg": 0.1951
+        },
+        "zspend": {
+          "z": 128,
+          "params_M": 0.3019,
+          "flops_G": 2.0889,
+          "enc": "dws|zspend",
+          "mAP50": 0.5161,
+          "mAP50_95": 0.2318,
+          "da_mIoU": 0.8549,
+          "da_fg": 0.7703,
+          "lane_mIoU": 0.5882,
+          "lane_fg": 0.2011
+        },
+        "encspend": {
+          "z": 16,
+          "params_M": 0.302,
+          "flops_G": 1.479,
+          "enc": "dws|encspend",
+          "mAP50": 0.5215,
+          "mAP50_95": 0.235,
+          "da_mIoU": 0.8538,
+          "da_fg": 0.7686,
+          "lane_mIoU": 0.5872,
+          "lane_fg": 0.1992
+        }
+      }
+    },
+    "a2": {
+      "status": "SCORED",
+      "verdict": "Z_WINS",
+      "budget_gate_pass": true,
+      "metrics_won": 0,
+      "params_rel": 0.013884068031933369,
+      "flops_rel": -0.22578480709321835,
+      "ruler": null,
+      "cells": {
+        "base": {
+          "z": 16,
+          "params_M": 0.2018,
+          "flops_G": 1.1424,
+          "enc": "ir|base",
+          "mAP50": 0.5002,
+          "mAP50_95": 0.2167,
+          "da_mIoU": 0.8544,
+          "da_fg": 0.7694,
+          "lane_mIoU": 0.588,
+          "lane_fg": 0.1997
+        },
+        "zspend": {
+          "z": 128,
+          "params_M": 0.2881,
+          "flops_G": 2.0865,
+          "enc": "ir|zspend",
+          "mAP50": 0.5331,
+          "mAP50_95": 0.2395,
+          "da_mIoU": 0.859,
+          "da_fg": 0.7763,
+          "lane_mIoU": 0.5902,
+          "lane_fg": 0.2047
+        },
+        "encspend": {
+          "z": 16,
+          "params_M": 0.2921,
+          "flops_G": 1.6154,
+          "enc": "ir|encspend",
+          "mAP50": 0.5211,
+          "mAP50_95": 0.2308,
+          "da_mIoU": 0.8587,
+          "da_fg": 0.7758,
+          "lane_mIoU": 0.5866,
+          "lane_fg": 0.1983
+        }
+      }
+    }
+  },
+  "sign_agreement": 4,
+  "transfer_verdict": "PARTIAL",
+  "transfer_detail": "a1=PARTIAL (2/6), a2=Z_WINS (0/6), sign agreement 4/6"
+}

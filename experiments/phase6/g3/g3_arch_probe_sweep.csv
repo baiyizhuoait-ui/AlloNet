@@ -1,0 +1,5 @@
+tier,expand,k,stages,z,enc_params,total_params,total_params_M,flops_G,note
+arch2_base_z16,2,0.79,"[24, 48, 72, 104]",16,136632,189198,0.1892,1.0835,anchor: matched to arch-1 E-base+z16
+arch2_zspend_z128,2,0.79,"[24, 48, 72, 104]",128,136632,282606,0.2826,2.059,"same encoder as base, larger Z (MEASURED)"
+arch2_encspend_z16,2,1.04,"[32, 64, 96, 136]",16,228248,281966,0.282,1.4502,"wider encoder, z16, total matched to zspend"
+REFERENCE_dws_R2thin14,,,"[32, 64, 96, 128]",16,147776,201366,0.2014,1.0796,arch-1 base

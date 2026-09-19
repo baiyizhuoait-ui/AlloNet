@@ -1,0 +1,66 @@
+# Phase 6 Round 4B / EXP-13 baseline cell C1 -- LEAN torso (1/8 lane, h32) with the
+# PRE-c8aca35 aspect-flipped anchors PINNED EXPLICITLY IN FILE.
+#
+# WHY THIS FILE EXISTS  (defect D7, found 2026-09-12)
+#   configs/phase4a_r2_z16.yaml has NO anchors block, so it falls through to the code
+#   default in models/representation/det_from_z.py. Commit c8aca35 (2026-09-08)
+#   redefined that default to the IoU-k-means set. Consequence: the two Round-4 arms
+#   labelled `supervision=old` actually trained k-means -- their mAP50 (0.4984/0.4938)
+#   matches lean+km (0.4950), not the historical old-anchor cell (0.3543).
+#   Root cause: scripts/phase6_round4_run.sh takes `supervision` as a CSV LABEL only;
+#   it never selects anchors. Anchors must therefore be pinned in the config.
+#
+#   The historical values are taken verbatim from
+#   `git show c8aca35^:models/representation/det_from_z.py` (DEFAULT_ANCHORS_3S),
+#   the commit message of which calls them "the phase2-4 historical baseline".
+#   They are written into BOTH model.detection.anchors and train.anchors so the
+#   ruler is pinned regardless of which key the loader reads.
+#
+# SINGLE KNOB vs configs/phase4a_r2_z16.yaml: the two anchors blocks, nothing else.
+# Verified by scripts/phase6_round4b_isolation_check.py (parsed-dict delta), not asserted.
+model:
+  encoder:
+    stem: 16
+    stages:
+    - 32
+    - 64
+    - 96
+    - 128
+    blocks:
+    - 2
+    - 2
+    - 2
+  representation:
+    z_channels: 16
+  detection:
+    nc: 1
+    from_z: true
+    z_proj: true
+    det_ch: 32
+    anchors:
+    - [[4, 12], [7, 19], [11, 28]]
+    - [[17, 40], [25, 58], [38, 89]]
+    - [[62, 136], [88, 206], [124, 412]]
+  segmentation:
+    hidden: 32
+input_size:
+- 640
+- 640
+train:
+  stage: A
+  train_split: tri_train
+  batch_size: 16
+  num_workers: 2
+  epochs: 20
+  lr: 1e-3
+  weight_decay: 5e-4
+  lambda_da: 1.0
+  lambda_lane: 1.0
+  lambda_budget: 0.0
+  grad_clip: 10.0
+  anchors:
+  - [[4, 12], [7, 19], [11, 28]]
+  - [[17, 40], [25, 58], [38, 89]]
+  - [[62, 136], [88, 206], [124, 412]]
+data:
+  root: data/bdd100k

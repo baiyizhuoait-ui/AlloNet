@@ -1,0 +1,19 @@
+{
+  "arm": "baseline",
+  "preset": "small",
+  "epochs": 3,
+  "batch_size": 16,
+  "lr": 0.0001,
+  "weight_decay": 0.0005,
+  "seed": 0,
+  "num_images": 69863,
+  "max_steps": 0,
+  "dc": 0,
+  "extra_params": 0,
+  "C14": 67,
+  "C0": 8,
+  "step0_max_delta": null,
+  "loss": "losses.multitask_loss.seg_ce_loss (fg_weight=10) on DA+lane",
+  "init": "weights/TwinLiteNetPlus_small.pth",
+  "params": 121552
+}

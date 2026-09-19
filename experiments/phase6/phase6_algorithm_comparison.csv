@@ -1,0 +1,11 @@
+model,family,params_M,flops_G,mAP50,da_mIoU,da_fg_iou,lane_mIoU,lane_fg_iou,lane_mIoU_per_GFLOP,da_mIoU_per_GFLOP,fixed_p50_ms,old_biased_p50_ms,rank_mAP50,rank_da_mIoU,rank_lane_mIoU,rank_lane_fg_iou
+YOLOP,external,7.94,31.3,0.7657,0.9115,0.8556,0.6038,0.2247,0.0193,0.0291,,14.6,1,4,5,5
+TwinLiteNet,external,0.44,14.1,,0.9114,0.8551,0.6077,0.2281,0.0431,0.0646,,9.0,,5,4,4
+TwinLiteNetPlus nano,external,0.033,1.9,,0.8634,0.7776,0.5866,0.1859,0.3087,0.4544,5.0314,5.2,,10,10,10
+TwinLiteNetPlus small,external,0.122,4.7,,0.8986,0.8336,0.6019,0.2165,0.1281,0.1912,,6.1,,7,7,8
+TwinLiteNetPlus medium,external,0.479,15.4,,0.9191,0.8672,0.6087,0.2297,0.0395,0.0597,,9.3,,3,3,3
+TwinLiteNetPlus large,external,1.944,58.6,,0.9279,0.8815,0.6161,0.245,0.0105,0.0158,,15.0,,1,1,1
+TriLiteNet tiny,external,0.151,1.8,0.4953,0.8796,0.8045,0.5914,0.1952,0.3286,0.4887,3.5096,4.4,5,8,9,9
+TriLiteNet small,external,0.592,6.6,0.6326,0.9053,0.8458,0.6037,0.2198,0.0915,0.1372,5.3836,6.8,3,6,6,6
+TriLiteNet base,external,2.35,25.4,0.7235,0.9203,0.8697,0.6123,0.2371,0.0241,0.0362,,9.4,2,2,2,2
+Ours (Model B),ours,0.1926,1.1656,0.5382,0.8673,0.7888,0.5978,0.2187,0.5129,0.7441,2.3964,,4,9,8,7

@@ -1,0 +1,52 @@
+# Phase 6 Round 4 / EXP-10 rung R4 -- "resolution-only" control (no new information).
+#
+# Single-variable vs configs/phase4b_l14up_z16.yaml: only the `anchors` block is
+# added (so this rung carries the same supervision as every other Round 4 cell).
+# lane_res: 4 with lane_use_f1: false  ->  bilinear upsample of Z to 1/4, no
+# encoder lateral. Cost: 0.2014M / 1.6129 GFLOPs.
+#
+# PURPOSE = mechanism isolation, not cost:
+#   R4 (1/4, no new info) vs R1 (1/4 + s1 lateral) separates
+#       "operating resolution is what lane needs"   (H-17: quantisation + continuity)
+#   from
+#       "lane needs genuinely new high-frequency information".
+#   At 4ep these two were indistinguishable (lane_mIoU 0.5836 vs 0.5839) but 4ep
+#   cannot resolve a +0.014 effect -- so this is the 20ep adjudication, and it is
+#   the cheapest way to find out whether the lateral (i.e. a new compute unit) is
+#   justified at all under Architecture Design Rule 1.
+model:
+  encoder:
+    stem: 16
+    stages: [32, 64, 96, 128]
+    blocks: [2, 2, 2]
+  representation:
+    z_channels: 16
+  detection:
+    nc: 1
+    from_z: true
+    z_proj: true
+    det_ch: 32
+    anchors: &id001
+      - [[9, 8], [18, 15], [32, 24]]
+      - [[49, 38], [80, 52], [65, 102]]
+      - [[124, 82], [166, 136], [237, 214]]
+  segmentation:
+    hidden: 32
+    lane_res: 4
+    lane_use_f1: false
+input_size: [640, 640]
+train:
+  stage: A
+  train_split: tri_train
+  batch_size: 16
+  num_workers: 2
+  epochs: 20
+  lr: 1e-3
+  weight_decay: 5e-4
+  lambda_da: 1.0
+  lambda_lane: 1.0
+  lambda_budget: 0.0
+  grad_clip: 10.0
+  anchors: *id001
+data:
+  root: data/bdd100k

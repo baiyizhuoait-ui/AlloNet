@@ -1,0 +1,130 @@
+# TRAC project ignores
+
+# Data (large)
+data/
+../trac_data/
+
+# Experiments outputs. Checkpoints and run logs ARE large, so they stay ignored --
+# at ANY depth: the old `experiments/*/...` form matched one level only and missed
+# experiments/phaseX/expY/training_log.txt -> bloated commits.
+experiments/**/checkpoint.pt
+**/checkpoint.pt.safe
+**/training_log.txt
+
+# Result tables (.csv) under experiments/ are DELIVERABLES: they are small and
+# carry params/FLOPs/per-task metrics/git-commit for every run. Without them a
+# phase is not reproducible, so they are tracked BY DEFAULT -- there is
+# deliberately NO ignore rule for them.
+#
+# History: this used to be `experiments/*/*.csv` (ignore) + a hand-maintained
+# `!whitelist`. That shape failed three separate ways, all silently:
+#   * phase6 was never added to the whitelist -> every Phase-6 table (registry /
+#     hypotheses / round-2 statistics) stayed untracked for days;
+#   * phase2b's `r1r2_paramaudit.csv` does not end in `_results.csv`, so the
+#     narrow `!experiments/phase2b/*_results.csv` form never matched it;
+#   * widening the ignore's reach reopened the hole for any non-`phase*` top-level
+#     directory -- verified by planting experiments/zz_probe_tmp/probe.csv, which
+#     `experiments/*/*.csv` swallowed even with the `!phase*/**` whitelist present.
+#     `experiments/_figures/` and `experiments/_template/` are exactly such dirs.
+# The lesson is the same one as the kd_cache incident below: adding or renaming a
+# directory must never require remembering to edit this file.
+# Guarded by check_repo_hygiene.sh assertion A1b ("no .csv under experiments/ may
+# be ignored"); oversized adds are separately caught by A2 (>= 1 MB).
+
+# Baseline repos keep their own .git; ignore their weight files
+baselines/*/pretrained/
+baselines/*/weights/
+*.pth
+*.pt
+*.onnx
+*.safetensors
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+# The 2026-09-10 Phase-1B/2B/2C directory reorganisation moved the KD feature
+# cache to experiments/phase2b/expF_single_teacher/kd_cache/. The two literal
+# rules that used to sit here (`experiments/*/kd_cache/` and
+# `experiments/expF_single_teacher/kd_cache/`) matched NEITHER the new path, so
+# 21 GB of *.npy was one `git add -A` away from being committed. Match at ANY
+# depth, and keep NO literal path rules in this file: they rot silently on the
+# next rename (check_repo_hygiene.sh assertion A4 exists to catch that).
+experiments/**/kd_cache/
+
+# Baseline/teacher weights and key trained models (uploaded for the server).
+# NOTE: weights/YOLOP_End-to-end.pth is 95.7 MB -- 4.3 MB below GitHub's 100 MB
+# hard limit, and ~83% of the packed repo. It is REGISTERED as an allowed large
+# blob in scripts/hygiene_exceptions.txt (assertion A3), so the exception is
+# auditable rather than implicit.
+!weights/
+!trained_models/
+!weights/*.pth
+!trained_models/*.pt
+
+# Verbose run-log captures (stdout of train/eval/launcher, NOT deliverable data).
+# Keep eval_stdout.log (small, provenance of reported metric) + metrics.json + config.yaml.
+**/train_stdout.log
+**/*_foreground.log
+**/*_runner.log
+**/*_monitor.log
+**/*_launch.log
+**/zsweep_*.log
+**/r1r2_*.log
+**/expA_*.log
+**/expD_*.log
+**/exp4C_*.log
+**/*_diag.log
+**/status.txt
+
+# Ignore ALL run/verbose logs except the eval provenance log (deliverable).
+# This catches ad-hoc logs (ours_*.log, dyn*.log, finish.log, *_eval.log, ...)
+# that the specific patterns below might miss.
+**/*.log
+!**/eval_stdout.log
+
+# baseline 公共仓库内容由服务器自行 clone，不纳入本仓库
+baselines/
+
+# Large derived cache / artifacts (never commit; GH001 rejects >100MB files)
+*.npz
+experiments/**/*.partial_*
+experiments/**/clean_master_chain.log
+
+experiments/phase6/round4/.round4b_chain.lock
+data/bdd100k/official_eval/
+experiments/phase6/official_gt_audit/
+.commit_msg_*.txt
+experiments/phase6/**/*.lock
+experiments/phase6/**/.d8_seeds.lock
+experiments/phase6/final/ABORTS.txt
+experiments/phase6/final/STOP_CHAIN
+# Runtime control files (CORRECTED 2026-09-14). Both are created and removed by the
+# chains themselves, so "absent right now" is their NORMAL state -- not a rename
+# leftover. They must stay ignored: a committed STOP_CHAIN would halt the very next
+# runner start (scripts/phase6_final100_run.sh:37 -- it IS the polite abort lever, see
+# scripts/_make_final_runner.py:50 "Keep STOP_CHAIN (harmless, and it is our abort
+# lever)"), and ABORTS.txt is a per-run abort marker. The rule was removed earlier
+# today on a WRONG reading (the grep was truncated by `head -20`, so the runner's own
+# use at :26/:37 never appeared); restored here with the matching audit exemption
+# (RUNTIME_EXEMPT in scripts/audit_gitignore.py), which is the correct fix -- the audit
+# targets rename leftovers, not runtime markers.
+# Generated single-file report (2026-09-14). The HTML is a BUILD PRODUCT of
+# docs/PHASE6_TECHNICAL_REPORT.md + experiments/phase6/figures/*.png, with every PNG
+# inlined as base64 so the file stands alone for a reader with no network. That makes
+# it 3.4 MB, over the 1 MB A2 budget, and it is reproducible byte-for-byte by
+# `python scripts/phase6_build_report_html.py`. So the SOURCE is committed (the .md,
+# the figure PNGs and both scripts) and the bundle is not -- same logic as
+# checkpoint.pt. Regenerate, do not commit.
+docs/PHASE6_TECHNICAL_REPORT.html
+
+# process logs are never deliverables
+*.log
+
+# baseline pretrained weights: fetched from upstream repos, never committed
+weights/

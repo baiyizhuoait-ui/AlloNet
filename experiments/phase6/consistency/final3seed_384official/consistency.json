@@ -1,0 +1,54 @@
+{
+  "input": "384",
+  "canvas": [
+    384,
+    640
+  ],
+  "gt_sources": [
+    "ours",
+    "official"
+  ],
+  "split": "tri_val",
+  "n_images": 10000,
+  "det_axis": false,
+  "models": {
+    "OursStatic:~/ai_study/trac/experiments/phase6/final/B100/checkpoint.pt": {
+      "n": 10000,
+      "secs": 1435.3,
+      "da_mIoU_ours": 0.8594,
+      "lane_fg_iou_ours": 0.2173,
+      "lane_mIoU_ours": 0.597,
+      "lane_line_acc_ours": 0.8773,
+      "da_mIoU_official": 0.8649,
+      "lane_fg_iou_official": 0.1941,
+      "lane_mIoU_official": 0.5848,
+      "lane_line_acc_official": 0.8401
+    },
+    "OursStatic:~/ai_study/trac/experiments/phase6/final/B100_s1/checkpoint.pt": {
+      "n": 10000,
+      "secs": 1489.4,
+      "da_mIoU_ours": 0.8631,
+      "lane_fg_iou_ours": 0.2104,
+      "lane_mIoU_ours": 0.5927,
+      "lane_line_acc_ours": 0.8868,
+      "da_mIoU_official": 0.8683,
+      "lane_fg_iou_official": 0.1887,
+      "lane_mIoU_official": 0.5813,
+      "lane_line_acc_official": 0.8497
+    },
+    "OursStatic:~/ai_study/trac/experiments/phase6/final/B100_s2/checkpoint.pt": {
+      "n": 10000,
+      "secs": 1422.3,
+      "da_mIoU_ours": 0.8626,
+      "lane_fg_iou_ours": 0.2203,
+      "lane_mIoU_ours": 0.5989,
+      "lane_line_acc_ours": 0.8715,
+      "da_mIoU_official": 0.8677,
+      "lane_fg_iou_official": 0.1954,
+      "lane_mIoU_official": 0.5858,
+      "lane_line_acc_official": 0.833
+    }
+  },
+  "errors": {},
+  "published_checks": []
+}

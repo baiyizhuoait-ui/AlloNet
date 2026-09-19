@@ -1,0 +1,306 @@
+{
+  "anchors": [
+    [
+      [
+        9,
+        8
+      ],
+      [
+        18,
+        15
+      ],
+      [
+        32,
+        24
+      ]
+    ],
+    [
+      [
+        49,
+        38
+      ],
+      [
+        80,
+        52
+      ],
+      [
+        65,
+        102
+      ]
+    ],
+    [
+      [
+        124,
+        82
+      ],
+      [
+        166,
+        136
+      ],
+      [
+        237,
+        214
+      ]
+    ]
+  ],
+  "cells": [
+    {
+      "name": "phase6_g3_a1_base_z16",
+      "arch": "a1",
+      "tier": "base",
+      "enc": {
+        "stem": 16,
+        "stages": [
+          32,
+          64,
+          96,
+          128
+        ],
+        "blocks": [
+          2,
+          2,
+          2
+        ]
+      },
+      "z": 16,
+      "desc": "smallest encoder tier",
+      "enc_params": 147776,
+      "total_params": 201366,
+      "total_params_M": 0.2014,
+      "flops_G": 1.0796
+    },
+    {
+      "name": "phase6_g3_a1_zspend_z128",
+      "arch": "a1",
+      "tier": "zspend",
+      "enc": {
+        "stem": 16,
+        "stages": [
+          32,
+          64,
+          96,
+          128
+        ],
+        "blocks": [
+          2,
+          2,
+          2
+        ]
+      },
+      "z": 128,
+      "desc": "same encoder, larger Z",
+      "enc_params": 147776,
+      "total_params": 301942,
+      "total_params_M": 0.3019,
+      "flops_G": 2.0889
+    },
+    {
+      "name": "phase6_g3_a1_encspend_z16",
+      "arch": "a1",
+      "tier": "encspend",
+      "enc": {
+        "stem": 24,
+        "stages": [
+          40,
+          80,
+          128,
+          168
+        ],
+        "blocks": [
+          2,
+          2,
+          2
+        ]
+      },
+      "z": 16,
+      "desc": "larger encoder, matched to the z-spend total",
+      "enc_params": 246968,
+      "total_params": 301966,
+      "total_params_M": 0.302,
+      "flops_G": 1.479
+    },
+    {
+      "name": "phase6_g3_a2_base_z16",
+      "arch": "a2",
+      "tier": "base",
+      "enc": {
+        "arch": "ir",
+        "stem": 16,
+        "stages": [
+          16,
+          32,
+          56,
+          72
+        ],
+        "blocks": [
+          2,
+          2,
+          2
+        ],
+        "expand": 4
+      },
+      "z": 16,
+      "desc": "smallest encoder tier",
+      "enc_params": 150280,
+      "total_params": 201822,
+      "total_params_M": 0.2018,
+      "flops_G": 1.1424
+    },
+    {
+      "name": "phase6_g3_a2_zspend_z128",
+      "arch": "a2",
+      "tier": "zspend",
+      "enc": {
+        "arch": "ir",
+        "stem": 16,
+        "stages": [
+          16,
+          32,
+          56,
+          72
+        ],
+        "blocks": [
+          2,
+          2,
+          2
+        ],
+        "expand": 4
+      },
+      "z": 128,
+      "desc": "same encoder, larger Z",
+      "enc_params": 150280,
+      "total_params": 288062,
+      "total_params_M": 0.2881,
+      "flops_G": 2.0865
+    },
+    {
+      "name": "phase6_g3_a2_encspend_z16",
+      "arch": "a2",
+      "tier": "encspend",
+      "enc": {
+        "arch": "ir",
+        "stem": 16,
+        "stages": [
+          24,
+          48,
+          72,
+          88
+        ],
+        "blocks": [
+          2,
+          2,
+          2
+        ],
+        "expand": 4
+      },
+      "z": 16,
+      "desc": "larger encoder, matched to the z-spend total",
+      "enc_params": 239800,
+      "total_params": 292110,
+      "total_params_M": 0.2921,
+      "flops_G": 1.6154
+    }
+  ],
+  "arch1_solution": {
+    "arch": "dws",
+    "base": {
+      "stem": 16,
+      "stages": [
+        32,
+        64,
+        96,
+        128
+      ],
+      "blocks": [
+        2,
+        2,
+        2
+      ]
+    },
+    "zspend": {
+      "stem": 16,
+      "stages": [
+        32,
+        64,
+        96,
+        128
+      ],
+      "blocks": [
+        2,
+        2,
+        2
+      ]
+    },
+    "encspend": {
+      "stem": 24,
+      "stages": [
+        40,
+        80,
+        128,
+        168
+      ],
+      "blocks": [
+        2,
+        2,
+        2
+      ]
+    },
+    "p_base": 201366,
+    "p_zspend": 301942,
+    "p_encspend": 301966
+  },
+  "arch2_solution": {
+    "arch": "ir",
+    "base": {
+      "arch": "ir",
+      "stem": 16,
+      "stages": [
+        16,
+        32,
+        56,
+        72
+      ],
+      "blocks": [
+        2,
+        2,
+        2
+      ],
+      "expand": 4
+    },
+    "zspend": {
+      "arch": "ir",
+      "stem": 16,
+      "stages": [
+        16,
+        32,
+        56,
+        72
+      ],
+      "blocks": [
+        2,
+        2,
+        2
+      ],
+      "expand": 4
+    },
+    "encspend": {
+      "arch": "ir",
+      "stem": 16,
+      "stages": [
+        24,
+        48,
+        72,
+        88
+      ],
+      "blocks": [
+        2,
+        2,
+        2
+      ],
+      "expand": 4
+    },
+    "p_base": 201822,
+    "p_zspend": 288062,
+    "p_encspend": 292110
+  }
+}

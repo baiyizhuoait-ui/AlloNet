@@ -1,0 +1,48 @@
+# Phase 6 Round 4B / EXP-10b -- is the Round-4 result OPTIMISATION-limited rather than
+# capacity-limited?  Identical to configs/phase6_r4_R2_thin14_z16.yaml EXCEPT lr.
+#
+# WHY THIS FILE EXISTS
+#   Round 3 measured a large lr sensitivity on the sibling trainer (lr 1e-3 -> 0.5104,
+#   lr 1e-4 -> 0.5656, i.e. +0.055 mAP50 -- 5.7x the 2-sigma noise floor of 0.0096).
+#   All Round-4 arms ran at the config default 1e-3. If that ranking transfers, the
+#   20-epoch number is hyperparameter-limited, not epoch-limited, and the cheapest way
+#   to buy accuracy is a local lr sweep -- not a rented 100-epoch run.
+#
+# SINGLE KNOB vs configs/phase6_r4_R2_thin14_z16.yaml: train.lr 1e-3 -> 1e-4.
+model:
+  encoder:
+    stem: 16
+    stages: [32, 64, 96, 128]
+    blocks: [2, 2, 2]
+  representation:
+    z_channels: 16
+  detection:
+    nc: 1
+    from_z: true
+    z_proj: true
+    det_ch: 32
+    anchors: &id001
+      - [[9, 8], [18, 15], [32, 24]]
+      - [[49, 38], [80, 52], [65, 102]]
+      - [[124, 82], [166, 136], [237, 214]]
+  segmentation:
+    hidden: 32
+    lane_res: 4
+    lane_use_f1: true
+    lane_hidden: 16
+input_size: [640, 640]
+train:
+  stage: A
+  train_split: tri_train
+  batch_size: 16
+  num_workers: 2
+  epochs: 20
+  lr: 1e-4
+  weight_decay: 5e-4
+  lambda_da: 1.0
+  lambda_lane: 1.0
+  lambda_budget: 0.0
+  grad_clip: 10.0
+  anchors: *id001
+data:
+  root: data/bdd100k

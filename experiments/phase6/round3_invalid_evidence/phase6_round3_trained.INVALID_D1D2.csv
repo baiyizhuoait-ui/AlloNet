@@ -1,0 +1,4 @@
+experiment,arm,arch,intervention,budget_epochs,budget_images,batch,seed,params_M,flops_G,mAP50,mAP50_95,da_mIoU,lane_mIoU,lane_fg_iou,det_loss_first,det_loss_last,lane_loss_first,lane_loss_last,wall_min,peak_gpu_mem_mib,git_commit
+EXP-9A,A0_shipped,YOLOP,anchor set = shipped (FLOPs-neutral),2,4000,6,0,7.9408,30.8208,0.7657,0.4406,0.9115,0.6038,0.2247,0.1805,0.1198,0.1661,0.0579,5.0,6086,9fb29e727e979d9b7511c0d23e8be756a162594f
+EXP-9A,A1_flip,YOLOP,anchor set = flip (FLOPs-neutral),2,4000,6,0,7.9408,30.8208,0.0000,0.0000,0.9115,0.6038,0.2247,0.2373,0.1163,0.1661,0.0567,4.8,6086,9fb29e727e979d9b7511c0d23e8be756a162594f
+EXP-9A,A2_kmeans,YOLOP,anchor set = kmeans (FLOPs-neutral),2,4000,6,0,7.9408,30.8208,0.0005,0.0001,0.9115,0.6038,0.2247,0.2535,0.0810,0.1661,0.0568,5.0,6086,9fb29e727e979d9b7511c0d23e8be756a162594f

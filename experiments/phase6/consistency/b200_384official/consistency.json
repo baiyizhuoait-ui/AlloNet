@@ -1,0 +1,30 @@
+{
+  "input": "384",
+  "canvas": [
+    384,
+    640
+  ],
+  "gt_sources": [
+    "ours",
+    "official"
+  ],
+  "split": "tri_val",
+  "n_images": 10000,
+  "det_axis": false,
+  "models": {
+    "OursStatic:~/ai_study/trac/experiments/phase6/final/B200/checkpoint.pt": {
+      "n": 10000,
+      "secs": 330.8,
+      "da_mIoU_ours": 0.8573,
+      "lane_fg_iou_ours": 0.2182,
+      "lane_mIoU_ours": 0.5975,
+      "lane_line_acc_ours": 0.8774,
+      "da_mIoU_official": 0.8624,
+      "lane_fg_iou_official": 0.195,
+      "lane_mIoU_official": 0.5853,
+      "lane_line_acc_official": 0.8405
+    }
+  },
+  "errors": {},
+  "published_checks": []
+}

@@ -1,0 +1,15 @@
+{
+  "stage": "yolop_finetune",
+  "arm": "shipped",
+  "params": 7940846,
+  "epochs": 1,
+  "num_images": 69863,
+  "batch_size": 6,
+  "seed": 0,
+  "lr": 0.0001,
+  "final_avg_loss": 0.22758489435075188,
+  "final_det_loss": 0.11453335511729404,
+  "wall_min": 42.54,
+  "peak_gpu_mem_mib": 6086.1,
+  "max_steps": 0
+}

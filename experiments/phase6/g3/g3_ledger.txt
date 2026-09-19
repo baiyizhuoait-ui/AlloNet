@@ -1,0 +1,126 @@
+================================================================================================
+PHASE 6 / G3 -- ALLOCATION LEDGER, TWO ENCODER TOPOLOGIES
+================================================================================================
+Frozen rules: R0 budget gate +/-5%; R1 dominance >=4/6 metrics;
+              R2 ruler = 2*sd measured on the SAME architecture;
+              R3 transfer = same class + same sign on >=4/6 metrics.
+
+################################################################################################
+# a1 = depthwise-separable (ESPNet lineage)
+################################################################################################
+
+  cell geometry (measured)
+  cell           z   params M   FLOPs G           encoder
+  base          16     0.2014    1.0796          dws|base
+  zspend       128     0.3019    2.0889        dws|zspend
+  encspend      16     0.3020    1.4790      dws|encspend
+
+  noise ruler: ABSENT (plus-seeds stage not run) -- no within-noise claim is made
+
+  A) spend on Z      base(z16) -> zspend(z128)
+  metric        before    after     delta   per 0.01M   per 0.1GF   real?
+  mAP50         0.4996   0.5161   +0.0165    +0.00164    +0.00163       -
+  mAP50_95      0.2198   0.2318   +0.0120    +0.00119    +0.00119       -
+  DA mIoU       0.8505   0.8549   +0.0044    +0.00044    +0.00044       -
+  DA fgIoU      0.7637   0.7703   +0.0066    +0.00066    +0.00065       -
+  lane mIoU     0.5853   0.5882   +0.0029    +0.00029    +0.00029       -
+  lane fgIoU    0.1951   0.2011   +0.0060    +0.00060    +0.00059       -
+  (d params, d FLOPs)                     +0.1005M  +1.0093G
+
+  B) spend on ENCODER base(z16) -> encspend(z16)
+  metric        before    after     delta   per 0.01M   per 0.1GF   real?
+  mAP50         0.4996   0.5215   +0.0219    +0.00218    +0.00548       -
+  mAP50_95      0.2198   0.2350   +0.0152    +0.00151    +0.00381       -
+  DA mIoU       0.8505   0.8538   +0.0033    +0.00033    +0.00083       -
+  DA fgIoU      0.7637   0.7686   +0.0049    +0.00049    +0.00123       -
+  lane mIoU     0.5853   0.5872   +0.0019    +0.00019    +0.00048       -
+  lane fgIoU    0.1951   0.1992   +0.0041    +0.00041    +0.00103       -
+  (d params, d FLOPs)                     +0.1006M  +0.3994G
+
+  C) efficiency ratio  encoder-spend / Z-spend
+  metric        enc per 0.01M   Z per 0.01M   ratio(params)   ratio(FLOPs)
+  mAP50              +0.00218      +0.00164            1.3x           3.4x
+  mAP50_95           +0.00151      +0.00119            1.3x           3.2x
+  DA mIoU            +0.00033      +0.00044            0.7x           1.9x
+  DA fgIoU           +0.00049      +0.00066            0.7x           1.9x
+  lane mIoU          +0.00019      +0.00029            0.7x           1.7x
+  lane fgIoU         +0.00041      +0.00060            0.7x           1.7x
+
+  D) LIKE-FOR-LIKE  z-spend vs enc-spend at near-equal TOTAL params
+                base enc + z128    wide enc + z16       delta
+  params M               0.3019            0.3020        0.0%
+  FLOPs G                2.0889            1.4790      -29.2%
+  mAP50                  0.5161            0.5215     +0.0054   >= (-)
+  mAP50_95               0.2318            0.2350     +0.0032   >= (-)
+  DA mIoU                0.8549            0.8538     -0.0011      (-)
+  DA fgIoU               0.7703            0.7686     -0.0017      (-)
+  lane mIoU              0.5882            0.5872     -0.0010      (-)
+  lane fgIoU             0.2011            0.1992     -0.0019      (-)
+
+  R0 budget gate: |rel params| = 0.0% <= 5%  -> PASS
+  R1 local verdict: PARTIAL  (enc-spend >= z-spend on 2/6 metrics; FLOPs -29.2%)
+
+################################################################################################
+# a2 = inverted-residual (MobileNetV2/V3 lineage)
+################################################################################################
+
+  cell geometry (measured)
+  cell           z   params M   FLOPs G           encoder
+  base          16     0.2018    1.1424           ir|base
+  zspend       128     0.2881    2.0865         ir|zspend
+  encspend      16     0.2921    1.6154       ir|encspend
+
+  noise ruler: ABSENT (plus-seeds stage not run) -- no within-noise claim is made
+
+  A) spend on Z      base(z16) -> zspend(z128)
+  metric        before    after     delta   per 0.01M   per 0.1GF   real?
+  mAP50         0.5002   0.5331   +0.0329    +0.00381    +0.00348       -
+  mAP50_95      0.2167   0.2395   +0.0228    +0.00264    +0.00241       -
+  DA mIoU       0.8544   0.8590   +0.0046    +0.00053    +0.00049       -
+  DA fgIoU      0.7694   0.7763   +0.0069    +0.00080    +0.00073       -
+  lane mIoU     0.5880   0.5902   +0.0022    +0.00025    +0.00023       -
+  lane fgIoU    0.1997   0.2047   +0.0050    +0.00058    +0.00053       -
+  (d params, d FLOPs)                     +0.0863M  +0.9441G
+
+  B) spend on ENCODER base(z16) -> encspend(z16)
+  metric        before    after     delta   per 0.01M   per 0.1GF   real?
+  mAP50         0.5002   0.5211   +0.0209    +0.00231    +0.00442       -
+  mAP50_95      0.2167   0.2308   +0.0141    +0.00156    +0.00298       -
+  DA mIoU       0.8544   0.8587   +0.0043    +0.00048    +0.00091       -
+  DA fgIoU      0.7694   0.7758   +0.0064    +0.00071    +0.00135       -
+  lane mIoU     0.5880   0.5866   -0.0014    -0.00016    -0.00030       -
+  lane fgIoU    0.1997   0.1983   -0.0014    -0.00016    -0.00030       -
+  (d params, d FLOPs)                     +0.0903M  +0.4730G
+
+  C) efficiency ratio  encoder-spend / Z-spend
+  metric        enc per 0.01M   Z per 0.01M   ratio(params)   ratio(FLOPs)
+  mAP50              +0.00231      +0.00381            0.6x           1.3x
+  mAP50_95           +0.00156      +0.00264            0.6x           1.2x
+  DA mIoU            +0.00048      +0.00053            0.9x           1.9x
+  DA fgIoU           +0.00071      +0.00080            0.9x           1.9x
+  lane mIoU          -0.00016      +0.00025           -0.6x          -1.3x
+  lane fgIoU         -0.00016      +0.00058           -0.3x          -0.6x
+
+  D) LIKE-FOR-LIKE  z-spend vs enc-spend at near-equal TOTAL params
+                base enc + z128    wide enc + z16       delta
+  params M               0.2881            0.2921        1.4%
+  FLOPs G                2.0865            1.6154      -22.6%
+  mAP50                  0.5331            0.5211     -0.0120      (-)
+  mAP50_95               0.2395            0.2308     -0.0087      (-)
+  DA mIoU                0.8590            0.8587     -0.0003      (-)
+  DA fgIoU               0.7763            0.7758     -0.0005      (-)
+  lane mIoU              0.5902            0.5866     -0.0036      (-)
+  lane fgIoU             0.2047            0.1983     -0.0064      (-)
+
+  R0 budget gate: |rel params| = 1.4% <= 5%  -> PASS
+  R1 local verdict: Z_WINS  (enc-spend >= z-spend on 0/6 metrics; FLOPs -22.6%)
+
+================================================================================================
+R3  TRANSFER VERDICT
+================================================================================================
+  PARTIAL
+  a1=PARTIAL (2/6), a2=Z_WINS (0/6), sign agreement 4/6
+  NOTE: ruler ABSENT on at least one architecture -> the metric-level
+        differences printed above are NOT noise-qualified.  Report the
+        ordering only; run the plus-seeds stage before claiming
+        significance.

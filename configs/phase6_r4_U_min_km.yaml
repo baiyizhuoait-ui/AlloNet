@@ -1,0 +1,53 @@
+# Phase 6 Round 4 / EXP-12 candidate U-minus -- uniform capacity + near-free spatial repair.
+#
+# Encoder/representation/detection are copied VERBATIM from
+# configs/phase6c_e9_aunif_km.yaml (A-uniform x k-means, the existing Model U).
+# The ONLY change is the segmentation block: the lane head is moved from 1/8 to
+# 1/4 operating resolution and thinned (lane_hidden 32 -> 8).
+#
+# Cost (measured): 0.3224M params / 1.6158 GFLOPs
+#   vs Model U (aunif_km): 0.3339M / 1.6650G
+#   => U-minus is cheaper on BOTH axes than U while carrying a 1/4 lane branch.
+#
+# This cell exists to test one thing: if EXP-10 shows that lane's gain is bought
+# by operating resolution and not by head width, then the "asymmetric" part of the
+# final architecture costs strictly nothing, and the uniform baseline is dominated
+# by its own bottleneck-aware variant. If EXP-10 shows otherwise (thin 1/4 fails
+# to retain the gain), this cell is the falsifier and U-minus should lose.
+model:
+  encoder:
+    stem: 24
+    stages: [48, 88, 136, 176]
+    blocks: [2, 2, 2]
+  representation:
+    z_channels: 16
+  detection:
+    nc: 1
+    from_z: true
+    z_proj: true
+    det_ch: 32
+    anchors: &id001
+      - [[9, 8], [18, 15], [32, 24]]
+      - [[49, 38], [80, 52], [65, 102]]
+      - [[124, 82], [166, 136], [237, 214]]
+  segmentation:
+    hidden: 32
+    lane_res: 4
+    lane_use_f1: true
+    lane_hidden: 8
+input_size: [640, 640]
+train:
+  stage: A
+  train_split: tri_train
+  batch_size: 16
+  num_workers: 2
+  epochs: 20
+  lr: 1e-3
+  weight_decay: 5e-4
+  lambda_da: 1.0
+  lambda_lane: 1.0
+  lambda_budget: 0.0
+  grad_clip: 10.0
+  anchors: *id001
+data:
+  root: data/bdd100k

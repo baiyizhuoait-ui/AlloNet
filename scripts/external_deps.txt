@@ -1,0 +1,27 @@
+# scripts/external_deps.txt
+# ---------------------------------------------------------------------------
+# External CODE dependencies that this repository imports at runtime but does
+# NOT vendor.  One entry per line, whitespace-separated:
+#
+#     <path relative to the repo root>  <pinned commit>  <source url>
+#
+# Enforced by scripts/check_external_deps.sh (gate 3/3 of scripts/check_all.sh):
+# the path must exist, its git HEAD must equal the pinned commit, and its working
+# tree must be clean.  Any drift FAILS the gate.
+#
+# Why this exists: this is the SAME silent-reference-failure class that already
+# produced two incidents in September 2026 --
+#   (1) a directory rename silently invalidated .gitignore literal paths;
+#   (2) a .py rename silently invalidated a module-name import and every eval
+#       died with ModuleNotFoundError for three hours.
+# `build_yolop()` resolves the second architecture through
+# `sys.path.insert(0, ROOT/../YOLOP)`.  If that tree is renamed, updated
+# in place, or locally patched, the evaluation silently scores a DIFFERENT
+# network than the one the report describes.  A pinned SHA plus a clean-tree
+# assertion is the only machine-checkable defence.
+# ---------------------------------------------------------------------------
+
+# YOLOP -- the H1 second architecture for Phase 6 Round 3.  Model code; the
+# checkpoint is in-repo (weights/YOLOP_End-to-end.pth, registered separately in
+# hygiene_exceptions.txt).
+../YOLOP 8d8f68df318c71f01d6f813c024df646c7d1978f https://github.com/hustvl/YOLOP

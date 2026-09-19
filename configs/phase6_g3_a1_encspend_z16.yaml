@@ -1,0 +1,47 @@
+# Phase 6 / G3 -- second-architecture transfer test.  GENERATED FILE.
+#
+# Emitted by scripts/phase6_g3_tier_solve.py; edit that script, not this file.
+# Cell: encspend   architecture: a1 encoder
+# Solved geometry (measured on the frozen FLOPs ruler at 640x640, batch 1):
+#   encoder params 246968   total params 301966   FLOPs 1.479 G
+#
+# Held FIXED across every G3 cell so the encoder topology is the only variable:
+#   - detection reads Compact Z (from_z), z_proj on
+#   - segmentation is lean (hidden: 32)
+#   - anchors are written EXPLICITLY (k-means).  A config that omits this key
+#     inherits whatever the code default is on the day it runs -- that silent
+#     dependency is what put the old allocation ledger in a different
+#     supervision regime from the paper's main table.
+model:
+  encoder:
+    stem: 24
+    stages: [40, 80, 128, 168]
+    blocks: [2, 2, 2]
+  representation:
+    z_channels: 16
+  detection:
+    nc: 1
+    from_z: true
+    z_proj: true
+    det_ch: 32
+    anchors:
+      - [[9, 8], [18, 15], [32, 24]]
+      - [[49, 38], [80, 52], [65, 102]]
+      - [[124, 82], [166, 136], [237, 214]]
+  segmentation:
+    hidden: 32
+input_size: [640, 640]
+train:
+  stage: A
+  train_split: tri_train
+  batch_size: 16
+  num_workers: 2
+  epochs: 20
+  lr: 1e-3
+  weight_decay: 5e-4
+  lambda_da: 1.0
+  lambda_lane: 1.0
+  lambda_budget: 0.0
+  grad_clip: 10.0
+data:
+  root: data/bdd100k

@@ -1,0 +1,274 @@
+{
+  "input": "384",
+  "canvas": [
+    384,
+    640
+  ],
+  "gt_sources": [
+    "ours",
+    "official"
+  ],
+  "split": "tri_val",
+  "n_images": 10000,
+  "det_axis": false,
+  "models": {
+    "OursStatic:~/ai_study/trac/experiments/phase6/final/B100/checkpoint.pt": {
+      "n": 10000,
+      "secs": 328.7,
+      "da_mIoU_ours": 0.8594,
+      "lane_fg_iou_ours": 0.2173,
+      "lane_mIoU_ours": 0.597,
+      "lane_line_acc_ours": 0.8773,
+      "da_mIoU_official": 0.8649,
+      "lane_fg_iou_official": 0.1941,
+      "lane_mIoU_official": 0.5848,
+      "lane_line_acc_official": 0.8402
+    },
+    "TriLiteNet:tiny": {
+      "n": 10000,
+      "secs": 321.7,
+      "da_mIoU_ours": 0.884,
+      "lane_fg_iou_ours": 0.2058,
+      "lane_mIoU_ours": 0.5956,
+      "lane_line_acc_ours": 0.724,
+      "da_mIoU_official": 0.8853,
+      "lane_fg_iou_official": 0.2432,
+      "lane_mIoU_official": 0.6148,
+      "lane_line_acc_official": 0.7565
+    },
+    "TriLiteNet:small": {
+      "n": 10000,
+      "secs": 344.0,
+      "da_mIoU_ours": 0.9084,
+      "lane_fg_iou_ours": 0.227,
+      "lane_mIoU_ours": 0.6062,
+      "lane_line_acc_ours": 0.7525,
+      "da_mIoU_official": 0.9103,
+      "lane_fg_iou_official": 0.2764,
+      "lane_mIoU_official": 0.6316,
+      "lane_line_acc_official": 0.7953
+    },
+    "TriLiteNet:base": {
+      "n": 10000,
+      "secs": 326.1,
+      "da_mIoU_ours": 0.9224,
+      "lane_fg_iou_ours": 0.2386,
+      "lane_mIoU_ours": 0.612,
+      "lane_line_acc_ours": 0.7711,
+      "da_mIoU_official": 0.9245,
+      "lane_fg_iou_official": 0.2985,
+      "lane_mIoU_official": 0.6428,
+      "lane_line_acc_official": 0.8233
+    },
+    "TwinLiteNetPlus:nano": {
+      "n": 10000,
+      "secs": 302.9,
+      "da_mIoU_ours": 0.8734,
+      "lane_fg_iou_ours": 0.1842,
+      "lane_mIoU_ours": 0.5859,
+      "lane_line_acc_ours": 0.6656,
+      "da_mIoU_official": 0.8742,
+      "lane_fg_iou_official": 0.2355,
+      "lane_mIoU_official": 0.6122,
+      "lane_line_acc_official": 0.7031
+    },
+    "TwinLiteNetPlus:small": {
+      "n": 10000,
+      "secs": 330.0,
+      "da_mIoU_ours": 0.9058,
+      "lane_fg_iou_ours": 0.2146,
+      "lane_mIoU_ours": 0.6011,
+      "lane_line_acc_ours": 0.7008,
+      "da_mIoU_official": 0.9065,
+      "lane_fg_iou_official": 0.2939,
+      "lane_mIoU_official": 0.6417,
+      "lane_line_acc_official": 0.7585
+    },
+    "TwinLiteNetPlus:medium": {
+      "n": 10000,
+      "secs": 299.4,
+      "da_mIoU_ours": 0.9202,
+      "lane_fg_iou_ours": 0.2322,
+      "lane_mIoU_ours": 0.6098,
+      "lane_line_acc_ours": 0.7244,
+      "da_mIoU_official": 0.9207,
+      "lane_fg_iou_official": 0.3244,
+      "lane_mIoU_official": 0.657,
+      "lane_line_acc_official": 0.7921
+    },
+    "TwinLiteNetPlus:large": {
+      "n": 10000,
+      "secs": 328.1,
+      "da_mIoU_ours": 0.9285,
+      "lane_fg_iou_ours": 0.244,
+      "lane_mIoU_ours": 0.6156,
+      "lane_line_acc_ours": 0.7453,
+      "da_mIoU_official": 0.9291,
+      "lane_fg_iou_official": 0.3426,
+      "lane_mIoU_official": 0.6661,
+      "lane_line_acc_official": 0.8194
+    },
+    "TwinLiteNet": {
+      "n": 10000,
+      "secs": 288.1,
+      "da_mIoU_ours": 0.912,
+      "lane_fg_iou_ours": 0.2345,
+      "lane_mIoU_ours": 0.6099,
+      "lane_line_acc_ours": 0.7638,
+      "da_mIoU_official": 0.9127,
+      "lane_fg_iou_official": 0.2883,
+      "lane_mIoU_official": 0.6376,
+      "lane_line_acc_official": 0.8106
+    }
+  },
+  "errors": {},
+  "published_checks": [
+    {
+      "model": "TriLiteNet:tiny",
+      "metric": "da_mIoU",
+      "measured": 88.53,
+      "published": 88.5,
+      "delta": 0.03,
+      "within_1.0": true
+    },
+    {
+      "model": "TriLiteNet:tiny",
+      "metric": "lane_fg_iou",
+      "measured": 24.32,
+      "published": 24.2,
+      "delta": 0.12,
+      "within_1.0": true
+    },
+    {
+      "model": "TriLiteNet:small",
+      "metric": "da_mIoU",
+      "measured": 91.03,
+      "published": 90.5,
+      "delta": 0.53,
+      "within_1.0": true
+    },
+    {
+      "model": "TriLiteNet:small",
+      "metric": "lane_fg_iou",
+      "measured": 27.64,
+      "published": 27.6,
+      "delta": 0.04,
+      "within_1.0": true
+    },
+    {
+      "model": "TriLiteNet:base",
+      "metric": "da_mIoU",
+      "measured": 92.45,
+      "published": 92.0,
+      "delta": 0.45,
+      "within_1.0": true
+    },
+    {
+      "model": "TriLiteNet:base",
+      "metric": "lane_fg_iou",
+      "measured": 29.85,
+      "published": 29.8,
+      "delta": 0.05,
+      "within_1.0": true
+    },
+    {
+      "model": "TwinLiteNetPlus:nano",
+      "metric": "da_mIoU",
+      "measured": 87.42,
+      "published": 87.3,
+      "delta": 0.12,
+      "within_1.0": true
+    },
+    {
+      "model": "TwinLiteNetPlus:nano",
+      "metric": "lane_fg_iou",
+      "measured": 23.55,
+      "published": 23.3,
+      "delta": 0.25,
+      "within_1.0": true
+    },
+    {
+      "model": "TwinLiteNetPlus:nano",
+      "metric": "lane_line_acc",
+      "measured": 70.31,
+      "published": 70.2,
+      "delta": 0.11,
+      "within_1.0": true
+    },
+    {
+      "model": "TwinLiteNetPlus:small",
+      "metric": "da_mIoU",
+      "measured": 90.65,
+      "published": 90.6,
+      "delta": 0.05,
+      "within_1.0": true
+    },
+    {
+      "model": "TwinLiteNetPlus:small",
+      "metric": "lane_fg_iou",
+      "measured": 29.39,
+      "published": 29.3,
+      "delta": 0.09,
+      "within_1.0": true
+    },
+    {
+      "model": "TwinLiteNetPlus:small",
+      "metric": "lane_line_acc",
+      "measured": 75.85,
+      "published": 75.8,
+      "delta": 0.05,
+      "within_1.0": true
+    },
+    {
+      "model": "TwinLiteNetPlus:medium",
+      "metric": "da_mIoU",
+      "measured": 92.07,
+      "published": 92.0,
+      "delta": 0.07,
+      "within_1.0": true
+    },
+    {
+      "model": "TwinLiteNetPlus:medium",
+      "metric": "lane_fg_iou",
+      "measured": 32.44,
+      "published": 32.3,
+      "delta": 0.14,
+      "within_1.0": true
+    },
+    {
+      "model": "TwinLiteNetPlus:medium",
+      "metric": "lane_line_acc",
+      "measured": 79.21,
+      "published": 79.1,
+      "delta": 0.11,
+      "within_1.0": true
+    },
+    {
+      "model": "TwinLiteNetPlus:large",
+      "metric": "da_mIoU",
+      "measured": 92.91,
+      "published": 92.9,
+      "delta": 0.01,
+      "within_1.0": true
+    },
+    {
+      "model": "TwinLiteNetPlus:large",
+      "metric": "lane_fg_iou",
+      "measured": 34.26,
+      "published": 34.2,
+      "delta": 0.06,
+      "within_1.0": true
+    },
+    {
+      "model": "TwinLiteNetPlus:large",
+      "metric": "lane_line_acc",
+      "measured": 81.94,
+      "published": 81.9,
+      "delta": 0.04,
+      "within_1.0": true
+    }
+  ],
+  "rebuilt_from_log": "experiments/phase6/consistency/stageB_in384.log",
+  "rebuilt_at": "2026-09-14 13:33:35",
+  "rebuilt_note": "aggregate reconstructed from the run log after json.dump aborted on a numpy.bool_ (within_1.0) and left the original consistency.json truncated; numbers are verbatim [done] lines, not re-measured"
+}

@@ -1,0 +1,13 @@
+test_id,quantity,observed,reference,threshold,verdict,basis
+F1,lane_mIoU(R2 thin 1/4),0.5946,0.5951,0.5913,PASS,thin keeps full's lane gain?
+F2,lane_mIoU(R2 thin 1/4),0.5946,0.5827,0.5865,PASS,repair real vs 1/8?
+F3,"d mAP50 (k-means - old), lean",0.1445,0.0000,0.0096,PASS,"supervision integration magnitude, 3 seeds"
+F4,lane_mIoU(R3 min 1/4),0.4959,0.5827,0.5865,FAIL,minimum-cost rung also works?
+F5,lane_mIoU(R1 up-only 1/4),0.5923,0.5951,0.5913,PASS,PASS => the s1 lateral is NOT necessary and must be removed
+F6,B vs S: lane>=thr & mAP>=thr & |dDA|<=thr,0.5946,0.5951,0.5913,PASS,mAP50=0.4954>=0.4885; |dDA| vs S checked when both_s0 present
+F7,|mAP50(B) - mAP50(lean+km)|,0.0046,0.0000,0.0096,PASS,lane branch must not perturb detection
+F8,"U- dominates U (flops<=, lane+, mAP-<=2sig)",0.4959,0.5874,0.5912,FAIL,flops 1.6158 <= 1.665; mAP 0.5326 >= 0.5236
+F1b*,lane_mIoU(B) 3-seed mean,0.5959,0.5951,0.5913,PASS,"supplementary: B n=3 (seeds 0,1,2)"
+F2b*,lane_mIoU(B) 3-seed mean,0.5959,0.5827,0.5865,PASS,"supplementary: B n=3 (seeds 0,1,2)"
+F6b*,"B vs S: lane & mAP & |dDA|, 3-seed means",0.5959,0.5951,0.5913,PASS,mAP50=0.4978>=0.4885; |dDA|=0.0012<=0.0023
+F7b*,"|mAP50(B) - mAP50(lean+km)|, 3-seed means",0.0028,0.0000,0.0096,PASS,supplementary: B n=3 vs lean+km n=3

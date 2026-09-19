@@ -1,0 +1,17 @@
+{
+  "model": "Round3TLP-small-channel",
+  "split": "tri_val",
+  "input_size": [
+    640,
+    640
+  ],
+  "eval_fwd_ms": 7.703,
+  "eval_fps": 129.82,
+  "da_pixel_acc": 0.9505,
+  "da_fg_iou": 0.7729,
+  "da_mIoU": 0.8567,
+  "lane_pixel_acc": 0.9775,
+  "lane_fg_iou": 0.2196,
+  "lane_mIoU": 0.5985,
+  "lane_line_acc": 0.8731
+}

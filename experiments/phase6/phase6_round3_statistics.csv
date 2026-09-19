@@ -1,0 +1,32 @@
+block,entity,metric,value,unit,note
+budget,EXP-9A,batch,6,,"re-frozen 11.4: bs8 was a WDDM VRAM-cliff artifact (4887 ms/step, 104.3% reservation)"
+budget,EXP-9A,images,69863,,full tri_train (was 4000 under the pre-11.4 freeze)
+budget,EXP-9A,epochs,1,,re-frozen 11.4: 11643 steps in the same wall clock the 1333-step budget used
+budget,EXP-9A,ms_per_step_measured,222,,measured at bs6 during the STEP-2 run
+budget,EXP-9A,lr,0.0001,,re-calibrated 11.4 by a criterion stated before the probes (preserve released weights)
+budget,EXP-9B,batch,16,,"b24 slower per image (23.9 vs 20.5 ms), rejected on throughput"
+budget,EXP-9B,images,69863,,full tri_train
+budget,EXP-9B,epochs,3,,"prereg section 5, 60-90 min window"
+budget,EXP-9B,ms_per_step_measured,255,,measured at bs16 during the STEP-2 run
+budget,EXP-9B,lr,0.0001,,"registered design choice, prereg 11.1(c)"
+H1.instrument,A0_shipped,zero_pos_rate,0.4941,,"project rule, STEP-1 zero-training"
+H1.instrument,A0_shipped,mean_best_iou,0.4161,,"project rule, STEP-1 zero-training"
+H1.instrument,A1_flip,zero_pos_rate,0.1666,,"project rule, STEP-1 zero-training"
+H1.instrument,A1_flip,mean_best_iou,0.5419,,"project rule, STEP-1 zero-training"
+H1.instrument,A2_kmeans,zero_pos_rate,0.0374,,"project rule, STEP-1 zero-training"
+H1.instrument,A2_kmeans,mean_best_iou,0.6805,,"project rule, STEP-1 zero-training"
+H1.instrument,ladder,span_zero_pos,0.4567,,ratio_to_floor=47.6 (floor=2sigma_R2=0.0096)
+H1.instrument,ladder,tier,SUPPORTED,,prereg section 6
+H1.accuracy,A0_shipped,mAP50,0.5407,,EXP-9A trained
+H1.accuracy,A1_flip,mAP50,0.6846,,EXP-9A trained
+H1.accuracy,A2_kmeans,mAP50,0.7400,,EXP-9A trained
+H1.accuracy,ladder,span,0.1993,,ratio_to_floor=20.76
+H1.accuracy,ladder,rho,1,,expect +1
+H1.accuracy,ladder,tier,SUPPORTED,,prereg 6 + 11.1(d)
+H2.lane,B0_baseline,lane_mIoU,0.5988,,EXP-9B trained
+H2.lane,B1_spatial,lane_mIoU,0.6004,,EXP-9B trained
+H2.lane,B2_channel,lane_mIoU,0.5985,,EXP-9B trained
+H2.lane,B1-B0,spatial_gain,0.0016,,lane_mIoU
+H2.lane,B2-B0,channel_gain,-0.0003,,lane_mIoU
+H2.lane,B1-B2,spatial_advantage,0.0019,,ratio_to_floor=0.20
+H2.lane,ladder,tier,WEAK SUPPORT,,prereg section 6/7

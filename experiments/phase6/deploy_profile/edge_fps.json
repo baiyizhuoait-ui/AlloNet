@@ -1,0 +1,181 @@
+{
+  "ours_GFLOPs": {
+    "640x640": 1.1656,
+    "384x640": 0.6994
+  },
+  "host_extra_ms": [
+    2.0,
+    4.0
+  ],
+  "cpu_anchor_measured": {
+    "640x640_t1": {
+      "p50": 30.3,
+      "p90": 34.6,
+      "FPS": 33.0
+    },
+    "640x640_t4": {
+      "p50": 16.9,
+      "p90": 18.9,
+      "FPS": 59.3
+    },
+    "384x640_t1": {
+      "p50": 17.2,
+      "p90": 19.4,
+      "FPS": 58.0
+    },
+    "384x640_t4": {
+      "p50": 12.6,
+      "p90": 15.2,
+      "FPS": 79.1
+    }
+  },
+  "rows": [
+    {
+      "device": "RK3588 (1 NPU core)",
+      "price": "\u00a5300-800 board (6 TOPS)",
+      "method": "two-anchor fit",
+      "k": 1.91,
+      "a": 10.39,
+      "latency_ms": 15.6,
+      "FPS": 64.1,
+      "ceiling_FPS": 276,
+      "anchors": [
+        "YOLOv8n INT8 37 FPS",
+        "YOLOv8s INT8 15 FPS"
+      ],
+      "source": "Orange Pi 5 Max, RKNN INT8, end-to-end",
+      "confidence": "medium"
+    },
+    {
+      "device": "Jetson Orin Nano (15W)",
+      "price": "\u00a52000-2800 devkit",
+      "method": "two-anchor fit",
+      "k": 0.23,
+      "a": 12.28,
+      "latency_ms": 15.6,
+      "FPS": 64.3,
+      "ceiling_FPS": 522,
+      "anchors": [
+        "YOLOv8n INT8 65-75 FPS",
+        "YOLOv8s INT8 48-58 FPS"
+      ],
+      "source": "TensorRT INT8, MAXN 15W",
+      "confidence": "medium"
+    },
+    {
+      "device": "Jetson Nano (2019)",
+      "price": "\u00a5400-600 used",
+      "method": "two-anchor fit",
+      "k": 3.198,
+      "a": 8.54,
+      "latency_ms": 15.3,
+      "FPS": 65.5,
+      "ceiling_FPS": 205,
+      "anchors": [
+        "YOLOv8n INT8 25-30 FPS",
+        "YOLOv8s INT8 8-12 FPS"
+      ],
+      "source": "JetPack 4.x, INT8",
+      "confidence": "medium"
+    },
+    {
+      "device": "K230 CanMV (KPU)",
+      "price": "\u00a5239-299 board (JD, 2026-09)",
+      "method": "single anchor -> bound",
+      "latency_ms": 22.2,
+      "latency_ms_lo": 15.0,
+      "latency_ms_hi": 29.3,
+      "FPS": 45.1,
+      "FPS_lo": 34.1,
+      "FPS_hi": 66.7,
+      "anchors": [
+        "YOLOv5s >=38 FPS (nncase INT8)"
+      ],
+      "source": "vendor spec, single anchor",
+      "confidence": "low"
+    },
+    {
+      "device": "RK3568 (1 TOPS NPU)",
+      "price": "\u00a5150-300 board",
+      "method": "single anchor -> bound",
+      "latency_ms": 42.3,
+      "latency_ms_lo": 15.0,
+      "latency_ms_hi": 69.7,
+      "FPS": 23.6,
+      "FPS_lo": 14.4,
+      "FPS_hi": 66.7,
+      "anchors": [
+        "YOLOv5s 14-16 FPS"
+      ],
+      "source": "RKNN INT8, single anchor",
+      "confidence": "low"
+    },
+    {
+      "device": "RK3588 (3-core async)",
+      "price": "\u00a5300-800 board (6 TOPS)",
+      "method": "single anchor -> bound",
+      "latency_ms": 13.5,
+      "latency_ms_lo": 12.0,
+      "latency_ms_hi": 15.0,
+      "FPS": 74.0,
+      "FPS_lo": 66.7,
+      "FPS_hi": 83.3,
+      "anchors": [
+        "YOLOv8n INT8 111 FPS"
+      ],
+      "source": "3 NPU cores asynchronous pipeline, single anchor",
+      "confidence": "low"
+    },
+    {
+      "device": "Raspberry Pi 5 (4x A76)",
+      "price": "\u00a5400-600 (4 GB)",
+      "method": "scaled from this machine's CPU measurement",
+      "base_note": "measured here: 30.3 ms (1 thread) / 16.9 ms (4 threads)",
+      "latency_ms": 30.7,
+      "FPS": 32.5,
+      "anchors": [
+        "CPU only, no NPU in use"
+      ],
+      "confidence": "low"
+    },
+    {
+      "device": "Old mid-range phone CPU (SD660 / Helio G85 class)",
+      "price": "\u00a5300-500 used phone",
+      "method": "scaled from this machine's CPU measurement",
+      "base_note": "measured here: 30.3 ms (1 thread) / 16.9 ms (4 threads)",
+      "latency_ms": 48.3,
+      "FPS": 20.7,
+      "anchors": [
+        "CPU only, NNAPI unreliable on this class"
+      ],
+      "confidence": "low"
+    },
+    {
+      "device": "Old flagship phone (SD845 class, 2018)",
+      "price": "\u00a5600-900 used phone",
+      "method": "scaled from this machine's CPU measurement",
+      "base_note": "measured here: 30.3 ms (1 thread) / 16.9 ms (4 threads)",
+      "latency_ms": 28.2,
+      "FPS": 35.5,
+      "anchors": [
+        "CPU path measured proxy; Adreno 630 GPU would be faster"
+      ],
+      "confidence": "low"
+    },
+    {
+      "device": "Cheap IP-camera SoC (RV1106 / Ingenic T41 class, 0.5 TOPS, 64 MB DDR)",
+      "price": "\u00a560-100 (board)",
+      "method": "RANGE from published constraints, no anchor",
+      "latency_ms": 7.8,
+      "latency_ms_lo": 7.8,
+      "latency_ms_hi": 45.0,
+      "FPS": 22.2,
+      "FPS_lo": 22.2,
+      "FPS_hi": 128.7,
+      "anchors": [
+        "no anchor; needs a 1-hour on-device test"
+      ],
+      "confidence": "very low"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+tag,encoder,supervision,lane_res,lane_use_f1,lane_hidden,params,params_M,flops_G,d_params,d_flops_G,flops_x
+R0_no_repair_1_8,lean,km,8,False,32,201366,0.2014,1.0796288,0,0.0,1.0
+R1_full_1_4_h32,lean,km,4,True,32,201878,0.2019,1.6391424,512,0.5595,1.5182
+R2_thin_1_4_h16,lean,km,4,True,16,192566,0.1926,1.1656448,-8800,0.086,1.0797
+R3_min_1_4_h8,lean,km,4,True,8,189638,0.1896,1.0173696,-11728,-0.0623,0.9423
+R4_uponly_1_4_h32,lean,km,4,False,32,201366,0.2014,1.612928,0,0.5333,1.494
+B_lean_km,lean,km,8,False,32,201366,0.2014,1.0796288,0,0.0,1.0
+B_thin_km,lean,km,4,True,16,192566,0.1926,1.1656448,-8800,0.086,1.0797
+S_full_km,lean,km,4,True,32,201878,0.2019,1.6391424,512,0.5595,1.5182
+S_full_old,lean,old,4,True,32,201878,0.2019,1.6391424,512,0.5595,1.5182
+U_floor_km,uniform,km,8,False,32,333862,0.3339,1.664992,132496,0.5854,1.5422
+U_thin_km,uniform,km,4,True,16,325318,0.3253,1.7641152,123952,0.6845,1.634
+U_min_km,uniform,km,4,True,8,322390,0.3224,1.61584,121024,0.5362,1.4967

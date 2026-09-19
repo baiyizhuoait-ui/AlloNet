@@ -1,0 +1,73 @@
+{
+  "model": {
+    "cfg": "configs/phase6_r4_R2_thin14_z16.yaml",
+    "ckpt": "experiments/phase6/final/B100/checkpoint.pt",
+    "params": 192566,
+    "missing": 0,
+    "unexpected": 0,
+    "epoch": 100
+  },
+  "n_calib": 30,
+  "n_eval": 60,
+  "head_mode": "per_channel",
+  "observer": "p9999",
+  "mem_avail_mb": 8848,
+  "rows": [
+    {
+      "bits": 8,
+      "da_pixel_agreement": 0.99426,
+      "da_fg_iou": 0.94269,
+      "lane_pixel_agreement": 0.99644,
+      "lane_fg_iou": 0.73946,
+      "det_obj_zero_frac": 0.98862,
+      "det_boxes_preserved": 0.9369,
+      "det_nms_boxes_c25": 9.55,
+      "head_output_step": 0.006694
+    },
+    {
+      "bits": 7,
+      "da_pixel_agreement": 0.98452,
+      "da_fg_iou": 0.85555,
+      "lane_pixel_agreement": 0.99421,
+      "lane_fg_iou": 0.5973,
+      "det_obj_zero_frac": 0.99127,
+      "det_boxes_preserved": 0.80911,
+      "det_nms_boxes_c25": 9.05,
+      "head_output_step": 0.013494
+    },
+    {
+      "bits": 6,
+      "da_pixel_agreement": 0.91525,
+      "da_fg_iou": 0.53706,
+      "lane_pixel_agreement": 0.98919,
+      "lane_fg_iou": 0.3732,
+      "det_obj_zero_frac": 0.99342,
+      "det_boxes_preserved": 0.49756,
+      "det_nms_boxes_c25": 9.82,
+      "head_output_step": 0.027423
+    },
+    {
+      "bits": 5,
+      "da_pixel_agreement": 0.87143,
+      "da_fg_iou": 0.00013,
+      "lane_pixel_agreement": 0.98466,
+      "lane_fg_iou": 0.02096,
+      "det_obj_zero_frac": 0.99702,
+      "det_boxes_preserved": 0.05308,
+      "det_nms_boxes_c25": 5.2,
+      "head_output_step": 0.056674
+    },
+    {
+      "bits": 4,
+      "da_pixel_agreement": 0.88055,
+      "da_fg_iou": 0.0,
+      "lane_pixel_agreement": 0.92226,
+      "lane_fg_iou": 0.03977,
+      "det_obj_zero_frac": 0.99465,
+      "det_boxes_preserved": 0.06287,
+      "det_nms_boxes_c25": 27.45,
+      "head_output_step": 0.121444
+    }
+  ],
+  "_note": "PTQ fake-quant with the detection-head quantiser present; no bias correction / AdaRound / QAT, so every row is a LOWER bound.  Simulation, not a vendor toolchain."
+}

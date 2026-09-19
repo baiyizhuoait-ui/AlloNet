@@ -1,0 +1,33 @@
+{
+  "model": "YOLOP",
+  "split": "tri_val",
+  "input_size": [
+    640,
+    640
+  ],
+  "eval_fwd_ms": 13.439,
+  "eval_fps": 74.41,
+  "mAP50": 0.5407,
+  "mAP50_95": 0.2369,
+  "det_n_gt": 108353,
+  "det_n_pred": 625107,
+  "det_AP50_small": 0.4654,
+  "det_AP5095_small": 0.1527,
+  "det_recall50_small": 0.8063,
+  "det_ngt_small": 74605,
+  "det_AP50_medium": 0.4482,
+  "det_AP5095_medium": 0.3116,
+  "det_recall50_medium": 0.9187,
+  "det_ngt_medium": 25805,
+  "det_AP50_large": 0.2095,
+  "det_AP5095_large": 0.1741,
+  "det_recall50_large": 0.5296,
+  "det_ngt_large": 7953,
+  "da_pixel_acc": 0.9588,
+  "da_fg_iou": 0.8033,
+  "da_mIoU": 0.8769,
+  "lane_pixel_acc": 0.9777,
+  "lane_fg_iou": 0.2279,
+  "lane_mIoU": 0.6028,
+  "lane_line_acc": 0.8869
+}

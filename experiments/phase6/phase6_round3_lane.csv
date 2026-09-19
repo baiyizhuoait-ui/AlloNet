@@ -1,0 +1,7 @@
+stage,preset,arm,params,extra_params,dc,flops_G,d_flops_vs_baseline_G,parity_gap_pct,parity_verdict,lane_mIoU,lane_fg_iou,da_mIoU,note
+design,small,baseline,121552,0,0,4.213447,0.000000,0.0348,PARITY-OK,NA,NA,NA,primary preset; C14=67 C0=8; step0 identical to baseline
+design,small,spatial,121756,204,0,4.223738,0.010291,0.0348,PARITY-OK,NA,NA,NA,primary preset; C14=67 C0=8; step0 identical to baseline
+design,small,channel,121815,263,13,4.224096,0.010650,0.0348,PARITY-OK,NA,NA,NA,primary preset; C14=67 C0=8; step0 identical to baseline
+design,nano,baseline,33379,0,0,1.588261,0.000000,0.0095,PARITY-OK,NA,NA,NA,primary preset; C14=35 C0=4; step0 identical to baseline
+design,nano,spatial,33487,108,0,1.593637,0.005376,0.0095,PARITY-OK,NA,NA,NA,primary preset; C14=35 C0=4; step0 identical to baseline
+design,nano,channel,33530,151,13,1.593586,0.005325,0.0095,PARITY-OK,NA,NA,NA,primary preset; C14=35 C0=4; step0 identical to baseline

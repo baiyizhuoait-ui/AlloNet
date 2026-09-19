@@ -1,0 +1,4080 @@
+{
+  "device": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "torch": "2.11.0+cu130",
+  "cuda": "13.0",
+  "gpu_state_start": {
+    "util_pct": 26,
+    "mem_mib": 207,
+    "temp_c": 41,
+    "sm_mhz": 450,
+    "power_w": 7.68,
+    "compute_apps": ""
+  },
+  "batch": [
+    1,
+    16
+  ],
+  "sessions": [
+    {
+      "model": "Ours B100 (100ep s0)",
+      "params": 192566,
+      "batch": 1,
+      "protocol": "AS_SHIPPED_OURS",
+      "n_sessions": 10,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 3,
+            "mean": 9.4435,
+            "p50": 10.2152,
+            "p95": 10.6183,
+            "p99": 10.6183,
+            "min": 7.4972,
+            "max": 10.6183,
+            "sd": 1.3861
+          },
+          "clock_before": 570,
+          "clock_after": 1387,
+          "temp_c": 41,
+          "power_w": 11.78
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 3,
+            "mean": 2.7446,
+            "p50": 2.7202,
+            "p95": 2.9571,
+            "p99": 2.9571,
+            "min": 2.5566,
+            "max": 2.9571,
+            "sd": 0.1644
+          },
+          "clock_before": 1387,
+          "clock_after": 1387,
+          "temp_c": 41,
+          "power_w": 14.32
+        },
+        {
+          "rep": 2,
+          "stats": {
+            "n": 3,
+            "mean": 2.4102,
+            "p50": 2.4008,
+            "p95": 2.4512,
+            "p99": 2.4512,
+            "min": 2.3785,
+            "max": 2.4512,
+            "sd": 0.0304
+          },
+          "clock_before": 1387,
+          "clock_after": 2025,
+          "temp_c": 41,
+          "power_w": 14.79
+        },
+        {
+          "rep": 3,
+          "stats": {
+            "n": 3,
+            "mean": 2.4169,
+            "p50": 2.4189,
+            "p95": 2.4281,
+            "p99": 2.4281,
+            "min": 2.4036,
+            "max": 2.4281,
+            "sd": 0.0101
+          },
+          "clock_before": 2025,
+          "clock_after": 2025,
+          "temp_c": 41,
+          "power_w": 18.3
+        },
+        {
+          "rep": 4,
+          "stats": {
+            "n": 3,
+            "mean": 2.5878,
+            "p50": 2.597,
+            "p95": 2.6981,
+            "p99": 2.6981,
+            "min": 2.4684,
+            "max": 2.6981,
+            "sd": 0.094
+          },
+          "clock_before": 2025,
+          "clock_after": 2025,
+          "temp_c": 42,
+          "power_w": 19.74
+        },
+        {
+          "rep": 5,
+          "stats": {
+            "n": 3,
+            "mean": 3.5219,
+            "p50": 2.5164,
+            "p95": 5.6766,
+            "p99": 5.6766,
+            "min": 2.3726,
+            "max": 5.6766,
+            "sd": 1.5247
+          },
+          "clock_before": 2025,
+          "clock_after": 1905,
+          "temp_c": 42,
+          "power_w": 19.14
+        },
+        {
+          "rep": 6,
+          "stats": {
+            "n": 3,
+            "mean": 2.8825,
+            "p50": 2.6627,
+            "p95": 3.5447,
+            "p99": 3.5447,
+            "min": 2.44,
+            "max": 3.5447,
+            "sd": 0.477
+          },
+          "clock_before": 1905,
+          "clock_after": 1905,
+          "temp_c": 42,
+          "power_w": 20.96
+        },
+        {
+          "rep": 7,
+          "stats": {
+            "n": 3,
+            "mean": 2.5809,
+            "p50": 2.6569,
+            "p95": 2.7831,
+            "p99": 2.7831,
+            "min": 2.3027,
+            "max": 2.7831,
+            "sd": 0.2033
+          },
+          "clock_before": 1905,
+          "clock_after": 1905,
+          "temp_c": 42,
+          "power_w": 20.15
+        },
+        {
+          "rep": 8,
+          "stats": {
+            "n": 3,
+            "mean": 2.2631,
+            "p50": 2.2662,
+            "p95": 2.2833,
+            "p99": 2.2833,
+            "min": 2.2399,
+            "max": 2.2833,
+            "sd": 0.0178
+          },
+          "clock_before": 1905,
+          "clock_after": 1905,
+          "temp_c": 42,
+          "power_w": 21.2
+        },
+        {
+          "rep": 9,
+          "stats": {
+            "n": 3,
+            "mean": 2.3618,
+            "p50": 2.3248,
+            "p95": 2.4453,
+            "p99": 2.4453,
+            "min": 2.3153,
+            "max": 2.4453,
+            "sd": 0.0592
+          },
+          "clock_before": 1935,
+          "clock_after": 1935,
+          "temp_c": 42,
+          "power_w": 20.6
+        }
+      ],
+      "p50_min": 2.2662,
+      "p50_max": 10.2152,
+      "spread_ratio": 4.508,
+      "wall_s": 2.0
+    },
+    {
+      "model": "Ours B100 (100ep s0)",
+      "params": 192566,
+      "batch": 1,
+      "protocol": "AS_SHIPPED_BASE",
+      "n_sessions": 3,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 100,
+            "mean": 2.8595,
+            "p50": 2.3005,
+            "p95": 7.5301,
+            "p99": 10.5384,
+            "min": 2.043,
+            "max": 10.5384,
+            "sd": 1.6843
+          },
+          "clock_before": 1935,
+          "clock_after": 2272,
+          "temp_c": 43,
+          "power_w": 26.25
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 100,
+            "mean": 3.715,
+            "p50": 2.5634,
+            "p95": 8.5663,
+            "p99": 9.2944,
+            "min": 2.1561,
+            "max": 9.2944,
+            "sd": 2.2797
+          },
+          "clock_before": 2272,
+          "clock_after": 2377,
+          "temp_c": 45,
+          "power_w": 35.92
+        },
+        {
+          "rep": 2,
+          "stats": {
+            "n": 100,
+            "mean": 5.8309,
+            "p50": 7.4105,
+            "p95": 8.91,
+            "p99": 9.2134,
+            "min": 2.0725,
+            "max": 9.2134,
+            "sd": 2.6366
+          },
+          "clock_before": 2377,
+          "clock_after": 2295,
+          "temp_c": 46,
+          "power_w": 35.61
+        }
+      ],
+      "p50_min": 2.3005,
+      "p50_max": 7.4105,
+      "spread_ratio": 3.221,
+      "wall_s": 1.7
+    },
+    {
+      "model": "Ours B100 (100ep s0)",
+      "params": 192566,
+      "batch": 1,
+      "protocol": "FIXED",
+      "n_sessions": 3,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 300,
+            "mean": 2.6954,
+            "p50": 2.3964,
+            "p95": 5.1143,
+            "p99": 8.9212,
+            "min": 1.9568,
+            "max": 11.4285,
+            "sd": 1.2846
+          },
+          "clock_before": 2295,
+          "clock_after": 2947,
+          "temp_c": 48,
+          "power_w": 47.37
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 300,
+            "mean": 3.6258,
+            "p50": 2.4862,
+            "p95": 8.4392,
+            "p99": 9.5165,
+            "min": 2.0515,
+            "max": 9.9963,
+            "sd": 2.2875
+          },
+          "clock_before": 2947,
+          "clock_after": 2955,
+          "temp_c": 49,
+          "power_w": 40.17
+        },
+        {
+          "rep": 2,
+          "stats": {
+            "n": 300,
+            "mean": 2.8648,
+            "p50": 2.4521,
+            "p95": 7.733,
+            "p99": 9.1712,
+            "min": 2.0167,
+            "max": 9.2909,
+            "sd": 1.4922
+          },
+          "clock_before": 2947,
+          "clock_after": 2947,
+          "temp_c": 48,
+          "power_w": 45.89
+        }
+      ],
+      "p50_min": 2.3964,
+      "p50_max": 2.4862,
+      "spread_ratio": 1.037,
+      "wall_s": 5.2
+    },
+    {
+      "model": "Ours B100 (100ep s0)",
+      "params": 192566,
+      "batch": 16,
+      "protocol": "AS_SHIPPED_OURS",
+      "n_sessions": 2,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 3,
+            "mean": 20.4903,
+            "p50": 20.5631,
+            "p95": 20.6017,
+            "p99": 20.6017,
+            "min": 20.306,
+            "max": 20.6017,
+            "sd": 0.1313
+          },
+          "clock_before": 2947,
+          "clock_after": 2947,
+          "temp_c": 49,
+          "power_w": 50.1
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 3,
+            "mean": 20.2077,
+            "p50": 20.2169,
+            "p95": 20.5455,
+            "p99": 20.5455,
+            "min": 19.8605,
+            "max": 20.5455,
+            "sd": 0.2797
+          },
+          "clock_before": 2947,
+          "clock_after": 2512,
+          "temp_c": 49,
+          "power_w": 56.63
+        }
+      ],
+      "p50_min": 20.2169,
+      "p50_max": 20.5631,
+      "spread_ratio": 1.017,
+      "wall_s": 0.8
+    },
+    {
+      "model": "Ours B100 (100ep s0)",
+      "params": 192566,
+      "batch": 16,
+      "protocol": "AS_SHIPPED_BASE",
+      "n_sessions": 2,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 100,
+            "mean": 20.5966,
+            "p50": 20.563,
+            "p95": 21.4434,
+            "p99": 21.6805,
+            "min": 19.6762,
+            "max": 21.6805,
+            "sd": 0.5148
+          },
+          "clock_before": 2512,
+          "clock_after": 2940,
+          "temp_c": 54,
+          "power_w": 85.82
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 100,
+            "mean": 20.8157,
+            "p50": 20.6914,
+            "p95": 21.892,
+            "p99": 22.456,
+            "min": 19.9151,
+            "max": 22.456,
+            "sd": 0.5689
+          },
+          "clock_before": 2940,
+          "clock_after": 2932,
+          "temp_c": 55,
+          "power_w": 85.61
+        }
+      ],
+      "p50_min": 20.563,
+      "p50_max": 20.6914,
+      "spread_ratio": 1.006,
+      "wall_s": 4.8
+    },
+    {
+      "model": "Ours B100 (100ep s0)",
+      "params": 192566,
+      "batch": 16,
+      "protocol": "FIXED",
+      "n_sessions": 2,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 120,
+            "mean": 20.7077,
+            "p50": 20.7166,
+            "p95": 21.5778,
+            "p99": 21.8592,
+            "min": 19.5745,
+            "max": 22.1572,
+            "sd": 0.5491
+          },
+          "clock_before": 2932,
+          "clock_after": 2932,
+          "temp_c": 57,
+          "power_w": 86.04
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 120,
+            "mean": 20.0777,
+            "p50": 19.9856,
+            "p95": 20.9948,
+            "p99": 21.4394,
+            "min": 19.4329,
+            "max": 21.7169,
+            "sd": 0.4223
+          },
+          "clock_before": 2932,
+          "clock_after": 2940,
+          "temp_c": 59,
+          "power_w": 88.81
+        }
+      ],
+      "p50_min": 19.9856,
+      "p50_max": 20.7166,
+      "spread_ratio": 1.037,
+      "wall_s": 10.1
+    },
+    {
+      "model": "Ours B40 (40ep s0)",
+      "params": 192566,
+      "batch": 1,
+      "protocol": "AS_SHIPPED_OURS",
+      "n_sessions": 10,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 3,
+            "mean": 2.6066,
+            "p50": 2.5938,
+            "p95": 2.6767,
+            "p99": 2.6767,
+            "min": 2.5493,
+            "max": 2.6767,
+            "sd": 0.0528
+          },
+          "clock_before": 2640,
+          "clock_after": 2640,
+          "temp_c": 53,
+          "power_w": 32.9
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 3,
+            "mean": 2.5694,
+            "p50": 2.475,
+            "p95": 2.7606,
+            "p99": 2.7606,
+            "min": 2.4724,
+            "max": 2.7606,
+            "sd": 0.1352
+          },
+          "clock_before": 2640,
+          "clock_after": 2640,
+          "temp_c": 53,
+          "power_w": 31.04
+        },
+        {
+          "rep": 2,
+          "stats": {
+            "n": 3,
+            "mean": 2.4487,
+            "p50": 2.4074,
+            "p95": 2.6567,
+            "p99": 2.6567,
+            "min": 2.2819,
+            "max": 2.6567,
+            "sd": 0.1557
+          },
+          "clock_before": 2640,
+          "clock_after": 2640,
+          "temp_c": 53,
+          "power_w": 29.22
+        },
+        {
+          "rep": 3,
+          "stats": {
+            "n": 3,
+            "mean": 4.519,
+            "p50": 4.7784,
+            "p95": 5.4699,
+            "p99": 5.4699,
+            "min": 3.3085,
+            "max": 5.4699,
+            "sd": 0.9012
+          },
+          "clock_before": 1335,
+          "clock_after": 1335,
+          "temp_c": 51,
+          "power_w": 26.62
+        },
+        {
+          "rep": 4,
+          "stats": {
+            "n": 3,
+            "mean": 2.2721,
+            "p50": 2.2061,
+            "p95": 2.4482,
+            "p99": 2.4482,
+            "min": 2.1618,
+            "max": 2.4482,
+            "sd": 0.1259
+          },
+          "clock_before": 1335,
+          "clock_after": 1335,
+          "temp_c": 51,
+          "power_w": 22.84
+        },
+        {
+          "rep": 5,
+          "stats": {
+            "n": 3,
+            "mean": 2.552,
+            "p50": 2.5519,
+            "p95": 2.6624,
+            "p99": 2.6624,
+            "min": 2.4417,
+            "max": 2.6624,
+            "sd": 0.0901
+          },
+          "clock_before": 1335,
+          "clock_after": 1725,
+          "temp_c": 49,
+          "power_w": 21.17
+        },
+        {
+          "rep": 6,
+          "stats": {
+            "n": 3,
+            "mean": 7.9342,
+            "p50": 7.9271,
+            "p95": 8.1006,
+            "p99": 8.1006,
+            "min": 7.7749,
+            "max": 8.1006,
+            "sd": 0.1331
+          },
+          "clock_before": 1725,
+          "clock_after": 1725,
+          "temp_c": 49,
+          "power_w": 20.65
+        },
+        {
+          "rep": 7,
+          "stats": {
+            "n": 3,
+            "mean": 4.6329,
+            "p50": 3.1693,
+            "p95": 8.2722,
+            "p99": 8.2722,
+            "min": 2.4573,
+            "max": 8.2722,
+            "sd": 2.5897
+          },
+          "clock_before": 1725,
+          "clock_after": 1725,
+          "temp_c": 49,
+          "power_w": 20.14
+        },
+        {
+          "rep": 8,
+          "stats": {
+            "n": 3,
+            "mean": 2.2757,
+            "p50": 2.2676,
+            "p95": 2.33,
+            "p99": 2.33,
+            "min": 2.2295,
+            "max": 2.33,
+            "sd": 0.0414
+          },
+          "clock_before": 1725,
+          "clock_after": 1290,
+          "temp_c": 49,
+          "power_w": 21.11
+        },
+        {
+          "rep": 9,
+          "stats": {
+            "n": 3,
+            "mean": 2.3696,
+            "p50": 2.4735,
+            "p95": 2.4821,
+            "p99": 2.4821,
+            "min": 2.1532,
+            "max": 2.4821,
+            "sd": 0.153
+          },
+          "clock_before": 1290,
+          "clock_after": 1290,
+          "temp_c": 49,
+          "power_w": 19.44
+        }
+      ],
+      "p50_min": 2.2061,
+      "p50_max": 7.9271,
+      "spread_ratio": 3.593,
+      "wall_s": 1.8
+    },
+    {
+      "model": "Ours B40 (40ep s0)",
+      "params": 192566,
+      "batch": 1,
+      "protocol": "AS_SHIPPED_BASE",
+      "n_sessions": 3,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 100,
+            "mean": 4.7333,
+            "p50": 2.9733,
+            "p95": 8.2818,
+            "p99": 8.9894,
+            "min": 2.1655,
+            "max": 8.9894,
+            "sd": 2.535
+          },
+          "clock_before": 1290,
+          "clock_after": 1057,
+          "temp_c": 50,
+          "power_w": 28.61
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 100,
+            "mean": 4.8171,
+            "p50": 2.6874,
+            "p95": 8.6521,
+            "p99": 8.8626,
+            "min": 2.1477,
+            "max": 8.8626,
+            "sd": 2.6985
+          },
+          "clock_before": 1057,
+          "clock_after": 2947,
+          "temp_c": 51,
+          "power_w": 36.12
+        },
+        {
+          "rep": 2,
+          "stats": {
+            "n": 100,
+            "mean": 2.7133,
+            "p50": 2.4766,
+            "p95": 5.2794,
+            "p99": 8.0665,
+            "min": 2.1235,
+            "max": 8.0665,
+            "sd": 1.0442
+          },
+          "clock_before": 2947,
+          "clock_after": 2947,
+          "temp_c": 51,
+          "power_w": 34.82
+        }
+      ],
+      "p50_min": 2.4766,
+      "p50_max": 2.9733,
+      "spread_ratio": 1.201,
+      "wall_s": 1.7
+    },
+    {
+      "model": "Ours B40 (40ep s0)",
+      "params": 192566,
+      "batch": 1,
+      "protocol": "FIXED",
+      "n_sessions": 3,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 300,
+            "mean": 3.4437,
+            "p50": 2.3829,
+            "p95": 8.329,
+            "p99": 8.8419,
+            "min": 2.0003,
+            "max": 9.4855,
+            "sd": 2.2369
+          },
+          "clock_before": 2227,
+          "clock_after": 2947,
+          "temp_c": 51,
+          "power_w": 41.92
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 300,
+            "mean": 3.6644,
+            "p50": 2.4788,
+            "p95": 8.2765,
+            "p99": 8.862,
+            "min": 2.0151,
+            "max": 11.2224,
+            "sd": 2.3356
+          },
+          "clock_before": 2947,
+          "clock_after": 2947,
+          "temp_c": 51,
+          "power_w": 42.02
+        },
+        {
+          "rep": 2,
+          "stats": {
+            "n": 300,
+            "mean": 3.1939,
+            "p50": 2.4408,
+            "p95": 8.0953,
+            "p99": 8.7558,
+            "min": 2.0196,
+            "max": 9.3221,
+            "sd": 1.8853
+          },
+          "clock_before": 2947,
+          "clock_after": 2955,
+          "temp_c": 53,
+          "power_w": 43.96
+        }
+      ],
+      "p50_min": 2.3829,
+      "p50_max": 2.4788,
+      "spread_ratio": 1.04,
+      "wall_s": 5.4
+    },
+    {
+      "model": "Ours B40 (40ep s0)",
+      "params": 192566,
+      "batch": 16,
+      "protocol": "AS_SHIPPED_OURS",
+      "n_sessions": 2,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 3,
+            "mean": 20.7074,
+            "p50": 20.7656,
+            "p95": 20.869,
+            "p99": 20.869,
+            "min": 20.4875,
+            "max": 20.869,
+            "sd": 0.1611
+          },
+          "clock_before": 2955,
+          "clock_after": 2955,
+          "temp_c": 53,
+          "power_w": 48.08
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 3,
+            "mean": 20.3026,
+            "p50": 20.603,
+            "p95": 20.6911,
+            "p99": 20.6911,
+            "min": 19.6138,
+            "max": 20.6911,
+            "sd": 0.4884
+          },
+          "clock_before": 2955,
+          "clock_after": 2925,
+          "temp_c": 49,
+          "power_w": 57.08
+        }
+      ],
+      "p50_min": 20.603,
+      "p50_max": 20.7656,
+      "spread_ratio": 1.008,
+      "wall_s": 0.8
+    },
+    {
+      "model": "Ours B40 (40ep s0)",
+      "params": 192566,
+      "batch": 16,
+      "protocol": "AS_SHIPPED_BASE",
+      "n_sessions": 2,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 100,
+            "mean": 20.3808,
+            "p50": 20.3062,
+            "p95": 21.1966,
+            "p99": 21.6577,
+            "min": 19.6607,
+            "max": 21.6577,
+            "sd": 0.4781
+          },
+          "clock_before": 2925,
+          "clock_after": 2932,
+          "temp_c": 58,
+          "power_w": 86.1
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 100,
+            "mean": 20.6581,
+            "p50": 20.7017,
+            "p95": 21.3131,
+            "p99": 22.0892,
+            "min": 19.6408,
+            "max": 22.0892,
+            "sd": 0.5087
+          },
+          "clock_before": 2932,
+          "clock_after": 2932,
+          "temp_c": 58,
+          "power_w": 86.81
+        }
+      ],
+      "p50_min": 20.3062,
+      "p50_max": 20.7017,
+      "spread_ratio": 1.019,
+      "wall_s": 4.8
+    },
+    {
+      "model": "Ours B40 (40ep s0)",
+      "params": 192566,
+      "batch": 16,
+      "protocol": "FIXED",
+      "n_sessions": 2,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 120,
+            "mean": 20.5875,
+            "p50": 20.6067,
+            "p95": 21.2442,
+            "p99": 21.5002,
+            "min": 19.5709,
+            "max": 21.5204,
+            "sd": 0.4359
+          },
+          "clock_before": 2932,
+          "clock_after": 2932,
+          "temp_c": 59,
+          "power_w": 87.72
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 120,
+            "mean": 20.599,
+            "p50": 20.6948,
+            "p95": 21.1937,
+            "p99": 21.5303,
+            "min": 19.5399,
+            "max": 22.0589,
+            "sd": 0.457
+          },
+          "clock_before": 2932,
+          "clock_after": 2940,
+          "temp_c": 60,
+          "power_w": 87.49
+        }
+      ],
+      "p50_min": 20.6067,
+      "p50_max": 20.6948,
+      "spread_ratio": 1.004,
+      "wall_s": 10.1
+    },
+    {
+      "model": "Ours B20 (20ep s0)",
+      "params": 192566,
+      "batch": 1,
+      "protocol": "AS_SHIPPED_OURS",
+      "n_sessions": 10,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 3,
+            "mean": 2.4189,
+            "p50": 2.4145,
+            "p95": 2.5348,
+            "p99": 2.5348,
+            "min": 2.3075,
+            "max": 2.5348,
+            "sd": 0.0929
+          },
+          "clock_before": 2632,
+          "clock_after": 2632,
+          "temp_c": 53,
+          "power_w": 35.58
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 3,
+            "mean": 2.4643,
+            "p50": 2.524,
+            "p95": 2.6687,
+            "p99": 2.6687,
+            "min": 2.2003,
+            "max": 2.6687,
+            "sd": 0.1958
+          },
+          "clock_before": 2632,
+          "clock_after": 2632,
+          "temp_c": 53,
+          "power_w": 33.5
+        },
+        {
+          "rep": 2,
+          "stats": {
+            "n": 3,
+            "mean": 2.4488,
+            "p50": 2.4493,
+            "p95": 2.5069,
+            "p99": 2.5069,
+            "min": 2.3902,
+            "max": 2.5069,
+            "sd": 0.0477
+          },
+          "clock_before": 2632,
+          "clock_after": 2632,
+          "temp_c": 53,
+          "power_w": 30.22
+        },
+        {
+          "rep": 3,
+          "stats": {
+            "n": 3,
+            "mean": 2.2445,
+            "p50": 2.1903,
+            "p95": 2.3616,
+            "p99": 2.3616,
+            "min": 2.1815,
+            "max": 2.3616,
+            "sd": 0.0829
+          },
+          "clock_before": 1282,
+          "clock_after": 1282,
+          "temp_c": 50,
+          "power_w": 27.37
+        },
+        {
+          "rep": 4,
+          "stats": {
+            "n": 3,
+            "mean": 2.5372,
+            "p50": 2.585,
+            "p95": 2.6073,
+            "p99": 2.6073,
+            "min": 2.4193,
+            "max": 2.6073,
+            "sd": 0.0839
+          },
+          "clock_before": 1282,
+          "clock_after": 1282,
+          "temp_c": 50,
+          "power_w": 24.33
+        },
+        {
+          "rep": 5,
+          "stats": {
+            "n": 3,
+            "mean": 2.5748,
+            "p50": 2.5072,
+            "p95": 2.7763,
+            "p99": 2.7763,
+            "min": 2.4409,
+            "max": 2.7763,
+            "sd": 0.145
+          },
+          "clock_before": 1282,
+          "clock_after": 1282,
+          "temp_c": 50,
+          "power_w": 21.66
+        },
+        {
+          "rep": 6,
+          "stats": {
+            "n": 3,
+            "mean": 2.4756,
+            "p50": 2.4782,
+            "p95": 2.5254,
+            "p99": 2.5254,
+            "min": 2.4233,
+            "max": 2.5254,
+            "sd": 0.0417
+          },
+          "clock_before": 1282,
+          "clock_after": 1095,
+          "temp_c": 51,
+          "power_w": 20.38
+        },
+        {
+          "rep": 7,
+          "stats": {
+            "n": 3,
+            "mean": 2.2632,
+            "p50": 2.2209,
+            "p95": 2.3825,
+            "p99": 2.3825,
+            "min": 2.1862,
+            "max": 2.3825,
+            "sd": 0.0856
+          },
+          "clock_before": 1095,
+          "clock_after": 1095,
+          "temp_c": 51,
+          "power_w": 19.62
+        },
+        {
+          "rep": 8,
+          "stats": {
+            "n": 3,
+            "mean": 4.7717,
+            "p50": 3.798,
+            "p95": 8.2488,
+            "p99": 8.2488,
+            "min": 2.2683,
+            "max": 8.2488,
+            "sd": 2.5367
+          },
+          "clock_before": 1095,
+          "clock_after": 1095,
+          "temp_c": 51,
+          "power_w": 19.97
+        },
+        {
+          "rep": 9,
+          "stats": {
+            "n": 3,
+            "mean": 2.4914,
+            "p50": 2.5085,
+            "p95": 2.5231,
+            "p99": 2.5231,
+            "min": 2.4428,
+            "max": 2.5231,
+            "sd": 0.0349
+          },
+          "clock_before": 1095,
+          "clock_after": 855,
+          "temp_c": 50,
+          "power_w": 19.06
+        }
+      ],
+      "p50_min": 2.1903,
+      "p50_max": 3.798,
+      "spread_ratio": 1.734,
+      "wall_s": 1.5
+    },
+    {
+      "model": "Ours B20 (20ep s0)",
+      "params": 192566,
+      "batch": 1,
+      "protocol": "AS_SHIPPED_BASE",
+      "n_sessions": 3,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 100,
+            "mean": 2.8166,
+            "p50": 2.4978,
+            "p95": 5.0138,
+            "p99": 7.9436,
+            "min": 2.127,
+            "max": 7.9436,
+            "sd": 1.1207
+          },
+          "clock_before": 855,
+          "clock_after": 855,
+          "temp_c": 50,
+          "power_w": 27.05
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 100,
+            "mean": 2.6179,
+            "p50": 2.4494,
+            "p95": 3.3661,
+            "p99": 7.9461,
+            "min": 2.0721,
+            "max": 7.9461,
+            "sd": 0.9996
+          },
+          "clock_before": 1890,
+          "clock_after": 1890,
+          "temp_c": 54,
+          "power_w": 31.77
+        },
+        {
+          "rep": 2,
+          "stats": {
+            "n": 100,
+            "mean": 2.5064,
+            "p50": 2.4737,
+            "p95": 2.9962,
+            "p99": 4.6271,
+            "min": 2.1357,
+            "max": 4.6271,
+            "sd": 0.3034
+          },
+          "clock_before": 2647,
+          "clock_after": 2647,
+          "temp_c": 54,
+          "power_w": 36.82
+        }
+      ],
+      "p50_min": 2.4494,
+      "p50_max": 2.4978,
+      "spread_ratio": 1.02,
+      "wall_s": 1.3
+    },
+    {
+      "model": "Ours B20 (20ep s0)",
+      "params": 192566,
+      "batch": 1,
+      "protocol": "FIXED",
+      "n_sessions": 3,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 300,
+            "mean": 2.8702,
+            "p50": 2.3843,
+            "p95": 7.6086,
+            "p99": 8.2623,
+            "min": 1.9996,
+            "max": 8.49,
+            "sd": 1.5601
+          },
+          "clock_before": 2647,
+          "clock_after": 2940,
+          "temp_c": 54,
+          "power_w": 48.3
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 300,
+            "mean": 3.7887,
+            "p50": 2.5737,
+            "p95": 8.1618,
+            "p99": 8.4543,
+            "min": 2.0658,
+            "max": 8.7192,
+            "sd": 2.2665
+          },
+          "clock_before": 2940,
+          "clock_after": 2955,
+          "temp_c": 54,
+          "power_w": 41.4
+        },
+        {
+          "rep": 2,
+          "stats": {
+            "n": 300,
+            "mean": 2.3698,
+            "p50": 2.2876,
+            "p95": 2.7618,
+            "p99": 5.313,
+            "min": 2.007,
+            "max": 7.7138,
+            "sd": 0.5521
+          },
+          "clock_before": 2955,
+          "clock_after": 2940,
+          "temp_c": 54,
+          "power_w": 51.48
+        }
+      ],
+      "p50_min": 2.2876,
+      "p50_max": 2.5737,
+      "spread_ratio": 1.125,
+      "wall_s": 4.6
+    },
+    {
+      "model": "Ours B20 (20ep s0)",
+      "params": 192566,
+      "batch": 16,
+      "protocol": "AS_SHIPPED_OURS",
+      "n_sessions": 2,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 3,
+            "mean": 20.5716,
+            "p50": 19.6072,
+            "p95": 22.9469,
+            "p99": 22.9469,
+            "min": 19.1608,
+            "max": 22.9469,
+            "sd": 1.6894
+          },
+          "clock_before": 2940,
+          "clock_after": 2940,
+          "temp_c": 53,
+          "power_w": 54.62
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 3,
+            "mean": 20.2084,
+            "p50": 19.4506,
+            "p95": 21.7549,
+            "p99": 21.7549,
+            "min": 19.4199,
+            "max": 21.7549,
+            "sd": 1.0936
+          },
+          "clock_before": 2940,
+          "clock_after": 2940,
+          "temp_c": 53,
+          "power_w": 58.1
+        }
+      ],
+      "p50_min": 19.4506,
+      "p50_max": 19.6072,
+      "spread_ratio": 1.008,
+      "wall_s": 0.8
+    },
+    {
+      "model": "Ours B20 (20ep s0)",
+      "params": 192566,
+      "batch": 16,
+      "protocol": "AS_SHIPPED_BASE",
+      "n_sessions": 2,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 100,
+            "mean": 19.6666,
+            "p50": 19.558,
+            "p95": 20.8049,
+            "p99": 21.6443,
+            "min": 18.9326,
+            "max": 21.6443,
+            "sd": 0.5589
+          },
+          "clock_before": 2940,
+          "clock_after": 2925,
+          "temp_c": 60,
+          "power_w": 94.57
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 100,
+            "mean": 20.3826,
+            "p50": 20.3372,
+            "p95": 21.1636,
+            "p99": 21.3876,
+            "min": 19.568,
+            "max": 21.3876,
+            "sd": 0.4533
+          },
+          "clock_before": 2925,
+          "clock_after": 2932,
+          "temp_c": 60,
+          "power_w": 87.95
+        }
+      ],
+      "p50_min": 19.558,
+      "p50_max": 20.3372,
+      "spread_ratio": 1.04,
+      "wall_s": 4.6
+    },
+    {
+      "model": "Ours B20 (20ep s0)",
+      "params": 192566,
+      "batch": 16,
+      "protocol": "FIXED",
+      "n_sessions": 2,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 120,
+            "mean": 20.5258,
+            "p50": 20.5171,
+            "p95": 21.1233,
+            "p99": 21.4849,
+            "min": 19.6329,
+            "max": 21.5779,
+            "sd": 0.4206
+          },
+          "clock_before": 2932,
+          "clock_after": 2932,
+          "temp_c": 60,
+          "power_w": 88.43
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 120,
+            "mean": 20.2112,
+            "p50": 20.1321,
+            "p95": 21.2543,
+            "p99": 21.2896,
+            "min": 19.5412,
+            "max": 21.4228,
+            "sd": 0.4494
+          },
+          "clock_before": 2932,
+          "clock_after": 2932,
+          "temp_c": 61,
+          "power_w": 89.91
+        }
+      ],
+      "p50_min": 20.1321,
+      "p50_max": 20.5171,
+      "spread_ratio": 1.019,
+      "wall_s": 10.1
+    },
+    {
+      "model": "Ours B20 (20ep s1)",
+      "params": 192566,
+      "batch": 1,
+      "protocol": "AS_SHIPPED_OURS",
+      "n_sessions": 10,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 3,
+            "mean": 2.7406,
+            "p50": 2.67,
+            "p95": 2.8944,
+            "p99": 2.8944,
+            "min": 2.6573,
+            "max": 2.8944,
+            "sd": 0.1089
+          },
+          "clock_before": 2662,
+          "clock_after": 2662,
+          "temp_c": 55,
+          "power_w": 40.57
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 3,
+            "mean": 2.3553,
+            "p50": 2.4285,
+            "p95": 2.43,
+            "p99": 2.43,
+            "min": 2.2072,
+            "max": 2.43,
+            "sd": 0.1047
+          },
+          "clock_before": 2662,
+          "clock_after": 2662,
+          "temp_c": 55,
+          "power_w": 37.65
+        },
+        {
+          "rep": 2,
+          "stats": {
+            "n": 3,
+            "mean": 2.6843,
+            "p50": 2.7376,
+            "p95": 2.8445,
+            "p99": 2.8445,
+            "min": 2.4706,
+            "max": 2.8445,
+            "sd": 0.1573
+          },
+          "clock_before": 1890,
+          "clock_after": 1890,
+          "temp_c": 52,
+          "power_w": 32.98
+        },
+        {
+          "rep": 3,
+          "stats": {
+            "n": 3,
+            "mean": 2.5892,
+            "p50": 2.5421,
+            "p95": 2.7465,
+            "p99": 2.7465,
+            "min": 2.4788,
+            "max": 2.7465,
+            "sd": 0.1143
+          },
+          "clock_before": 1890,
+          "clock_after": 1890,
+          "temp_c": 52,
+          "power_w": 29.91
+        },
+        {
+          "rep": 4,
+          "stats": {
+            "n": 3,
+            "mean": 2.5599,
+            "p50": 2.5238,
+            "p95": 2.7295,
+            "p99": 2.7295,
+            "min": 2.4262,
+            "max": 2.7295,
+            "sd": 0.1264
+          },
+          "clock_before": 1890,
+          "clock_after": 1890,
+          "temp_c": 52,
+          "power_w": 25.24
+        },
+        {
+          "rep": 5,
+          "stats": {
+            "n": 3,
+            "mean": 2.5218,
+            "p50": 2.539,
+            "p95": 2.661,
+            "p99": 2.661,
+            "min": 2.3653,
+            "max": 2.661,
+            "sd": 0.1213
+          },
+          "clock_before": 1567,
+          "clock_after": 1567,
+          "temp_c": 51,
+          "power_w": 22.19
+        },
+        {
+          "rep": 6,
+          "stats": {
+            "n": 3,
+            "mean": 2.3262,
+            "p50": 2.2062,
+            "p95": 2.614,
+            "p99": 2.614,
+            "min": 2.1585,
+            "max": 2.614,
+            "sd": 0.2044
+          },
+          "clock_before": 1567,
+          "clock_after": 1567,
+          "temp_c": 51,
+          "power_w": 20.12
+        },
+        {
+          "rep": 7,
+          "stats": {
+            "n": 3,
+            "mean": 8.1251,
+            "p50": 8.5004,
+            "p95": 8.5074,
+            "p99": 8.5074,
+            "min": 7.3673,
+            "max": 8.5074,
+            "sd": 0.5358
+          },
+          "clock_before": 1567,
+          "clock_after": 1162,
+          "temp_c": 52,
+          "power_w": 20.4
+        },
+        {
+          "rep": 8,
+          "stats": {
+            "n": 3,
+            "mean": 2.4735,
+            "p50": 2.5033,
+            "p95": 2.6255,
+            "p99": 2.6255,
+            "min": 2.2918,
+            "max": 2.6255,
+            "sd": 0.1379
+          },
+          "clock_before": 1162,
+          "clock_after": 1162,
+          "temp_c": 52,
+          "power_w": 20.36
+        },
+        {
+          "rep": 9,
+          "stats": {
+            "n": 3,
+            "mean": 2.6113,
+            "p50": 2.5445,
+            "p95": 2.9571,
+            "p99": 2.9571,
+            "min": 2.3323,
+            "max": 2.9571,
+            "sd": 0.2594
+          },
+          "clock_before": 1162,
+          "clock_after": 1162,
+          "temp_c": 52,
+          "power_w": 19.21
+        }
+      ],
+      "p50_min": 2.2062,
+      "p50_max": 8.5004,
+      "spread_ratio": 3.853,
+      "wall_s": 1.6
+    },
+    {
+      "model": "Ours B20 (20ep s1)",
+      "params": 192566,
+      "batch": 1,
+      "protocol": "AS_SHIPPED_BASE",
+      "n_sessions": 3,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 100,
+            "mean": 3.9696,
+            "p50": 2.7691,
+            "p95": 9.9508,
+            "p99": 10.4412,
+            "min": 2.2275,
+            "max": 10.4412,
+            "sd": 2.4561
+          },
+          "clock_before": 1162,
+          "clock_after": 1222,
+          "temp_c": 52,
+          "power_w": 25.95
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 100,
+            "mean": 3.08,
+            "p50": 2.6495,
+            "p95": 6.2401,
+            "p99": 9.7826,
+            "min": 2.0898,
+            "max": 9.7826,
+            "sd": 1.48
+          },
+          "clock_before": 1222,
+          "clock_after": 2947,
+          "temp_c": 52,
+          "power_w": 36.22
+        },
+        {
+          "rep": 2,
+          "stats": {
+            "n": 100,
+            "mean": 3.9209,
+            "p50": 3.1858,
+            "p95": 7.5641,
+            "p99": 10.5526,
+            "min": 2.2826,
+            "max": 10.5526,
+            "sd": 1.6519
+          },
+          "clock_before": 2947,
+          "clock_after": 2850,
+          "temp_c": 51,
+          "power_w": 37.82
+        }
+      ],
+      "p50_min": 2.6495,
+      "p50_max": 3.1858,
+      "spread_ratio": 1.202,
+      "wall_s": 1.5
+    },
+    {
+      "model": "Ours B20 (20ep s1)",
+      "params": 192566,
+      "batch": 1,
+      "protocol": "FIXED",
+      "n_sessions": 3,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 300,
+            "mean": 3.9419,
+            "p50": 2.8122,
+            "p95": 8.7347,
+            "p99": 10.1283,
+            "min": 2.1237,
+            "max": 10.2414,
+            "sd": 2.2307
+          },
+          "clock_before": 2850,
+          "clock_after": 2940,
+          "temp_c": 54,
+          "power_w": 36.56
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 300,
+            "mean": 3.2643,
+            "p50": 2.6678,
+            "p95": 8.066,
+            "p99": 9.415,
+            "min": 2.0981,
+            "max": 10.1313,
+            "sd": 1.6428
+          },
+          "clock_before": 2940,
+          "clock_after": 2947,
+          "temp_c": 55,
+          "power_w": 44.86
+        },
+        {
+          "rep": 2,
+          "stats": {
+            "n": 300,
+            "mean": 3.2809,
+            "p50": 2.651,
+            "p95": 8.366,
+            "p99": 9.7376,
+            "min": 2.1453,
+            "max": 9.8254,
+            "sd": 1.796
+          },
+          "clock_before": 2947,
+          "clock_after": 2940,
+          "temp_c": 54,
+          "power_w": 45.97
+        }
+      ],
+      "p50_min": 2.651,
+      "p50_max": 2.8122,
+      "spread_ratio": 1.061,
+      "wall_s": 5.3
+    },
+    {
+      "model": "Ours B20 (20ep s1)",
+      "params": 192566,
+      "batch": 16,
+      "protocol": "AS_SHIPPED_OURS",
+      "n_sessions": 2,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 3,
+            "mean": 20.2775,
+            "p50": 20.2952,
+            "p95": 20.4766,
+            "p99": 20.4766,
+            "min": 20.0607,
+            "max": 20.4766,
+            "sd": 0.1703
+          },
+          "clock_before": 2940,
+          "clock_after": 1732,
+          "temp_c": 54,
+          "power_w": 48.77
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 3,
+            "mean": 20.7897,
+            "p50": 20.8865,
+            "p95": 21.0508,
+            "p99": 21.0508,
+            "min": 20.4318,
+            "max": 21.0508,
+            "sd": 0.2618
+          },
+          "clock_before": 1732,
+          "clock_after": 1732,
+          "temp_c": 57,
+          "power_w": 57.9
+        }
+      ],
+      "p50_min": 20.2952,
+      "p50_max": 20.8865,
+      "spread_ratio": 1.029,
+      "wall_s": 0.8
+    },
+    {
+      "model": "Ours B20 (20ep s1)",
+      "params": 192566,
+      "batch": 16,
+      "protocol": "AS_SHIPPED_BASE",
+      "n_sessions": 2,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 100,
+            "mean": 20.6179,
+            "p50": 20.5566,
+            "p95": 21.7584,
+            "p99": 21.9975,
+            "min": 19.7078,
+            "max": 21.9975,
+            "sd": 0.5434
+          },
+          "clock_before": 2145,
+          "clock_after": 2932,
+          "temp_c": 61,
+          "power_w": 87.69
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 100,
+            "mean": 20.5712,
+            "p50": 20.5523,
+            "p95": 21.5155,
+            "p99": 21.6772,
+            "min": 19.871,
+            "max": 21.6772,
+            "sd": 0.484
+          },
+          "clock_before": 2932,
+          "clock_after": 2932,
+          "temp_c": 62,
+          "power_w": 86.33
+        }
+      ],
+      "p50_min": 20.5523,
+      "p50_max": 20.5566,
+      "spread_ratio": 1.0,
+      "wall_s": 4.8
+    },
+    {
+      "model": "Ours B20 (20ep s1)",
+      "params": 192566,
+      "batch": 16,
+      "protocol": "FIXED",
+      "n_sessions": 2,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 120,
+            "mean": 20.6355,
+            "p50": 20.6221,
+            "p95": 21.6085,
+            "p99": 21.7188,
+            "min": 19.679,
+            "max": 21.7601,
+            "sd": 0.5411
+          },
+          "clock_before": 2932,
+          "clock_after": 2932,
+          "temp_c": 62,
+          "power_w": 88.26
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 120,
+            "mean": 20.5387,
+            "p50": 20.5202,
+            "p95": 21.312,
+            "p99": 21.5851,
+            "min": 19.6324,
+            "max": 21.761,
+            "sd": 0.4938
+          },
+          "clock_before": 2932,
+          "clock_after": 2932,
+          "temp_c": 63,
+          "power_w": 89.59
+        }
+      ],
+      "p50_min": 20.5202,
+      "p50_max": 20.6221,
+      "spread_ratio": 1.005,
+      "wall_s": 10.1
+    },
+    {
+      "model": "Ours B20 (20ep s2)",
+      "params": 192566,
+      "batch": 1,
+      "protocol": "AS_SHIPPED_OURS",
+      "n_sessions": 10,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 3,
+            "mean": 2.3208,
+            "p50": 2.3071,
+            "p95": 2.3969,
+            "p99": 2.3969,
+            "min": 2.2585,
+            "max": 2.3969,
+            "sd": 0.0573
+          },
+          "clock_before": 2677,
+          "clock_after": 2677,
+          "temp_c": 56,
+          "power_w": 40.33
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 3,
+            "mean": 3.0487,
+            "p50": 2.788,
+            "p95": 3.6766,
+            "p99": 3.6766,
+            "min": 2.6814,
+            "max": 3.6766,
+            "sd": 0.4461
+          },
+          "clock_before": 2677,
+          "clock_after": 2677,
+          "temp_c": 56,
+          "power_w": 36.12
+        },
+        {
+          "rep": 2,
+          "stats": {
+            "n": 3,
+            "mean": 3.5958,
+            "p50": 2.6299,
+            "p95": 5.7271,
+            "p99": 5.7271,
+            "min": 2.4304,
+            "max": 5.7271,
+            "sd": 1.5092
+          },
+          "clock_before": 2677,
+          "clock_after": 1087,
+          "temp_c": 53,
+          "power_w": 32.31
+        },
+        {
+          "rep": 3,
+          "stats": {
+            "n": 3,
+            "mean": 2.7553,
+            "p50": 2.6994,
+            "p95": 2.9898,
+            "p99": 2.9898,
+            "min": 2.5767,
+            "max": 2.9898,
+            "sd": 0.1732
+          },
+          "clock_before": 1087,
+          "clock_after": 1087,
+          "temp_c": 53,
+          "power_w": 28.7
+        },
+        {
+          "rep": 4,
+          "stats": {
+            "n": 3,
+            "mean": 4.5683,
+            "p50": 4.9512,
+            "p95": 5.8857,
+            "p99": 5.8857,
+            "min": 2.8679,
+            "max": 5.8857,
+            "sd": 1.2614
+          },
+          "clock_before": 1087,
+          "clock_after": 1087,
+          "temp_c": 53,
+          "power_w": 24.7
+        },
+        {
+          "rep": 5,
+          "stats": {
+            "n": 3,
+            "mean": 2.845,
+            "p50": 2.8532,
+            "p95": 3.1182,
+            "p99": 3.1182,
+            "min": 2.5636,
+            "max": 3.1182,
+            "sd": 0.2265
+          },
+          "clock_before": 1087,
+          "clock_after": 1320,
+          "temp_c": 53,
+          "power_w": 22.81
+        },
+        {
+          "rep": 6,
+          "stats": {
+            "n": 3,
+            "mean": 2.2476,
+            "p50": 2.2621,
+            "p95": 2.2801,
+            "p99": 2.2801,
+            "min": 2.2007,
+            "max": 2.2801,
+            "sd": 0.034
+          },
+          "clock_before": 1320,
+          "clock_after": 1320,
+          "temp_c": 53,
+          "power_w": 20.87
+        },
+        {
+          "rep": 7,
+          "stats": {
+            "n": 3,
+            "mean": 2.3447,
+            "p50": 2.2438,
+            "p95": 2.5621,
+            "p99": 2.5621,
+            "min": 2.2282,
+            "max": 2.5621,
+            "sd": 0.1538
+          },
+          "clock_before": 1320,
+          "clock_after": 1320,
+          "temp_c": 53,
+          "power_w": 20.67
+        },
+        {
+          "rep": 8,
+          "stats": {
+            "n": 3,
+            "mean": 3.614,
+            "p50": 2.5181,
+            "p95": 5.9381,
+            "p99": 5.9381,
+            "min": 2.3859,
+            "max": 5.9381,
+            "sd": 1.6443
+          },
+          "clock_before": 1320,
+          "clock_after": 975,
+          "temp_c": 53,
+          "power_w": 20.07
+        },
+        {
+          "rep": 9,
+          "stats": {
+            "n": 3,
+            "mean": 2.406,
+            "p50": 2.2657,
+            "p95": 2.7143,
+            "p99": 2.7143,
+            "min": 2.2381,
+            "max": 2.7143,
+            "sd": 0.2183
+          },
+          "clock_before": 975,
+          "clock_after": 975,
+          "temp_c": 53,
+          "power_w": 21.03
+        }
+      ],
+      "p50_min": 2.2438,
+      "p50_max": 4.9512,
+      "spread_ratio": 2.207,
+      "wall_s": 1.6
+    },
+    {
+      "model": "Ours B20 (20ep s2)",
+      "params": 192566,
+      "batch": 1,
+      "protocol": "AS_SHIPPED_BASE",
+      "n_sessions": 3,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 100,
+            "mean": 3.2649,
+            "p50": 2.4481,
+            "p95": 7.7109,
+            "p99": 9.1492,
+            "min": 2.1744,
+            "max": 9.1492,
+            "sd": 1.8579
+          },
+          "clock_before": 975,
+          "clock_after": 1282,
+          "temp_c": 56,
+          "power_w": 26.74
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 100,
+            "mean": 3.0403,
+            "p50": 2.5548,
+            "p95": 7.487,
+            "p99": 8.3492,
+            "min": 2.1886,
+            "max": 8.3492,
+            "sd": 1.3969
+          },
+          "clock_before": 1282,
+          "clock_after": 1822,
+          "temp_c": 55,
+          "power_w": 36.25
+        },
+        {
+          "rep": 2,
+          "stats": {
+            "n": 100,
+            "mean": 2.4838,
+            "p50": 2.4427,
+            "p95": 2.9466,
+            "p99": 4.9067,
+            "min": 2.1931,
+            "max": 4.9067,
+            "sd": 0.3256
+          },
+          "clock_before": 1822,
+          "clock_after": 1830,
+          "temp_c": 55,
+          "power_w": 38.86
+        }
+      ],
+      "p50_min": 2.4427,
+      "p50_max": 2.5548,
+      "spread_ratio": 1.046,
+      "wall_s": 1.3
+    },
+    {
+      "model": "Ours B20 (20ep s2)",
+      "params": 192566,
+      "batch": 1,
+      "protocol": "FIXED",
+      "n_sessions": 3,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 300,
+            "mean": 2.4649,
+            "p50": 2.3238,
+            "p95": 3.2206,
+            "p99": 7.4981,
+            "min": 2.0276,
+            "max": 7.7953,
+            "sd": 0.7818
+          },
+          "clock_before": 1830,
+          "clock_after": 2932,
+          "temp_c": 57,
+          "power_w": 51.49
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 300,
+            "mean": 4.2316,
+            "p50": 2.6638,
+            "p95": 8.2885,
+            "p99": 9.8666,
+            "min": 2.0414,
+            "max": 12.0606,
+            "sd": 2.4941
+          },
+          "clock_before": 2932,
+          "clock_after": 2940,
+          "temp_c": 56,
+          "power_w": 41.29
+        },
+        {
+          "rep": 2,
+          "stats": {
+            "n": 300,
+            "mean": 3.3513,
+            "p50": 2.5152,
+            "p95": 8.5583,
+            "p99": 9.1532,
+            "min": 2.0235,
+            "max": 9.4018,
+            "sd": 2.0352
+          },
+          "clock_before": 2940,
+          "clock_after": 2940,
+          "temp_c": 55,
+          "power_w": 44.81
+        }
+      ],
+      "p50_min": 2.3238,
+      "p50_max": 2.6638,
+      "spread_ratio": 1.146,
+      "wall_s": 5.3
+    },
+    {
+      "model": "Ours B20 (20ep s2)",
+      "params": 192566,
+      "batch": 16,
+      "protocol": "AS_SHIPPED_OURS",
+      "n_sessions": 2,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 3,
+            "mean": 21.003,
+            "p50": 21.4471,
+            "p95": 21.5142,
+            "p99": 21.5142,
+            "min": 20.0476,
+            "max": 21.5142,
+            "sd": 0.6761
+          },
+          "clock_before": 2940,
+          "clock_after": 2520,
+          "temp_c": 55,
+          "power_w": 50.63
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 3,
+            "mean": 21.0208,
+            "p50": 20.9843,
+            "p95": 21.168,
+            "p99": 21.168,
+            "min": 20.9101,
+            "max": 21.168,
+            "sd": 0.1084
+          },
+          "clock_before": 2520,
+          "clock_after": 2107,
+          "temp_c": 56,
+          "power_w": 58.39
+        }
+      ],
+      "p50_min": 20.9843,
+      "p50_max": 21.4471,
+      "spread_ratio": 1.022,
+      "wall_s": 0.8
+    },
+    {
+      "model": "Ours B20 (20ep s2)",
+      "params": 192566,
+      "batch": 16,
+      "protocol": "AS_SHIPPED_BASE",
+      "n_sessions": 2,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 100,
+            "mean": 20.9234,
+            "p50": 20.9642,
+            "p95": 21.6232,
+            "p99": 22.0389,
+            "min": 19.8281,
+            "max": 22.0389,
+            "sd": 0.3913
+          },
+          "clock_before": 2107,
+          "clock_after": 2932,
+          "temp_c": 61,
+          "power_w": 87.66
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 100,
+            "mean": 20.5008,
+            "p50": 20.4024,
+            "p95": 21.4893,
+            "p99": 21.8391,
+            "min": 19.6807,
+            "max": 21.8391,
+            "sd": 0.5016
+          },
+          "clock_before": 2932,
+          "clock_after": 2932,
+          "temp_c": 62,
+          "power_w": 87.32
+        }
+      ],
+      "p50_min": 20.4024,
+      "p50_max": 20.9642,
+      "spread_ratio": 1.028,
+      "wall_s": 4.8
+    },
+    {
+      "model": "Ours B20 (20ep s2)",
+      "params": 192566,
+      "batch": 16,
+      "protocol": "FIXED",
+      "n_sessions": 2,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 120,
+            "mean": 20.6665,
+            "p50": 20.7518,
+            "p95": 21.2928,
+            "p99": 21.5115,
+            "min": 19.5934,
+            "max": 21.8001,
+            "sd": 0.4811
+          },
+          "clock_before": 2932,
+          "clock_after": 2932,
+          "temp_c": 62,
+          "power_w": 88.52
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 120,
+            "mean": 20.671,
+            "p50": 20.7337,
+            "p95": 21.3724,
+            "p99": 21.5589,
+            "min": 19.5992,
+            "max": 21.58,
+            "sd": 0.4535
+          },
+          "clock_before": 2932,
+          "clock_after": 2932,
+          "temp_c": 62,
+          "power_w": 88.87
+        }
+      ],
+      "p50_min": 20.7337,
+      "p50_max": 20.7518,
+      "spread_ratio": 1.001,
+      "wall_s": 10.1
+    },
+    {
+      "model": "TriLiteNet tiny",
+      "params": 151413,
+      "batch": 1,
+      "protocol": "AS_SHIPPED_OURS",
+      "n_sessions": 10,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 3,
+            "mean": 4.1803,
+            "p50": 4.2529,
+            "p95": 4.4086,
+            "p99": 4.4086,
+            "min": 3.8793,
+            "max": 4.4086,
+            "sd": 0.2221
+          },
+          "clock_before": 660,
+          "clock_after": 682,
+          "temp_c": 52,
+          "power_w": 14.3
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 3,
+            "mean": 4.2261,
+            "p50": 4.2567,
+            "p95": 4.573,
+            "p99": 4.573,
+            "min": 3.8486,
+            "max": 4.573,
+            "sd": 0.2965
+          },
+          "clock_before": 682,
+          "clock_after": 682,
+          "temp_c": 51,
+          "power_w": 16.76
+        },
+        {
+          "rep": 2,
+          "stats": {
+            "n": 3,
+            "mean": 3.9741,
+            "p50": 3.8485,
+            "p95": 4.2322,
+            "p99": 4.2322,
+            "min": 3.8417,
+            "max": 4.2322,
+            "sd": 0.1825
+          },
+          "clock_before": 1725,
+          "clock_after": 1725,
+          "temp_c": 51,
+          "power_w": 19.86
+        },
+        {
+          "rep": 3,
+          "stats": {
+            "n": 3,
+            "mean": 7.0499,
+            "p50": 6.6056,
+            "p95": 9.8466,
+            "p99": 9.8466,
+            "min": 4.6974,
+            "max": 9.8466,
+            "sd": 2.1255
+          },
+          "clock_before": 1725,
+          "clock_after": 1725,
+          "temp_c": 51,
+          "power_w": 20.5
+        },
+        {
+          "rep": 4,
+          "stats": {
+            "n": 3,
+            "mean": 4.1676,
+            "p50": 4.089,
+            "p95": 4.4462,
+            "p99": 4.4462,
+            "min": 3.9675,
+            "max": 4.4462,
+            "sd": 0.2032
+          },
+          "clock_before": 1725,
+          "clock_after": 1545,
+          "temp_c": 52,
+          "power_w": 22.59
+        },
+        {
+          "rep": 5,
+          "stats": {
+            "n": 3,
+            "mean": 4.2209,
+            "p50": 4.1975,
+            "p95": 4.4773,
+            "p99": 4.4773,
+            "min": 3.9879,
+            "max": 4.4773,
+            "sd": 0.2005
+          },
+          "clock_before": 1545,
+          "clock_after": 1545,
+          "temp_c": 52,
+          "power_w": 25.86
+        },
+        {
+          "rep": 6,
+          "stats": {
+            "n": 3,
+            "mean": 4.4113,
+            "p50": 4.3949,
+            "p95": 4.4597,
+            "p99": 4.4597,
+            "min": 4.3792,
+            "max": 4.4597,
+            "sd": 0.0348
+          },
+          "clock_before": 1545,
+          "clock_after": 1545,
+          "temp_c": 52,
+          "power_w": 25.23
+        },
+        {
+          "rep": 7,
+          "stats": {
+            "n": 3,
+            "mean": 4.6743,
+            "p50": 4.6702,
+            "p95": 5.0815,
+            "p99": 5.0815,
+            "min": 4.2712,
+            "max": 5.0815,
+            "sd": 0.3308
+          },
+          "clock_before": 1545,
+          "clock_after": 1552,
+          "temp_c": 52,
+          "power_w": 25.82
+        },
+        {
+          "rep": 8,
+          "stats": {
+            "n": 3,
+            "mean": 4.7198,
+            "p50": 4.4212,
+            "p95": 5.3384,
+            "p99": 5.3384,
+            "min": 4.3997,
+            "max": 5.3384,
+            "sd": 0.4375
+          },
+          "clock_before": 1552,
+          "clock_after": 1552,
+          "temp_c": 52,
+          "power_w": 24.62
+        },
+        {
+          "rep": 9,
+          "stats": {
+            "n": 3,
+            "mean": 4.4327,
+            "p50": 4.4247,
+            "p95": 4.701,
+            "p99": 4.701,
+            "min": 4.1725,
+            "max": 4.701,
+            "sd": 0.2158
+          },
+          "clock_before": 1552,
+          "clock_after": 1552,
+          "temp_c": 53,
+          "power_w": 25.85
+        }
+      ],
+      "p50_min": 3.8485,
+      "p50_max": 6.6056,
+      "spread_ratio": 1.716,
+      "wall_s": 2.1
+    },
+    {
+      "model": "TriLiteNet tiny",
+      "params": 151413,
+      "batch": 1,
+      "protocol": "AS_SHIPPED_BASE",
+      "n_sessions": 3,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 100,
+            "mean": 5.5078,
+            "p50": 4.3067,
+            "p95": 10.2109,
+            "p99": 11.0995,
+            "min": 3.8104,
+            "max": 11.0995,
+            "sd": 2.3142
+          },
+          "clock_before": 1852,
+          "clock_after": 2632,
+          "temp_c": 55,
+          "power_w": 35.88
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 100,
+            "mean": 5.825,
+            "p50": 4.3262,
+            "p95": 10.3624,
+            "p99": 10.7088,
+            "min": 3.7761,
+            "max": 10.7088,
+            "sd": 2.5629
+          },
+          "clock_before": 2632,
+          "clock_after": 2205,
+          "temp_c": 56,
+          "power_w": 45.75
+        },
+        {
+          "rep": 2,
+          "stats": {
+            "n": 100,
+            "mean": 5.0727,
+            "p50": 4.0617,
+            "p95": 10.1076,
+            "p99": 10.7348,
+            "min": 3.7141,
+            "max": 10.7348,
+            "sd": 2.1255
+          },
+          "clock_before": 2205,
+          "clock_after": 2940,
+          "temp_c": 56,
+          "power_w": 45.41
+        }
+      ],
+      "p50_min": 4.0617,
+      "p50_max": 4.3262,
+      "spread_ratio": 1.065,
+      "wall_s": 2.1
+    },
+    {
+      "model": "TriLiteNet tiny",
+      "params": 151413,
+      "batch": 1,
+      "protocol": "FIXED",
+      "n_sessions": 3,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 300,
+            "mean": 5.4721,
+            "p50": 3.5096,
+            "p95": 9.9757,
+            "p99": 11.4243,
+            "min": 3.1974,
+            "max": 106.4276,
+            "sd": 6.4033
+          },
+          "clock_before": 2940,
+          "clock_after": 2932,
+          "temp_c": 57,
+          "power_w": 49.04
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 300,
+            "mean": 6.0787,
+            "p50": 5.3013,
+            "p95": 9.6473,
+            "p99": 9.9004,
+            "min": 3.182,
+            "max": 10.0725,
+            "sd": 2.732
+          },
+          "clock_before": 2932,
+          "clock_after": 2940,
+          "temp_c": 56,
+          "power_w": 48.4
+        },
+        {
+          "rep": 2,
+          "stats": {
+            "n": 300,
+            "mean": 5.1848,
+            "p50": 3.4412,
+            "p95": 9.7572,
+            "p99": 10.8999,
+            "min": 3.1554,
+            "max": 12.14,
+            "sd": 2.6516
+          },
+          "clock_before": 2940,
+          "clock_after": 2932,
+          "temp_c": 58,
+          "power_w": 51.32
+        }
+      ],
+      "p50_min": 3.4412,
+      "p50_max": 5.3013,
+      "spread_ratio": 1.541,
+      "wall_s": 8.3
+    },
+    {
+      "model": "TriLiteNet tiny",
+      "params": 151413,
+      "batch": 16,
+      "protocol": "AS_SHIPPED_OURS",
+      "n_sessions": 2,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 3,
+            "mean": 34.9447,
+            "p50": 34.9386,
+            "p95": 35.2568,
+            "p99": 35.2568,
+            "min": 34.6388,
+            "max": 35.2568,
+            "sd": 0.2524
+          },
+          "clock_before": 2932,
+          "clock_after": 2932,
+          "temp_c": 62,
+          "power_w": 61.49
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 3,
+            "mean": 35.7174,
+            "p50": 35.6738,
+            "p95": 35.8359,
+            "p99": 35.8359,
+            "min": 35.6425,
+            "max": 35.8359,
+            "sd": 0.0848
+          },
+          "clock_before": 2932,
+          "clock_after": 2325,
+          "temp_c": 62,
+          "power_w": 84.67
+        }
+      ],
+      "p50_min": 34.9386,
+      "p50_max": 35.6738,
+      "spread_ratio": 1.021,
+      "wall_s": 1.2
+    },
+    {
+      "model": "TriLiteNet tiny",
+      "params": 151413,
+      "batch": 16,
+      "protocol": "AS_SHIPPED_BASE",
+      "n_sessions": 2,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 100,
+            "mean": 35.6865,
+            "p50": 35.6744,
+            "p95": 35.9217,
+            "p99": 36.2148,
+            "min": 35.2729,
+            "max": 36.2148,
+            "sd": 0.134
+          },
+          "clock_before": 2325,
+          "clock_after": 2932,
+          "temp_c": 64,
+          "power_w": 92.81
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 100,
+            "mean": 35.7607,
+            "p50": 35.7432,
+            "p95": 36.0693,
+            "p99": 36.5461,
+            "min": 35.1984,
+            "max": 36.5461,
+            "sd": 0.1843
+          },
+          "clock_before": 2932,
+          "clock_after": 2917,
+          "temp_c": 65,
+          "power_w": 93.07
+        }
+      ],
+      "p50_min": 35.6744,
+      "p50_max": 35.7432,
+      "spread_ratio": 1.002,
+      "wall_s": 8.1
+    },
+    {
+      "model": "TriLiteNet tiny",
+      "params": 151413,
+      "batch": 16,
+      "protocol": "FIXED",
+      "n_sessions": 2,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 120,
+            "mean": 35.4896,
+            "p50": 35.478,
+            "p95": 35.7539,
+            "p99": 35.941,
+            "min": 35.1429,
+            "max": 36.0639,
+            "sd": 0.1388
+          },
+          "clock_before": 2917,
+          "clock_after": 2917,
+          "temp_c": 66,
+          "power_w": 94.13
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 120,
+            "mean": 35.5152,
+            "p50": 35.4904,
+            "p95": 35.8313,
+            "p99": 35.9204,
+            "min": 35.1635,
+            "max": 35.9377,
+            "sd": 0.1353
+          },
+          "clock_before": 2917,
+          "clock_after": 2917,
+          "temp_c": 66,
+          "power_w": 94.16
+        }
+      ],
+      "p50_min": 35.478,
+      "p50_max": 35.4904,
+      "spread_ratio": 1.0,
+      "wall_s": 17.3
+    },
+    {
+      "model": "TriLiteNet small",
+      "params": 592338,
+      "batch": 1,
+      "protocol": "AS_SHIPPED_OURS",
+      "n_sessions": 10,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 3,
+            "mean": 5.6573,
+            "p50": 5.6009,
+            "p95": 5.8655,
+            "p99": 5.8655,
+            "min": 5.5056,
+            "max": 5.8655,
+            "sd": 0.1523
+          },
+          "clock_before": 2685,
+          "clock_after": 2175,
+          "temp_c": 55,
+          "power_w": 41.73
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 3,
+            "mean": 10.3578,
+            "p50": 12.0528,
+            "p95": 12.4723,
+            "p99": 12.4723,
+            "min": 6.5484,
+            "max": 12.4723,
+            "sd": 2.6991
+          },
+          "clock_before": 2175,
+          "clock_after": 2175,
+          "temp_c": 55,
+          "power_w": 40.04
+        },
+        {
+          "rep": 2,
+          "stats": {
+            "n": 3,
+            "mean": 12.3425,
+            "p50": 12.4358,
+            "p95": 12.4571,
+            "p99": 12.4571,
+            "min": 12.1347,
+            "max": 12.4571,
+            "sd": 0.1472
+          },
+          "clock_before": 2175,
+          "clock_after": 2175,
+          "temp_c": 55,
+          "power_w": 35.88
+        },
+        {
+          "rep": 3,
+          "stats": {
+            "n": 3,
+            "mean": 12.1671,
+            "p50": 12.166,
+            "p95": 12.1921,
+            "p99": 12.1921,
+            "min": 12.1431,
+            "max": 12.1921,
+            "sd": 0.02
+          },
+          "clock_before": 1372,
+          "clock_after": 1372,
+          "temp_c": 55,
+          "power_w": 33.3
+        },
+        {
+          "rep": 4,
+          "stats": {
+            "n": 3,
+            "mean": 12.4506,
+            "p50": 12.3541,
+            "p95": 12.7468,
+            "p99": 12.7468,
+            "min": 12.2508,
+            "max": 12.7468,
+            "sd": 0.2137
+          },
+          "clock_before": 1372,
+          "clock_after": 1372,
+          "temp_c": 58,
+          "power_w": 33.56
+        },
+        {
+          "rep": 5,
+          "stats": {
+            "n": 3,
+            "mean": 10.7153,
+            "p50": 12.7579,
+            "p95": 13.5609,
+            "p99": 13.5609,
+            "min": 5.827,
+            "max": 13.5609,
+            "sd": 3.472
+          },
+          "clock_before": 1372,
+          "clock_after": 2122,
+          "temp_c": 58,
+          "power_w": 32.55
+        },
+        {
+          "rep": 6,
+          "stats": {
+            "n": 3,
+            "mean": 11.0798,
+            "p50": 11.5282,
+            "p95": 12.2714,
+            "p99": 12.2714,
+            "min": 9.4397,
+            "max": 12.2714,
+            "sd": 1.1987
+          },
+          "clock_before": 2122,
+          "clock_after": 2122,
+          "temp_c": 58,
+          "power_w": 34.75
+        },
+        {
+          "rep": 7,
+          "stats": {
+            "n": 3,
+            "mean": 9.9954,
+            "p50": 11.3902,
+            "p95": 12.049,
+            "p99": 12.049,
+            "min": 6.5471,
+            "max": 12.049,
+            "sd": 2.4531
+          },
+          "clock_before": 2122,
+          "clock_after": 1860,
+          "temp_c": 58,
+          "power_w": 32.98
+        },
+        {
+          "rep": 8,
+          "stats": {
+            "n": 3,
+            "mean": 5.789,
+            "p50": 5.7627,
+            "p95": 5.879,
+            "p99": 5.879,
+            "min": 5.7253,
+            "max": 5.879,
+            "sd": 0.0654
+          },
+          "clock_before": 1860,
+          "clock_after": 1860,
+          "temp_c": 58,
+          "power_w": 32.72
+        },
+        {
+          "rep": 9,
+          "stats": {
+            "n": 3,
+            "mean": 5.802,
+            "p50": 5.8721,
+            "p95": 5.9224,
+            "p99": 5.9224,
+            "min": 5.6116,
+            "max": 5.9224,
+            "sd": 0.1362
+          },
+          "clock_before": 1860,
+          "clock_after": 1927,
+          "temp_c": 54,
+          "power_w": 31.35
+        }
+      ],
+      "p50_min": 5.6009,
+      "p50_max": 12.7579,
+      "spread_ratio": 2.278,
+      "wall_s": 2.3
+    },
+    {
+      "model": "TriLiteNet small",
+      "params": 592338,
+      "batch": 1,
+      "protocol": "AS_SHIPPED_BASE",
+      "n_sessions": 3,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 100,
+            "mean": 9.0481,
+            "p50": 10.0174,
+            "p95": 12.8091,
+            "p99": 15.7314,
+            "min": 5.3247,
+            "max": 15.7314,
+            "sd": 3.1101
+          },
+          "clock_before": 1927,
+          "clock_after": 2917,
+          "temp_c": 57,
+          "power_w": 52.92
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 100,
+            "mean": 8.4761,
+            "p50": 6.74,
+            "p95": 15.3514,
+            "p99": 16.7515,
+            "min": 5.2963,
+            "max": 16.7515,
+            "sd": 3.5156
+          },
+          "clock_before": 2917,
+          "clock_after": 2925,
+          "temp_c": 60,
+          "power_w": 49.83
+        },
+        {
+          "rep": 2,
+          "stats": {
+            "n": 100,
+            "mean": 6.6592,
+            "p50": 5.727,
+            "p95": 13.0066,
+            "p99": 15.7248,
+            "min": 5.3064,
+            "max": 15.7248,
+            "sd": 2.2851
+          },
+          "clock_before": 2925,
+          "clock_after": 2902,
+          "temp_c": 60,
+          "power_w": 55.72
+        }
+      ],
+      "p50_min": 5.727,
+      "p50_max": 10.0174,
+      "spread_ratio": 1.749,
+      "wall_s": 3.0
+    },
+    {
+      "model": "TriLiteNet small",
+      "params": 592338,
+      "batch": 1,
+      "protocol": "FIXED",
+      "n_sessions": 3,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 300,
+            "mean": 6.057,
+            "p50": 5.3836,
+            "p95": 12.0686,
+            "p99": 15.8675,
+            "min": 5.1797,
+            "max": 18.8156,
+            "sd": 2.0291
+          },
+          "clock_before": 2902,
+          "clock_after": 2910,
+          "temp_c": 59,
+          "power_w": 64.75
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 300,
+            "mean": 7.295,
+            "p50": 5.487,
+            "p95": 13.2049,
+            "p99": 15.27,
+            "min": 5.1655,
+            "max": 16.5,
+            "sd": 3.0077
+          },
+          "clock_before": 2910,
+          "clock_after": 2925,
+          "temp_c": 59,
+          "power_w": 59.59
+        },
+        {
+          "rep": 2,
+          "stats": {
+            "n": 300,
+            "mean": 8.1353,
+            "p50": 6.2724,
+            "p95": 12.0049,
+            "p99": 12.4277,
+            "min": 5.0641,
+            "max": 13.2673,
+            "sd": 2.8861
+          },
+          "clock_before": 2925,
+          "clock_after": 2917,
+          "temp_c": 59,
+          "power_w": 59.43
+        }
+      ],
+      "p50_min": 5.3836,
+      "p50_max": 6.2724,
+      "spread_ratio": 1.165,
+      "wall_s": 10.7
+    },
+    {
+      "model": "TriLiteNet small",
+      "params": 592338,
+      "batch": 16,
+      "protocol": "AS_SHIPPED_OURS",
+      "n_sessions": 2,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 3,
+            "mean": 70.6504,
+            "p50": 70.698,
+            "p95": 70.8375,
+            "p99": 70.8375,
+            "min": 70.4156,
+            "max": 70.8375,
+            "sd": 0.1755
+          },
+          "clock_before": 2917,
+          "clock_after": 2925,
+          "temp_c": 65,
+          "power_w": 91.95
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 3,
+            "mean": 70.6587,
+            "p50": 70.7191,
+            "p95": 70.7295,
+            "p99": 70.7295,
+            "min": 70.5274,
+            "max": 70.7295,
+            "sd": 0.0929
+          },
+          "clock_before": 2925,
+          "clock_after": 2917,
+          "temp_c": 65,
+          "power_w": 87.89
+        }
+      ],
+      "p50_min": 70.698,
+      "p50_max": 70.7191,
+      "spread_ratio": 1.0,
+      "wall_s": 2.1
+    },
+    {
+      "model": "TriLiteNet small",
+      "params": 592338,
+      "batch": 16,
+      "protocol": "AS_SHIPPED_BASE",
+      "n_sessions": 2,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 100,
+            "mean": 70.6389,
+            "p50": 70.6286,
+            "p95": 70.8835,
+            "p99": 71.0043,
+            "min": 70.2387,
+            "max": 71.0043,
+            "sd": 0.1353
+          },
+          "clock_before": 2917,
+          "clock_after": 2902,
+          "temp_c": 66,
+          "power_w": 98.9
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 100,
+            "mean": 70.6583,
+            "p50": 70.6414,
+            "p95": 70.9212,
+            "p99": 71.1608,
+            "min": 70.2535,
+            "max": 71.1608,
+            "sd": 0.1433
+          },
+          "clock_before": 2902,
+          "clock_after": 2910,
+          "temp_c": 66,
+          "power_w": 99.05
+        }
+      ],
+      "p50_min": 70.6286,
+      "p50_max": 70.6414,
+      "spread_ratio": 1.0,
+      "wall_s": 15.8
+    },
+    {
+      "model": "TriLiteNet small",
+      "params": 592338,
+      "batch": 16,
+      "protocol": "FIXED",
+      "n_sessions": 2,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 120,
+            "mean": 70.3585,
+            "p50": 70.3562,
+            "p95": 70.6588,
+            "p99": 70.7246,
+            "min": 69.9411,
+            "max": 70.7617,
+            "sd": 0.1627
+          },
+          "clock_before": 2910,
+          "clock_after": 2910,
+          "temp_c": 69,
+          "power_w": 99.77
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 120,
+            "mean": 70.3745,
+            "p50": 70.3592,
+            "p95": 70.6095,
+            "p99": 70.7252,
+            "min": 69.9312,
+            "max": 70.9007,
+            "sd": 0.1278
+          },
+          "clock_before": 2910,
+          "clock_after": 2910,
+          "temp_c": 68,
+          "power_w": 100.15
+        }
+      ],
+      "p50_min": 70.3562,
+      "p50_max": 70.3592,
+      "spread_ratio": 1.0,
+      "wall_s": 34.0
+    },
+    {
+      "model": "TwinLiteNetPlus nano",
+      "params": 33379,
+      "batch": 1,
+      "protocol": "AS_SHIPPED_OURS",
+      "n_sessions": 10,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 3,
+            "mean": 7.3411,
+            "p50": 7.1488,
+            "p95": 7.891,
+            "p99": 7.891,
+            "min": 6.9834,
+            "max": 7.891,
+            "sd": 0.3947
+          },
+          "clock_before": 2812,
+          "clock_after": 2812,
+          "temp_c": 64,
+          "power_w": 57.95
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 3,
+            "mean": 4.1847,
+            "p50": 3.9798,
+            "p95": 4.8392,
+            "p99": 4.8392,
+            "min": 3.735,
+            "max": 4.8392,
+            "sd": 0.4735
+          },
+          "clock_before": 2812,
+          "clock_after": 2812,
+          "temp_c": 64,
+          "power_w": 52.42
+        },
+        {
+          "rep": 2,
+          "stats": {
+            "n": 3,
+            "mean": 7.0705,
+            "p50": 6.9541,
+            "p95": 7.4231,
+            "p99": 7.4231,
+            "min": 6.8342,
+            "max": 7.4231,
+            "sd": 0.2541
+          },
+          "clock_before": 2032,
+          "clock_after": 2032,
+          "temp_c": 56,
+          "power_w": 46.29
+        },
+        {
+          "rep": 3,
+          "stats": {
+            "n": 3,
+            "mean": 3.8265,
+            "p50": 3.8304,
+            "p95": 3.9868,
+            "p99": 3.9868,
+            "min": 3.6623,
+            "max": 3.9868,
+            "sd": 0.1325
+          },
+          "clock_before": 2032,
+          "clock_after": 2032,
+          "temp_c": 56,
+          "power_w": 40.4
+        },
+        {
+          "rep": 4,
+          "stats": {
+            "n": 3,
+            "mean": 7.7321,
+            "p50": 7.493,
+            "p95": 8.5349,
+            "p99": 8.5349,
+            "min": 7.1685,
+            "max": 8.5349,
+            "sd": 0.5829
+          },
+          "clock_before": 2032,
+          "clock_after": 1522,
+          "temp_c": 56,
+          "power_w": 31.49
+        },
+        {
+          "rep": 5,
+          "stats": {
+            "n": 3,
+            "mean": 3.8558,
+            "p50": 3.938,
+            "p95": 3.9921,
+            "p99": 3.9921,
+            "min": 3.6372,
+            "max": 3.9921,
+            "sd": 0.1562
+          },
+          "clock_before": 1522,
+          "clock_after": 1522,
+          "temp_c": 58,
+          "power_w": 28.08
+        },
+        {
+          "rep": 6,
+          "stats": {
+            "n": 3,
+            "mean": 7.0248,
+            "p50": 6.7324,
+            "p95": 7.6245,
+            "p99": 7.6245,
+            "min": 6.7175,
+            "max": 7.6245,
+            "sd": 0.4241
+          },
+          "clock_before": 1522,
+          "clock_after": 1522,
+          "temp_c": 58,
+          "power_w": 27.76
+        },
+        {
+          "rep": 7,
+          "stats": {
+            "n": 3,
+            "mean": 7.2042,
+            "p50": 7.1078,
+            "p95": 7.5496,
+            "p99": 7.5496,
+            "min": 6.9552,
+            "max": 7.5496,
+            "sd": 0.252
+          },
+          "clock_before": 1522,
+          "clock_after": 1110,
+          "temp_c": 58,
+          "power_w": 28.81
+        },
+        {
+          "rep": 8,
+          "stats": {
+            "n": 3,
+            "mean": 6.453,
+            "p50": 6.7653,
+            "p95": 7.2381,
+            "p99": 7.2381,
+            "min": 5.3556,
+            "max": 7.2381,
+            "sd": 0.7996
+          },
+          "clock_before": 1110,
+          "clock_after": 1110,
+          "temp_c": 60,
+          "power_w": 26.36
+        },
+        {
+          "rep": 9,
+          "stats": {
+            "n": 3,
+            "mean": 7.1096,
+            "p50": 7.0939,
+            "p95": 7.3816,
+            "p99": 7.3816,
+            "min": 6.8534,
+            "max": 7.3816,
+            "sd": 0.2159
+          },
+          "clock_before": 1110,
+          "clock_after": 1110,
+          "temp_c": 60,
+          "power_w": 28.73
+        }
+      ],
+      "p50_min": 3.8304,
+      "p50_max": 7.493,
+      "spread_ratio": 1.956,
+      "wall_s": 1.8
+    },
+    {
+      "model": "TwinLiteNetPlus nano",
+      "params": 33379,
+      "batch": 1,
+      "protocol": "AS_SHIPPED_BASE",
+      "n_sessions": 3,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 100,
+            "mean": 5.0339,
+            "p50": 3.9734,
+            "p95": 7.4277,
+            "p99": 7.7675,
+            "min": 3.5086,
+            "max": 7.7675,
+            "sd": 1.5886
+          },
+          "clock_before": 1110,
+          "clock_after": 2932,
+          "temp_c": 60,
+          "power_w": 40.5
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 100,
+            "mean": 5.2339,
+            "p50": 4.3634,
+            "p95": 7.4599,
+            "p99": 8.5495,
+            "min": 3.492,
+            "max": 8.5495,
+            "sd": 1.6348
+          },
+          "clock_before": 2932,
+          "clock_after": 2182,
+          "temp_c": 60,
+          "power_w": 50.64
+        },
+        {
+          "rep": 2,
+          "stats": {
+            "n": 100,
+            "mean": 4.7022,
+            "p50": 3.8203,
+            "p95": 7.4221,
+            "p99": 8.0043,
+            "min": 3.5428,
+            "max": 8.0043,
+            "sd": 1.4809
+          },
+          "clock_before": 2182,
+          "clock_after": 2467,
+          "temp_c": 61,
+          "power_w": 49.8
+        }
+      ],
+      "p50_min": 3.8203,
+      "p50_max": 4.3634,
+      "spread_ratio": 1.142,
+      "wall_s": 2.0
+    },
+    {
+      "model": "TwinLiteNetPlus nano",
+      "params": 33379,
+      "batch": 1,
+      "protocol": "FIXED",
+      "n_sessions": 3,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 300,
+            "mean": 4.9086,
+            "p50": 5.0314,
+            "p95": 6.9145,
+            "p99": 7.2493,
+            "min": 3.2496,
+            "max": 7.7475,
+            "sd": 1.4489
+          },
+          "clock_before": 2467,
+          "clock_after": 2932,
+          "temp_c": 59,
+          "power_w": 56.06
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 300,
+            "mean": 4.8126,
+            "p50": 4.5204,
+            "p95": 6.8418,
+            "p99": 7.583,
+            "min": 3.2578,
+            "max": 8.5212,
+            "sd": 1.4448
+          },
+          "clock_before": 2932,
+          "clock_after": 2925,
+          "temp_c": 61,
+          "power_w": 56.62
+        },
+        {
+          "rep": 2,
+          "stats": {
+            "n": 300,
+            "mean": 4.5885,
+            "p50": 3.6057,
+            "p95": 6.9043,
+            "p99": 7.115,
+            "min": 3.266,
+            "max": 7.2707,
+            "sd": 1.4198
+          },
+          "clock_before": 2925,
+          "clock_after": 2925,
+          "temp_c": 61,
+          "power_w": 59.17
+        }
+      ],
+      "p50_min": 3.6057,
+      "p50_max": 5.0314,
+      "spread_ratio": 1.395,
+      "wall_s": 7.4
+    },
+    {
+      "model": "TwinLiteNetPlus nano",
+      "params": 33379,
+      "batch": 16,
+      "protocol": "AS_SHIPPED_OURS",
+      "n_sessions": 2,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 3,
+            "mean": 41.5411,
+            "p50": 41.5579,
+            "p95": 41.5731,
+            "p99": 41.5731,
+            "min": 41.4924,
+            "max": 41.5731,
+            "sd": 0.035
+          },
+          "clock_before": 2925,
+          "clock_after": 2482,
+          "temp_c": 63,
+          "power_w": 69.06
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 3,
+            "mean": 41.5334,
+            "p50": 41.5605,
+            "p95": 41.5815,
+            "p99": 41.5815,
+            "min": 41.4582,
+            "max": 41.5815,
+            "sd": 0.0539
+          },
+          "clock_before": 2482,
+          "clock_after": 2925,
+          "temp_c": 65,
+          "power_w": 86.43
+        }
+      ],
+      "p50_min": 41.5579,
+      "p50_max": 41.5605,
+      "spread_ratio": 1.0,
+      "wall_s": 1.3
+    },
+    {
+      "model": "TwinLiteNetPlus nano",
+      "params": 33379,
+      "batch": 16,
+      "protocol": "AS_SHIPPED_BASE",
+      "n_sessions": 2,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 100,
+            "mean": 41.6301,
+            "p50": 41.5817,
+            "p95": 41.9286,
+            "p99": 42.2886,
+            "min": 41.3342,
+            "max": 42.2886,
+            "sd": 0.1675
+          },
+          "clock_before": 2925,
+          "clock_after": 2917,
+          "temp_c": 66,
+          "power_w": 95.5
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 100,
+            "mean": 41.6109,
+            "p50": 41.5786,
+            "p95": 41.8858,
+            "p99": 42.1076,
+            "min": 41.4279,
+            "max": 42.1076,
+            "sd": 0.1209
+          },
+          "clock_before": 2917,
+          "clock_after": 2917,
+          "temp_c": 66,
+          "power_w": 95.5
+        }
+      ],
+      "p50_min": 41.5786,
+      "p50_max": 41.5817,
+      "spread_ratio": 1.0,
+      "wall_s": 9.4
+    },
+    {
+      "model": "TwinLiteNetPlus nano",
+      "params": 33379,
+      "batch": 16,
+      "protocol": "FIXED",
+      "n_sessions": 2,
+      "sessions": [
+        {
+          "rep": 0,
+          "stats": {
+            "n": 120,
+            "mean": 41.374,
+            "p50": 41.3238,
+            "p95": 41.6489,
+            "p99": 41.738,
+            "min": 41.1704,
+            "max": 41.8251,
+            "sd": 0.1369
+          },
+          "clock_before": 2917,
+          "clock_after": 2917,
+          "temp_c": 68,
+          "power_w": 97.7
+        },
+        {
+          "rep": 1,
+          "stats": {
+            "n": 120,
+            "mean": 41.3947,
+            "p50": 41.3356,
+            "p95": 41.822,
+            "p99": 41.905,
+            "min": 40.9965,
+            "max": 42.0435,
+            "sd": 0.1943
+          },
+          "clock_before": 2917,
+          "clock_after": 2917,
+          "temp_c": 69,
+          "power_w": 97.76
+        }
+      ],
+      "p50_min": 41.3238,
+      "p50_max": 41.3356,
+      "spread_ratio": 1.0,
+      "wall_s": 20.1
+    }
+  ],
+  "ramp": {
+    "Ours B100 (100ep s0)": [
+      [
+        0,
+        2940
+      ],
+      [
+        50,
+        2940
+      ],
+      [
+        100,
+        2310
+      ],
+      [
+        150,
+        2310
+      ],
+      [
+        200,
+        2310
+      ],
+      [
+        250,
+        2340
+      ],
+      [
+        300,
+        2340
+      ],
+      [
+        350,
+        2692
+      ],
+      [
+        400,
+        2692
+      ],
+      [
+        450,
+        2662
+      ],
+      [
+        500,
+        2662
+      ],
+      [
+        550,
+        2655
+      ],
+      [
+        600,
+        2655
+      ]
+    ],
+    "Ours B40 (40ep s0)": [
+      [
+        0,
+        2940
+      ],
+      [
+        50,
+        2940
+      ],
+      [
+        100,
+        2310
+      ],
+      [
+        150,
+        2310
+      ],
+      [
+        200,
+        2310
+      ],
+      [
+        250,
+        2670
+      ],
+      [
+        300,
+        2670
+      ],
+      [
+        350,
+        2670
+      ],
+      [
+        400,
+        2325
+      ],
+      [
+        450,
+        2325
+      ],
+      [
+        500,
+        2580
+      ],
+      [
+        550,
+        2580
+      ],
+      [
+        600,
+        2580
+      ]
+    ],
+    "Ours B20 (20ep s0)": [
+      [
+        0,
+        2940
+      ],
+      [
+        50,
+        2940
+      ],
+      [
+        100,
+        2940
+      ],
+      [
+        150,
+        2940
+      ],
+      [
+        200,
+        2685
+      ],
+      [
+        250,
+        2685
+      ],
+      [
+        300,
+        2662
+      ],
+      [
+        350,
+        2662
+      ],
+      [
+        400,
+        2670
+      ],
+      [
+        450,
+        2670
+      ],
+      [
+        500,
+        2670
+      ],
+      [
+        550,
+        2662
+      ],
+      [
+        600,
+        2662
+      ]
+    ],
+    "Ours B20 (20ep s1)": [
+      [
+        0,
+        2932
+      ],
+      [
+        50,
+        2932
+      ],
+      [
+        100,
+        2932
+      ],
+      [
+        150,
+        2932
+      ],
+      [
+        200,
+        2505
+      ],
+      [
+        250,
+        2505
+      ],
+      [
+        300,
+        2505
+      ],
+      [
+        350,
+        2550
+      ],
+      [
+        400,
+        2550
+      ],
+      [
+        450,
+        2550
+      ],
+      [
+        500,
+        2670
+      ],
+      [
+        550,
+        2670
+      ],
+      [
+        600,
+        2677
+      ]
+    ],
+    "Ours B20 (20ep s2)": [
+      [
+        0,
+        2932
+      ],
+      [
+        50,
+        2932
+      ],
+      [
+        100,
+        2932
+      ],
+      [
+        150,
+        2617
+      ],
+      [
+        200,
+        2617
+      ],
+      [
+        250,
+        2692
+      ],
+      [
+        300,
+        2692
+      ],
+      [
+        350,
+        2692
+      ],
+      [
+        400,
+        2685
+      ],
+      [
+        450,
+        2685
+      ],
+      [
+        500,
+        2685
+      ],
+      [
+        550,
+        2685
+      ],
+      [
+        600,
+        2685
+      ]
+    ],
+    "TriLiteNet tiny": [
+      [
+        0,
+        2917
+      ],
+      [
+        50,
+        2917
+      ],
+      [
+        100,
+        2685
+      ],
+      [
+        150,
+        2685
+      ],
+      [
+        200,
+        2662
+      ],
+      [
+        250,
+        2662
+      ],
+      [
+        300,
+        2887
+      ],
+      [
+        350,
+        2887
+      ],
+      [
+        400,
+        2752
+      ],
+      [
+        450,
+        2752
+      ],
+      [
+        500,
+        2790
+      ],
+      [
+        550,
+        2790
+      ],
+      [
+        600,
+        2685
+      ]
+    ],
+    "TriLiteNet small": [
+      [
+        0,
+        2910
+      ],
+      [
+        50,
+        2430
+      ],
+      [
+        100,
+        2430
+      ],
+      [
+        150,
+        2737
+      ],
+      [
+        200,
+        2895
+      ],
+      [
+        250,
+        2805
+      ],
+      [
+        300,
+        2745
+      ],
+      [
+        350,
+        2745
+      ],
+      [
+        400,
+        2737
+      ],
+      [
+        450,
+        2835
+      ],
+      [
+        500,
+        2835
+      ],
+      [
+        550,
+        2715
+      ],
+      [
+        600,
+        2812
+      ]
+    ],
+    "TwinLiteNetPlus nano": [
+      [
+        0,
+        2917
+      ],
+      [
+        50,
+        2917
+      ],
+      [
+        100,
+        2520
+      ],
+      [
+        150,
+        2520
+      ],
+      [
+        200,
+        2752
+      ],
+      [
+        250,
+        2752
+      ],
+      [
+        300,
+        2752
+      ],
+      [
+        350,
+        2745
+      ],
+      [
+        400,
+        2745
+      ],
+      [
+        450,
+        2827
+      ],
+      [
+        500,
+        2827
+      ],
+      [
+        550,
+        2812
+      ],
+      [
+        600,
+        2812
+      ]
+    ]
+  },
+  "t_start": "2026-09-14 10:08:54",
+  "wall_total_s": 292.6,
+  "gpu_state_end": {
+    "util_pct": 69,
+    "mem_mib": 254,
+    "temp_c": 64,
+    "sm_mhz": 2812,
+    "power_w": 60.32,
+    "compute_apps": "1640, [Not Found], [N/A]"
+  },
+  "t_end": "2026-09-14 10:13:46"
+}

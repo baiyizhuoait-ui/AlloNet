@@ -1,0 +1,313 @@
+{
+  "fingerprint": {
+    "variant": "r2",
+    "z": "16",
+    "encoder": "ebase",
+    "params_M": "0.1926",
+    "flops_G": "1.1656"
+  },
+  "frozen_sigma": {
+    "mAP50": 0.0048,
+    "lane_mIoU": 0.0019,
+    "lane_fg_iou": 0.0031,
+    "da_mIoU": 0.00115
+  },
+  "budgets": [
+    20,
+    40,
+    100
+  ],
+  "dispersion": {
+    "mAP50": {
+      "20": {
+        "n": 3,
+        "mean": 0.497767,
+        "sd": 0.003044,
+        "mn": 0.4954,
+        "mx": 0.5012,
+        "seeds": [
+          "0",
+          "1",
+          "2"
+        ]
+      },
+      "40": {
+        "n": 1,
+        "mean": 0.5198,
+        "sd": null,
+        "mn": 0.5198,
+        "mx": 0.5198,
+        "seeds": [
+          "0"
+        ]
+      },
+      "100": {
+        "n": 3,
+        "mean": 0.536,
+        "sd": 0.001997,
+        "mn": 0.5343,
+        "mx": 0.5382,
+        "seeds": [
+          "0",
+          "1",
+          "2"
+        ]
+      }
+    },
+    "mAP50_95": {
+      "20": {
+        "n": 3,
+        "mean": 0.216667,
+        "sd": 0.002003,
+        "mn": 0.2146,
+        "mx": 0.2186,
+        "seeds": [
+          "0",
+          "1",
+          "2"
+        ]
+      },
+      "40": {
+        "n": 1,
+        "mean": 0.2314,
+        "sd": null,
+        "mn": 0.2314,
+        "mx": 0.2314,
+        "seeds": [
+          "0"
+        ]
+      },
+      "100": {
+        "n": 3,
+        "mean": 0.2431,
+        "sd": 0.001908,
+        "mn": 0.2413,
+        "mx": 0.2451,
+        "seeds": [
+          "0",
+          "1",
+          "2"
+        ]
+      }
+    },
+    "da_mIoU": {
+      "20": {
+        "n": 3,
+        "mean": 0.856167,
+        "sd": 0.003037,
+        "mn": 0.8528,
+        "mx": 0.8587,
+        "seeds": [
+          "0",
+          "1",
+          "2"
+        ]
+      },
+      "40": {
+        "n": 1,
+        "mean": 0.8594,
+        "sd": null,
+        "mn": 0.8594,
+        "mx": 0.8594,
+        "seeds": [
+          "0"
+        ]
+      },
+      "100": {
+        "n": 3,
+        "mean": 0.8712,
+        "sd": 0.003951,
+        "mn": 0.8673,
+        "mx": 0.8752,
+        "seeds": [
+          "0",
+          "1",
+          "2"
+        ]
+      }
+    },
+    "da_fg": {
+      "20": {
+        "n": 3,
+        "mean": 0.772067,
+        "sd": 0.004576,
+        "mn": 0.767,
+        "mx": 0.7759,
+        "seeds": [
+          "0",
+          "1",
+          "2"
+        ]
+      },
+      "40": {
+        "n": 1,
+        "mean": 0.7769,
+        "sd": null,
+        "mn": 0.7769,
+        "mx": 0.7769,
+        "seeds": [
+          "0"
+        ]
+      },
+      "100": {
+        "n": 3,
+        "mean": 0.7946,
+        "sd": 0.005903,
+        "mn": 0.7888,
+        "mx": 0.8006,
+        "seeds": [
+          "0",
+          "1",
+          "2"
+        ]
+      }
+    },
+    "lane_mIoU": {
+      "20": {
+        "n": 3,
+        "mean": 0.595867,
+        "sd": 0.003101,
+        "mn": 0.5936,
+        "mx": 0.5994,
+        "seeds": [
+          "0",
+          "1",
+          "2"
+        ]
+      },
+      "40": {
+        "n": 1,
+        "mean": 0.5992,
+        "sd": null,
+        "mn": 0.5992,
+        "mx": 0.5992,
+        "seeds": [
+          "0"
+        ]
+      },
+      "100": {
+        "n": 3,
+        "mean": 0.5973,
+        "sd": 0.003576,
+        "mn": 0.5935,
+        "mx": 0.6006,
+        "seeds": [
+          "0",
+          "1",
+          "2"
+        ]
+      }
+    },
+    "lane_fg": {
+      "20": {
+        "n": 3,
+        "mean": 0.214167,
+        "sd": 0.005029,
+        "mn": 0.2105,
+        "mx": 0.2199,
+        "seeds": [
+          "0",
+          "1",
+          "2"
+        ]
+      },
+      "40": {
+        "n": 1,
+        "mean": 0.2203,
+        "sd": null,
+        "mn": 0.2203,
+        "mx": 0.2203,
+        "seeds": [
+          "0"
+        ]
+      },
+      "100": {
+        "n": 3,
+        "mean": 0.2179,
+        "sd": 0.005742,
+        "mn": 0.2118,
+        "mx": 0.2232,
+        "seeds": [
+          "0",
+          "1",
+          "2"
+        ]
+      }
+    }
+  },
+  "g2_verdict": {
+    "mAP50": {
+      "measured_sd": 0.001997,
+      "frozen": 0.0048,
+      "ratio": 0.416,
+      "verdict": "frozen is CONSERVATIVE (safe)"
+    },
+    "da_mIoU": {
+      "measured_sd": 0.003951,
+      "frozen": 0.00115,
+      "ratio": 3.436,
+      "verdict": "frozen is 3.4x TOO TIGHT -- claims need re-checking"
+    },
+    "lane_mIoU": {
+      "measured_sd": 0.003576,
+      "frozen": 0.0019,
+      "ratio": 1.882,
+      "verdict": "frozen is 1.9x TOO TIGHT -- claims need re-checking"
+    },
+    "lane_fg": {
+      "measured_sd": 0.005742,
+      "frozen": 0.0031,
+      "ratio": 1.852,
+      "verdict": "frozen is 1.9x TOO TIGHT -- claims need re-checking"
+    }
+  },
+  "budget_contrast": {
+    "small": 20,
+    "big": 100,
+    "metrics": {
+      "mAP50": {
+        "delta": 0.038233,
+        "pooled_sd": 0.002574,
+        "floor": 0.005149,
+        "separable": true,
+        "x_floor": 7.43
+      },
+      "mAP50_95": {
+        "delta": 0.026433,
+        "pooled_sd": 0.001956,
+        "floor": 0.003912,
+        "separable": true,
+        "x_floor": 6.76
+      },
+      "da_mIoU": {
+        "delta": 0.015033,
+        "pooled_sd": 0.003524,
+        "floor": 0.007048,
+        "separable": true,
+        "x_floor": 2.13
+      },
+      "da_fg": {
+        "delta": 0.022533,
+        "pooled_sd": 0.005281,
+        "floor": 0.010563,
+        "separable": true,
+        "x_floor": 2.13
+      },
+      "lane_mIoU": {
+        "delta": 0.001433,
+        "pooled_sd": 0.003347,
+        "floor": 0.006694,
+        "separable": false,
+        "x_floor": 0.21
+      },
+      "lane_fg": {
+        "delta": 0.003733,
+        "pooled_sd": 0.005397,
+        "floor": 0.010795,
+        "separable": false,
+        "x_floor": 0.35
+      }
+    }
+  },
+  "_note": "Measured sd is reported beside the frozen sigma, never in place of it. Frozen sigmas come from 20 ep arms; a change in them at 100 ep is a finding about the ruler, not a licence to re-freeze it."
+}

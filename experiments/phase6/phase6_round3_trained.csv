@@ -1,0 +1,7 @@
+experiment,arm,arch,intervention,budget_epochs,budget_images,batch,seed,params_M,flops_G,mAP50,mAP50_95,da_mIoU,lane_mIoU,lane_fg_iou,det_loss_first,det_loss_last,lane_loss_first,lane_loss_last,wall_min,peak_gpu_mem_mib,git_commit
+EXP-9A,A0_shipped,YOLOP,anchor set = shipped (FLOPs-neutral),1,69863,6,0,7.9408,30.8208,0.5407,0.2369,0.8769,0.6028,0.2279,0.1805,0.1145,0.1485,0.0574,42.5,6086,21a61fecec56b9e16406292e6ec86a321b2cd949
+EXP-9A,A1_flip,YOLOP,anchor set = flip (FLOPs-neutral),1,69863,6,0,7.9408,30.8208,0.6846,0.3598,0.8765,0.6026,0.2276,0.2468,0.1145,0.1485,0.0574,42.0,6086,21a61fecec56b9e16406292e6ec86a321b2cd949
+EXP-9A,A2_kmeans,YOLOP,anchor set = kmeans (FLOPs-neutral),1,69863,6,0,7.9408,30.8208,0.7400,0.3961,0.8769,0.6027,0.2279,0.2704,0.0829,0.1485,0.0574,42.6,6086,21a61fecec56b9e16406292e6ec86a321b2cd949
+EXP-9B,B0_baseline,TwinLiteNetPlus-small,stock lane head (no added path),3,69863,16,0,0.1216,4.2134,NA,NA,0.8563,0.5988,0.2201,NA,NA,1.4720,0.0515,24.8,4342,21a61fecec56b9e16406292e6ec86a321b2cd949
+EXP-9B,B1_spatial,TwinLiteNetPlus-small,"learned 1/4 tap into lane head (zero-init, +204 params)",3,69863,16,0,0.1218,4.2237,NA,NA,0.8568,0.6004,0.2230,NA,NA,1.4720,0.0513,56.8,4347,21a61fecec56b9e16406292e6ec86a321b2cd949
+EXP-9B,B2_channel,TwinLiteNetPlus-small,"1x1 bottleneck widening at 1/4 stage (zero-init, dc=13, +263 params)",3,69863,16,0,0.1218,4.2241,NA,NA,0.8567,0.5985,0.2196,NA,NA,1.4720,0.0516,56.6,4433,21a61fecec56b9e16406292e6ec86a321b2cd949

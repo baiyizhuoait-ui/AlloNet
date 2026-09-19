@@ -1,0 +1,37 @@
+{
+  "model": {
+    "cfg": "configs/phase6_r4_R2_thin14_z16.yaml",
+    "ckpt": "experiments/phase6/final/B100/checkpoint.pt",
+    "params": 192566,
+    "missing": 0,
+    "unexpected": 0,
+    "epoch": 100
+  },
+  "bits": 8,
+  "act_quant": "off",
+  "n_calib": 30,
+  "n_eval": 60,
+  "mem_avail_mb": 9089,
+  "variants": {
+    "B_inner_only": {
+      "head_mode": "none",
+      "obj_frac_rounded_to_zero": 0.00018,
+      "obj_ref_frac_zero": 0.0002,
+      "obj_max": 0.86315,
+      "obj_ref_max": 0.86275,
+      "obj_p999": 0.20817,
+      "obj_ref_p999": 0.20402,
+      "nms_boxes_c25": 8.86667,
+      "nms_boxes_ref_c25": 8.75,
+      "nms_boxes_c001": 258.91667,
+      "nms_boxes_ref_c001": 255.15,
+      "boxes_preserved_frac": 0.99855,
+      "matched_box_iou_mean": 0.98415,
+      "da_pixel_agreement": 0.99906,
+      "da_fg_iou": 0.98833,
+      "lane_pixel_agreement": 0.99929,
+      "lane_fg_iou": 0.94846
+    }
+  },
+  "_note": "Does the detection head survive a REALISTIC INT8 output quantiser?"
+}

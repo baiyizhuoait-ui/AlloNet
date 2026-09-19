@@ -1,0 +1,173 @@
+{
+  "model": {
+    "cfg": "configs/phase6_r4_R2_thin14_z16.yaml",
+    "params": 192566,
+    "ckpt": "experiments/phase6/final/B100/checkpoint.pt",
+    "epoch": 100,
+    "missing": 0,
+    "unexpected": 0
+  },
+  "machine": {
+    "cpu_count": 24,
+    "threads_name": 4
+  },
+  "cost": {
+    "640x640": {
+      "GFLOPs": 1.1656,
+      "GMACs": 0.5828,
+      "macs_by_component": {
+        "da_head": 0.0889,
+        "det_head": 0.0265,
+        "encoder": 0.3257,
+        "lane_head": 0.1188,
+        "lane_lat": 0.0131,
+        "representation": 0.0098
+      },
+      "ops": {
+        "conv2d": 49,
+        "interpolate": 5
+      },
+      "peak_activation_MB": 6.25,
+      "peak_activation_what": "conv out (1, 16, 320, 320) @encoder"
+    },
+    "384x640": {
+      "GFLOPs": 0.6994,
+      "GMACs": 0.3497,
+      "macs_by_component": {
+        "da_head": 0.0533,
+        "det_head": 0.0159,
+        "encoder": 0.1954,
+        "lane_head": 0.0713,
+        "lane_lat": 0.0079,
+        "representation": 0.0059
+      },
+      "ops": {
+        "conv2d": 49,
+        "interpolate": 5
+      },
+      "peak_activation_MB": 3.75,
+      "peak_activation_what": "conv out (1, 16, 192, 320) @encoder"
+    }
+  },
+  "modules": {
+    "StaticMultiTaskModel": 1,
+    "LightEncoder": 1,
+    "ConvBNAct": 1,
+    "Conv2d": 49,
+    "BatchNorm2d": 41,
+    "ReLU": 28,
+    "DWSBlock": 7,
+    "DepthwiseSeparableConv": 14,
+    "Sequential": 10,
+    "CompactRepresentation": 1,
+    "DetFromZ": 1,
+    "Identity": 1,
+    "ModuleList": 1,
+    "DynamicSegHead": 2,
+    "DynamicConv2d": 6,
+    "DynamicBatchNorm2d": 4
+  },
+  "weight_bytes": {
+    "FP32": 770264,
+    "FP16": 385132,
+    "INT8": 192566,
+    "FP32_MB": 0.735,
+    "FP16_MB": 0.367,
+    "INT8_MB": 0.184
+  },
+  "cpu_latency_ms": {
+    "640x640_t1": {
+      "p50": 38.7,
+      "p90": 46.9,
+      "FPS": 25.9
+    },
+    "640x640_t4": {
+      "p50": 21.8,
+      "p90": 25.4,
+      "FPS": 45.9
+    },
+    "384x640_t1": {
+      "p50": 18.1,
+      "p90": 20.5,
+      "FPS": 55.3
+    },
+    "384x640_t4": {
+      "p50": 11.8,
+      "p90": 14.9,
+      "FPS": 84.9
+    }
+  },
+  "int8_sim": {
+    "n_images_eval": 60,
+    "variants": {
+      "W8A8_absmax": {
+        "bits": 8,
+        "observer": "absmax",
+        "det": {
+          "logit_cosine": 0.999093,
+          "relative_L2": 0.06699
+        },
+        "da": {
+          "mask_pixel_agreement": 0.90564,
+          "fgIoU_FP32_vs_int8": 0.54136,
+          "fg_rate_FP32": 0.11945,
+          "fg_rate_int8": 0.19588,
+          "fg_area_inflation": 1.64
+        },
+        "lane": {
+          "mask_pixel_agreement": 0.99459,
+          "fgIoU_FP32_vs_int8": 0.60676,
+          "fg_rate_FP32": 0.01463,
+          "fg_rate_int8": 0.01203,
+          "fg_area_inflation": 0.822
+        }
+      },
+      "W8A8_p9999": {
+        "bits": 8,
+        "observer": "p9999",
+        "det": {
+          "logit_cosine": 1.00125,
+          "relative_L2": 0.0157
+        },
+        "da": {
+          "mask_pixel_agreement": 0.99426,
+          "fgIoU_FP32_vs_int8": 0.94269,
+          "fg_rate_FP32": 0.11945,
+          "fg_rate_int8": 0.12108,
+          "fg_area_inflation": 1.014
+        },
+        "lane": {
+          "mask_pixel_agreement": 0.99644,
+          "fgIoU_FP32_vs_int8": 0.73946,
+          "fg_rate_FP32": 0.01463,
+          "fg_rate_int8": 0.01342,
+          "fg_area_inflation": 0.917
+        }
+      },
+      "W6A6_absmax": {
+        "bits": 6,
+        "observer": "absmax",
+        "det": {
+          "logit_cosine": 0.998627,
+          "relative_L2": 0.07467
+        },
+        "da": {
+          "mask_pixel_agreement": 0.88993,
+          "fgIoU_FP32_vs_int8": 0.1064,
+          "fg_rate_FP32": 0.11945,
+          "fg_rate_int8": 0.01926,
+          "fg_area_inflation": 0.161
+        },
+        "lane": {
+          "mask_pixel_agreement": 0.98545,
+          "fgIoU_FP32_vs_int8": 0.10325,
+          "fg_rate_FP32": 0.01463,
+          "fg_rate_int8": 0.0043,
+          "fg_area_inflation": 0.294
+        }
+      }
+    },
+    "_note": "FAKE-QUANT simulation, not a vendor toolchain result. Per-output-channel weights; per-tensor activations quantised at BatchNorm/ReLU outputs, i.e. where a fused conv+BN graph puts them, calibrated on 30 images. W8A8_absmax is the naive observer; W8A8_p9999 is the usual PTQ setting; W6A6_absmax is a margin probe, NOT a deployment candidate. No bias correction, no AdaRound, no QAT, so these are a LOWER bound on what a real toolchain achieves.",
+    "_defect_fixed_2026_09_14": "Runs before this date removed the activation hooks before the eval pass, so their 'W8A8' figures were weight+input quantisation only (activations stayed FP32).  Those inflated numbers are DA 0.99906/0.98833 and lane 0.99929/0.94846; with the hooks live the same protocol gives DA 0.99426/0.94269 and lane 0.99644/0.73946.  Reproduce the old behaviour with scripts/phase6_quant_head_audit.py --act-quant off.  NOTE this simulation still does NOT quantise the detection head's output tensor -- see phase6_quant_head_audit.py, where quantising it per-tensor drives 100% of the objectness channel to zero."
+  }
+}

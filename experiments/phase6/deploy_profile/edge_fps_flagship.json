@@ -1,0 +1,587 @@
+{
+  "_what_this_is": "scaling extrapolation, NOT a measurement; see module docstring",
+  "ours": {
+    "params_M": 0.1926,
+    "GFLOPs_640": 1.1656,
+    "GMACs_640": 0.583,
+    "fp32_MB": 0.74
+  },
+  "measured_anchors": {
+    "yolov5m_w8a16_640_ms": {
+      "Snapdragon 8 Gen 2": 12.485,
+      "Snapdragon 8 Gen 3": 8.295,
+      "Snapdragon 8 Elite": 7.295,
+      "Snapdragon 8 Elite Gen 5": 3.291,
+      "QCS8550 (8 Gen 2 class)": 12.515,
+      "QCS8275 (entry IoT)": 25.413
+    },
+    "yolov8n_int8_640_ms": {
+      "Snapdragon 8 Gen 2 (Galaxy S23 Ultra)": 2.111,
+      "RB5 / QCS8250 (2019-class IoT)": 47.75
+    },
+    "source": "Qualcomm AI Hub model cards (huggingface.co/qualcomm)"
+  },
+  "measured_accelerator_throughput": [
+    {
+      "chip": "Snapdragon 8 Gen 2",
+      "yolov5m_ms": 12.485,
+      "GFLOPs_per_s": 3845,
+      "vs_8gen2": 1.0
+    },
+    {
+      "chip": "Snapdragon 8 Gen 3",
+      "yolov5m_ms": 8.295,
+      "GFLOPs_per_s": 5787,
+      "vs_8gen2": 1.51
+    },
+    {
+      "chip": "Snapdragon 8 Elite",
+      "yolov5m_ms": 7.295,
+      "GFLOPs_per_s": 6580,
+      "vs_8gen2": 1.71
+    },
+    {
+      "chip": "Snapdragon 8 Elite Gen 5",
+      "yolov5m_ms": 3.291,
+      "GFLOPs_per_s": 14585,
+      "vs_8gen2": 3.79
+    },
+    {
+      "chip": "QCS8550 (8 Gen 2 class)",
+      "yolov5m_ms": 12.515,
+      "GFLOPs_per_s": 3835,
+      "vs_8gen2": 1.0
+    },
+    {
+      "chip": "QCS8275 (entry IoT)",
+      "yolov5m_ms": 25.413,
+      "GFLOPs_per_s": 1889,
+      "vs_8gen2": 0.49
+    }
+  ],
+  "calibration": {
+    "TNN_single_thread_ms": {
+      "Snapdragon 835": {
+        "mobilenet_v1_cpu": 94,
+        "mobilenet_v1_gpu": 16,
+        "mobilenet_v2_cpu": 61,
+        "mobilenet_v2_gpu": 14
+      },
+      "Snapdragon 845": {
+        "mobilenet_v1_cpu": 60,
+        "mobilenet_v1_gpu": 10,
+        "mobilenet_v2_cpu": 39,
+        "mobilenet_v2_gpu": 8
+      },
+      "Kirin 970": {
+        "mobilenet_v1_cpu": 88,
+        "mobilenet_v1_gpu": 12,
+        "mobilenet_v2_cpu": 58,
+        "mobilenet_v2_gpu": 11
+      }
+    },
+    "PaddleLite_armv8_4thread_ms": {
+      "Snapdragon 835": {
+        "mobilenet_v1": 49.02,
+        "mobilenet_v2": 42.66
+      },
+      "Snapdragon 845": {
+        "mobilenet_v1": 19.18,
+        "mobilenet_v2": 17.36
+      },
+      "Snapdragon 855": {
+        "mobilenet_v1": 9.6,
+        "mobilenet_v2": 9.29
+      }
+    },
+    "ncnn_vulkan_ms": {
+      "Snapdragon 855+ (Adreno 640)": {
+        "mobilenetv2_yolov3": 30.98
+      }
+    }
+  },
+  "ladder": [
+    {
+      "year": 2016,
+      "vendor": "Qualcomm",
+      "soc": "Snapdragon 835",
+      "accelerator": "Hexagon 682 DSP (HVX), no dedicated NPU",
+      "ai_engine": "2nd-gen AI Engine",
+      "confidence": "very low",
+      "basis": "TNN: MobileNetV2 61 ms CPU / 14 ms GPU; A75+1.8 GHz A55",
+      "latency_ms_mid": 65.0,
+      "FPS_mid": 15.4,
+      "FPS_hi": 20.0,
+      "FPS_lo": 12.5,
+      "t_accel_ms": [
+        25,
+        45
+      ],
+      "t_host_ms": [
+        25,
+        35
+      ]
+    },
+    {
+      "year": 2016,
+      "vendor": "MediaTek",
+      "soc": "Helio X25 (MT6797T)",
+      "accelerator": "no NPU; CPU/DSP only",
+      "ai_engine": "-",
+      "confidence": "very low",
+      "basis": "10-core tri-cluster, 20 nm; no published INT8 accelerator",
+      "latency_ms_mid": 95.5,
+      "FPS_mid": 10.5,
+      "FPS_hi": 13.7,
+      "FPS_lo": 8.5,
+      "t_accel_ms": [
+        45,
+        80
+      ],
+      "t_host_ms": [
+        28,
+        38
+      ]
+    },
+    {
+      "year": 2017,
+      "vendor": "Qualcomm",
+      "soc": "Snapdragon 845",
+      "accelerator": "Hexagon 685 DSP + Adreno 630",
+      "ai_engine": "3rd-gen AI Engine (3x SD835)",
+      "confidence": "very low",
+      "basis": "TNN: MobileNetV2 39 ms CPU / 8 ms GPU; PaddleLite mobilenet_v2 17.36 ms",
+      "latency_ms_mid": 44.0,
+      "FPS_mid": 22.7,
+      "FPS_hi": 29.4,
+      "FPS_lo": 18.5,
+      "t_accel_ms": [
+        14,
+        26
+      ],
+      "t_host_ms": [
+        20,
+        28
+      ]
+    },
+    {
+      "year": 2017,
+      "vendor": "MediaTek",
+      "soc": "Helio X30 (MT6799)",
+      "accelerator": "no NPU; CPU/GPU only",
+      "ai_engine": "-",
+      "confidence": "very low",
+      "basis": "10 nm, PowerVR GT7400; no INT8 accelerator",
+      "latency_ms_mid": 80.0,
+      "FPS_mid": 12.5,
+      "FPS_hi": 16.4,
+      "FPS_lo": 10.1,
+      "t_accel_ms": [
+        35,
+        65
+      ],
+      "t_host_ms": [
+        26,
+        34
+      ]
+    },
+    {
+      "year": 2018,
+      "vendor": "Qualcomm",
+      "soc": "Snapdragon 855",
+      "accelerator": "Hexagon 690 DSP + Tensor Accelerator",
+      "ai_engine": "4th-gen AI Engine, >7 TOPS",
+      "confidence": "low",
+      "basis": "PaddleLite: mobilenet_v1 9.60 ms (4 threads); ncnn Vulkan yolov3 31 ms",
+      "latency_ms_mid": 31.5,
+      "FPS_mid": 31.7,
+      "FPS_hi": 41.7,
+      "FPS_lo": 25.6,
+      "t_accel_ms": [
+        6,
+        14
+      ],
+      "t_host_ms": [
+        18,
+        25
+      ]
+    },
+    {
+      "year": 2018,
+      "vendor": "MediaTek",
+      "soc": "Helio P90 (MT6779)",
+      "accelerator": "APU 2.0, 1165 GMACs",
+      "ai_engine": "APU 2.0",
+      "confidence": "very low",
+      "basis": "MediaTek's first flagship-class APU; 4x Helio P70 claim",
+      "latency_ms_mid": 57.0,
+      "FPS_mid": 17.5,
+      "FPS_hi": 22.7,
+      "FPS_lo": 14.3,
+      "t_accel_ms": [
+        22,
+        40
+      ],
+      "t_host_ms": [
+        22,
+        30
+      ]
+    },
+    {
+      "year": 2019,
+      "vendor": "Qualcomm",
+      "soc": "Snapdragon 865",
+      "accelerator": "Hexagon 698",
+      "ai_engine": "5th-gen AI Engine, 15 TOPS",
+      "confidence": "low",
+      "basis": "generation claim 2x SD855; offset from the SD855 measured row",
+      "latency_ms_mid": 27.0,
+      "FPS_mid": 37.0,
+      "FPS_hi": 47.6,
+      "FPS_lo": 30.3,
+      "t_accel_ms": [
+        4,
+        10
+      ],
+      "t_host_ms": [
+        17,
+        23
+      ]
+    },
+    {
+      "year": 2019,
+      "vendor": "MediaTek",
+      "soc": "Dimensity 1000 (MT6889)",
+      "accelerator": "APU 3.0 (6 cores)",
+      "ai_engine": "APU 3.0",
+      "confidence": "low",
+      "basis": "first Dimensity flagship; offset below the SD855/865 rows",
+      "latency_ms_mid": 37.5,
+      "FPS_mid": 26.7,
+      "FPS_hi": 34.5,
+      "FPS_lo": 21.7,
+      "t_accel_ms": [
+        10,
+        20
+      ],
+      "t_host_ms": [
+        19,
+        26
+      ]
+    },
+    {
+      "year": 2020,
+      "vendor": "Qualcomm",
+      "soc": "Snapdragon 888",
+      "accelerator": "Hexagon 780",
+      "ai_engine": "6th-gen AI Engine, 26 TOPS",
+      "confidence": "low",
+      "basis": "26 TOPS published; 73% over SD865 per Qualcomm",
+      "latency_ms_mid": 24.5,
+      "FPS_mid": 40.8,
+      "FPS_hi": 52.6,
+      "FPS_lo": 33.3,
+      "t_accel_ms": [
+        3,
+        8
+      ],
+      "t_host_ms": [
+        16,
+        22
+      ]
+    },
+    {
+      "year": 2020,
+      "vendor": "MediaTek",
+      "soc": "Dimensity 1000+",
+      "accelerator": "APU 3.0",
+      "ai_engine": "APU 3.0",
+      "confidence": "low",
+      "basis": "refresh of Dimensity 1000, 144 Hz display support",
+      "latency_ms_mid": 33.5,
+      "FPS_mid": 29.9,
+      "FPS_hi": 38.5,
+      "FPS_lo": 24.4,
+      "t_accel_ms": [
+        8,
+        17
+      ],
+      "t_host_ms": [
+        18,
+        24
+      ]
+    },
+    {
+      "year": 2021,
+      "vendor": "Qualcomm",
+      "soc": "Snapdragon 8 Gen 1",
+      "accelerator": "Hexagon (7th-gen AI Engine)",
+      "ai_engine": "7th-gen AI Engine",
+      "confidence": "low",
+      "basis": "double performance-and-efficiency claim; no absolute TOPS published",
+      "latency_ms_mid": 23.0,
+      "FPS_mid": 43.5,
+      "FPS_hi": 55.6,
+      "FPS_lo": 35.7,
+      "t_accel_ms": [
+        3,
+        7
+      ],
+      "t_host_ms": [
+        15,
+        21
+      ]
+    },
+    {
+      "year": 2021,
+      "vendor": "MediaTek",
+      "soc": "Dimensity 9000 (MT6983)",
+      "accelerator": "APU 590",
+      "ai_engine": "APU 590",
+      "confidence": "low",
+      "basis": "first Dimensity to match Snapdragon flagship AI tier",
+      "latency_ms_mid": 25.5,
+      "FPS_mid": 39.2,
+      "FPS_hi": 50.0,
+      "FPS_lo": 32.3,
+      "t_accel_ms": [
+        4,
+        9
+      ],
+      "t_host_ms": [
+        16,
+        22
+      ]
+    },
+    {
+      "year": 2022,
+      "vendor": "Qualcomm",
+      "soc": "Snapdragon 8 Gen 2",
+      "accelerator": "Hexagon + INT4 support",
+      "ai_engine": "8th-gen AI Engine",
+      "confidence": "medium",
+      "basis": "AI Hub MEASURED: Yolo-v5 M w8a16 = 12.485 ms; YOLOv8n int8 = 2.111 ms",
+      "latency_ms_mid": 21.0,
+      "FPS_mid": 47.6,
+      "FPS_hi": 62.5,
+      "FPS_lo": 38.5,
+      "t_accel_ms": [
+        2,
+        6
+      ],
+      "t_host_ms": [
+        14,
+        20
+      ]
+    },
+    {
+      "year": 2022,
+      "vendor": "MediaTek",
+      "soc": "Dimensity 9200 (MT6985)",
+      "accelerator": "NPU 690",
+      "ai_engine": "NPU 690",
+      "confidence": "low",
+      "basis": "positioned one tier below the SD8Gen2 row",
+      "latency_ms_mid": 23.8,
+      "FPS_mid": 42.1,
+      "FPS_hi": 54.1,
+      "FPS_lo": 34.5,
+      "t_accel_ms": [
+        3.5,
+        8
+      ],
+      "t_host_ms": [
+        15,
+        21
+      ]
+    },
+    {
+      "year": 2023,
+      "vendor": "Qualcomm",
+      "soc": "Snapdragon 8 Gen 3",
+      "accelerator": "Hexagon NPU",
+      "ai_engine": "9th-gen AI Engine, 45 TOPS",
+      "confidence": "medium",
+      "basis": "AI Hub MEASURED: Yolo-v5 M w8a16 = 8.295 ms (1.51x over 8 Gen 2)",
+      "latency_ms_mid": 19.5,
+      "FPS_mid": 51.3,
+      "FPS_hi": 66.7,
+      "FPS_lo": 41.7,
+      "t_accel_ms": [
+        2,
+        5
+      ],
+      "t_host_ms": [
+        13,
+        19
+      ]
+    },
+    {
+      "year": 2023,
+      "vendor": "MediaTek",
+      "soc": "Dimensity 9300 (MT6989)",
+      "accelerator": "NPU 790",
+      "ai_engine": "NPU 790",
+      "confidence": "low",
+      "basis": "ETHZ AI Benchmark v6: Dimensity 9400 6773 vs SD8Gen3 5374 (+26%)",
+      "latency_ms_mid": 21.2,
+      "FPS_mid": 47.1,
+      "FPS_hi": 60.6,
+      "FPS_lo": 38.5,
+      "t_accel_ms": [
+        2.5,
+        6
+      ],
+      "t_host_ms": [
+        14,
+        20
+      ]
+    },
+    {
+      "year": 2024,
+      "vendor": "Qualcomm",
+      "soc": "Snapdragon 8 Elite",
+      "accelerator": "Hexagon NPU (2nd gen in this line)",
+      "ai_engine": "Hexagon NPU, +45% AI",
+      "confidence": "medium",
+      "basis": "AI Hub MEASURED: Yolo-v5 M w8a16 = 7.295 ms (only 1.14x over 8 Gen 3)",
+      "latency_ms_mid": 18.8,
+      "FPS_mid": 53.3,
+      "FPS_hi": 69.0,
+      "FPS_lo": 43.5,
+      "t_accel_ms": [
+        1.5,
+        5
+      ],
+      "t_host_ms": [
+        13,
+        18
+      ]
+    },
+    {
+      "year": 2024,
+      "vendor": "MediaTek",
+      "soc": "Dimensity 9400 (MT6991)",
+      "accelerator": "NPU 890, 48 TOPS",
+      "ai_engine": "NPU 890",
+      "confidence": "low",
+      "basis": "48 TOPS (INT8); ETHZ 6773",
+      "latency_ms_mid": 20.0,
+      "FPS_mid": 50.0,
+      "FPS_hi": 66.7,
+      "FPS_lo": 40.0,
+      "t_accel_ms": [
+        2,
+        6
+      ],
+      "t_host_ms": [
+        13,
+        19
+      ]
+    },
+    {
+      "year": 2025,
+      "vendor": "Qualcomm",
+      "soc": "Snapdragon 8 Elite Gen 5",
+      "accelerator": "Hexagon NPU (3rd gen)",
+      "ai_engine": "Hexagon NPU",
+      "confidence": "medium",
+      "basis": "AI Hub MEASURED: Yolo-v5 M w8a16 = 3.291 ms (2.52x over 8 Gen 3)",
+      "latency_ms_mid": 17.2,
+      "FPS_mid": 58.0,
+      "FPS_hi": 74.1,
+      "FPS_lo": 47.6,
+      "t_accel_ms": [
+        1.5,
+        4
+      ],
+      "t_host_ms": [
+        12,
+        17
+      ]
+    },
+    {
+      "year": 2025,
+      "vendor": "MediaTek",
+      "soc": "Dimensity 9500",
+      "accelerator": "NPU 990, ~100 TOPS",
+      "ai_engine": "NPU 990",
+      "confidence": "low",
+      "basis": "NPU 990 (9th-gen), 4.21 GHz C1-Ultra; TSMC N3P",
+      "latency_ms_mid": 18.2,
+      "FPS_mid": 54.8,
+      "FPS_hi": 74.1,
+      "FPS_lo": 43.5,
+      "t_accel_ms": [
+        1.5,
+        5
+      ],
+      "t_host_ms": [
+        12,
+        18
+      ]
+    }
+  ],
+  "edge_carried": [
+    [
+      "RK3588 (3 NPU cores, async)",
+      74.0,
+      "single-board NPU",
+      "low"
+    ],
+    [
+      "Jetson Nano (2019, used)",
+      65.5,
+      "Jetson",
+      "medium"
+    ],
+    [
+      "Jetson Orin Nano 15W",
+      64.3,
+      "Jetson",
+      "medium"
+    ],
+    [
+      "RK3588 (1 NPU core)",
+      64.1,
+      "single-board NPU",
+      "medium"
+    ],
+    [
+      "K230 CanMV",
+      45.1,
+      "single-board NPU",
+      "low"
+    ],
+    [
+      "Old flagship phone SD845-class, CPU path",
+      35.5,
+      "old phone CPU",
+      "low"
+    ],
+    [
+      "Raspberry Pi 5 (4x A76, CPU)",
+      32.5,
+      "CPU only",
+      "low"
+    ],
+    [
+      "RK3568 (1 TOPS NPU)",
+      23.6,
+      "single-board NPU",
+      "low"
+    ],
+    [
+      "IP-camera SoC RV1106 / T41",
+      22.2,
+      "camera SoC",
+      "very low"
+    ],
+    [
+      "Old mid-range phone SD660 / G85, CPU",
+      20.7,
+      "old phone CPU",
+      "low"
+    ]
+  ]
+}

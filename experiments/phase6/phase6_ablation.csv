@@ -1,0 +1,6 @@
+arm,construction,n_seeds,params,flops_G,mAP50_mean,mAP50_sd,d_mAP50_vs_baseline,lane_mIoU_mean,da_mIoU_mean,seeds
+Baseline,lean + old anchors,3,201366,1.0796,0.3505,0.0047,0.0000,0.5839,0.8523,"0,1,2"
++Detection component,lean + k-means,3,201366,1.0796,0.4950,0.0038,0.1445,0.5827,0.8514,"0,1,2"
++Lane component,lean + full 1/4 + old,3,201878,1.6391,0.3588,0.0031,0.0083,0.5980,0.8548,"0,1,2"
++Both,lean + full 1/4 + k-means,3,201878,1.6391,0.4981,0.0060,0.1475,0.5951,0.8550,"0,1,2"
+"+Full model (B, thin 1/4)",lean + thin 1/4 h16 + k-means,3,192566,1.1656,0.4978,0.0030,0.1472,0.5959,0.8562,"0,1,2"

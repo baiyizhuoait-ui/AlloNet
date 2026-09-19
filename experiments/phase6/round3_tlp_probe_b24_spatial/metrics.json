@@ -1,0 +1,15 @@
+{
+  "stage": "tlp_finetune",
+  "arm": "spatial",
+  "preset": "small",
+  "params": 121756,
+  "extra_params": 204,
+  "epochs": 1,
+  "final_avg_loss": 1.5312689661979675,
+  "final_da_loss": 0.44855619259178636,
+  "final_lane_loss": 1.0827127605676652,
+  "wall_min": 0.32,
+  "peak_gpu_mem_mib": 6541.3,
+  "max_steps": 40,
+  "step0_max_delta": 0.0
+}
