@@ -1,8 +1,7 @@
-# TRAC project dependencies — install into ../gpu_env (torch 2.11.0+cu130)
-# Baseline repos (TwinLiteNet/TwinLiteNetPlus/TriLiteNet) run on the same env.
-# NOTE: their pinned requirements (torch==1.8.0 etc.) are NOT installable on
-# Python 3.12 + Blackwell (sm_120); torch 2.11.0+cu130 is verified working
-# (see ../experiments/env_setup_summary.json for the same decision on YOLOP family).
+# AlloNet dependencies.
+# Verified on Python 3.12 + CUDA 13 (Blackwell sm_120); any recent CUDA torch
+# build works. Third-party baseline repos pin older torch versions in their
+# own repositories; those pins are not installable on Python 3.12 + sm_120.
 
 # Core
 torch==2.11.0+cu130
