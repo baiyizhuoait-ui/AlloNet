@@ -1,19 +1,14 @@
 """Encoder factory: one dispatch point, default behaviour unchanged.
 
-Why a factory instead of editing light_encoder.py: G3 needs a second encoder
-topology selectable from the config, but every existing config (and every
-frozen result in experiments/) must keep building EXACTLY as before.  The
-dispatch therefore keys off `cfg["arch"]` and defaults to the original
-LightEncoder instance, so a config without an `arch` key takes the identical
-code path it took before this file existed.
+G3 needs a second encoder topology selectable from the config, but every
+frozen result must keep building exactly as before. Dispatch keys off
+cfg["arch"] and defaults to LightEncoder, so a config without an `arch` key
+takes its original code path (equivalence proven by
+scripts/phase6_g3_arch_probe.py --equivalence: state_dict keys, param count,
+seeded forward).
 
     arch absent / "dws" / "light"   -> LightEncoder            (original)
     arch "ir" / "inverted_residual" -> InvertedResidualEncoder (G3)
-
-Proof of equivalence for the default path lives in
-scripts/phase6_g3_arch_probe.py (`--equivalence`), which builds the same cfg
-both ways and compares state_dict keys, parameter counts and a seeded forward
-pass -- not just the isinstance check.
 """
 from models.encoder.light_encoder import LightEncoder
 

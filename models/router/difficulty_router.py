@@ -70,6 +70,7 @@ class DifficultyRouter(nn.Module):
 
         return {
             "logits": logits, "probs": probs, "one_hot": one_hot,
+            "budgets": self.budgets.to(logits.device),
             "widths": widths, "assignments": assignments,
             "diff_pred": diff_pred,
         }

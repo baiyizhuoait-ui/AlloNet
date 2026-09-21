@@ -24,6 +24,12 @@ class DynamicConv2d(nn.Module):
         self.width = 1.0
         self._cache = {}
 
+    def _apply(self, fn, *args, **kwargs):
+        # .to()/.cuda()/.float() replace the underlying parameter storage, which
+        # would leave cached weight slices pointing at the old tensors.
+        self._cache.clear()
+        return super()._apply(fn, *args, **kwargs)
+
     def set_width(self, w):
         self.width = w
         if w >= 1.0:
@@ -51,6 +57,11 @@ class DynamicBatchNorm2d(nn.Module):
         self.bn = nn.BatchNorm2d(c)
         self.width = 1.0
         self._cache = {}
+
+    def _apply(self, fn, *args, **kwargs):
+        # Same reason as DynamicConv2d._apply: invalidate stale slices on moves.
+        self._cache.clear()
+        return super()._apply(fn, *args, **kwargs)
 
     def set_width(self, w):
         self.width = w

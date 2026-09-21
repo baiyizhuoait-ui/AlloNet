@@ -56,6 +56,8 @@ class StaticMultiTaskModel(nn.Module):
                                      p2_ch=enc_cfg["stages"][0])
             self.det_from_z = True
         else:
+            # R0: detection reads the encoder's multi-scale features directly.
+            self.det_p2 = "none"   # R0 never uses a P2 level; referenced by need_highres
             self.det_head = DynamicDetHead(
                 enc_cfg["stages"][1:],
                 nc=det_cfg.get("nc", 1),

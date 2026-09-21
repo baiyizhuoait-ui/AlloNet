@@ -9,6 +9,9 @@ import torch
 import torch.nn as nn
 
 from models.router.dynamic_conv import DynamicConv2d, DynamicBatchNorm2d
+# Single source of truth for the default anchors (IoU-k-means set, 2026-09-08),
+# shared with det_head.py / det_from_z.py / the loss side in training/train.py.
+from models.representation.det_from_z import DEFAULT_ANCHORS_3S
 
 
 class DynamicDetHead(nn.Module):
@@ -19,9 +22,7 @@ class DynamicDetHead(nn.Module):
         self.na = num_anchors
         self.nl = 3
         if anchors is None:
-            anchors = [[[4, 12], [7, 19], [11, 28]],
-                       [[17, 40], [25, 58], [38, 89]],
-                       [[62, 136], [88, 206], [124, 412]]]
+            anchors = DEFAULT_ANCHORS_3S
         self.anchors = torch.tensor(anchors).float().view(self.nl, self.na, 2)
         self.anchor_grid = self.anchors.clone().view(self.nl, 1, self.na, 1, 1, 2)
         self.stride = torch.tensor([8, 16, 32])

@@ -13,8 +13,9 @@ YOLO-style letterbox: images, masks and boxes are all mapped into the same
 img_size x img_size coordinate space; `meta` records (scale, pad) so results
 can be mapped back to native coordinates if needed.
 
-Detection GT follows the official baselines' protocol: category == 'car' only
-(YOLOP and TriLiteNet official models are single-class, nc=1).
+Detection GT follows the single-class protocol of the official baselines'
+released weights: all vehicle categories (car/bus/truck/train) are merged
+into one class (nc=1), matching YOLOP's convert.py id_dict_single.
 """
 import json
 import os

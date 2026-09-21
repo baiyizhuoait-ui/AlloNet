@@ -1,37 +1,18 @@
 """Task 2(c) — R1/R2 variant: Detection consumes Compact Z (3-scale, fair vs R0).
 
-CONTEXT
--------
-R0 (default, unchanged): DetHead reads the encoder's multi-scale features
-    [F2(1/8), F3(1/16), F4(1/32)] directly, 3 YOLO scales, stride [8, 16, 32].
-R1 (from_z, z_proj=False): detection is derived ONLY from Compact Z.
-R2 (from_z, z_proj=True):  same, but Z first passes a 1x1 projection (the
-    "minimal information-allocation" path we actually want to test).
+Three topologies, selected by model.detection.from_z / z_proj (default off = R0):
+    R0: detection reads encoder multi-scale features [F2, F3, F4] directly.
+    R1 (from_z, z_proj=False): detection derived ONLY from Compact Z.
+    R2 (from_z, z_proj=True):  same, but Z first passes a 1x1 projection.
 
-FAIRNESS REQUIREMENT (why this was rewritten)
----------------------------------------------
-A first draft emitted a SINGLE detection scale; YOLOLoss indexes nl = anchors.shape[0]
-= 3 scales, so it crashed with IndexError, and — more importantly — a 1-scale head
-would lose for "missing scales" rather than for "information bottleneck", which
-invalidates the R0-vs-R2 comparison. This version emits the SAME 3 scales, same
-strides, same anchors as R0, so the only difference is the INFORMATION SOURCE
-(encoder multi-scale features vs. one unified Compact Z).
+Fairness: this head emits the SAME 3 scales / strides / anchors as R0, so the
+only difference vs R0 is the information source (multi-scale features vs one
+compact Z) -- not the number of scales.
 
-Compact Z lives at 1/8 resolution (compact_z.py interpolates to f2.shape[2:]).
-We therefore build the detection pyramid from Z by 2x/4x downsampling:
-    s0 = Z            (1/8,  stride 8)
-    s1 = down(Z)      (1/16, stride 16)
-    s2 = down(down(Z))(1/32, stride 32)
-
-PARAMETER-ISOLATION DESIGN
---------------------------
-The downsampling branches use a FIXED internal width `det_ch` (default 32), NOT
-z_channels. If they used z_channels, R2's head params would grow as O(z^2) across
-the Z sweep and the "Z capacity" effect would be confounded with "head capacity".
-With det_ch fixed, R2's total param count is essentially constant across Z
-(only the 1x1 entry projection scales as zc*det_ch), keeping the sweep clean.
-
-Flag-gated by model.detection.from_z (default off) => R0 path is untouched.
+Parameter isolation: the downsampling branches use a FIXED internal width
+`det_ch` (default 32), not z_channels. Otherwise R2's head params would grow
+as O(z^2) across the Z sweep and the "Z capacity" effect would be confounded
+with "head capacity".
 """
 import math
 
@@ -40,18 +21,9 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 # Must match models/heads/det_head.py defaults (R0) and the anchors fed to YOLOLoss.
-#
-# 2026-09-08: switched the code default to the IoU-k-means anchor set that won
-# +0.1543 mAP50 (10.57x noise, zero params, zero FLOPs) in the P4B-EXP-03 danc
-# cell. The OLD default (below) was aspect-flipped vs the data (tall h/w 2.5-3.0
-# vs the near-square 0.85 median) and left ~48.5% of GT boxes with zero positive
-# assignment under the project rule; every phase2/3/4 cell that omitted anchors
-# silently used it, so those historical detection effect sizes are read against
-# a supervision-handicapped baseline. danc/dp2a/dp2b configs still write anchors
-# explicitly and are unaffected by this constant.
-#
-# OLD (pre-2026-09-08) default for reference:
-#   [[[4,12],[7,19],[11,28]], [[17,40],[25,58],[38,89]], [[62,136],[88,206],[124,412]]]
+# IoU-k-means set (won +0.1543 mAP50 in the P4B-EXP-03 danc cell). The pre-2026-09-08
+# default was aspect-flipped vs the data and left ~48.5% of GT with zero positive
+# assignment; historical runs that omitted anchors used it and are read accordingly.
 DEFAULT_ANCHORS_3S = [[[9, 8], [18, 15], [32, 24]],
                       [[49, 38], [80, 52], [65, 102]],
                       [[124, 82], [166, 136], [237, 214]]]

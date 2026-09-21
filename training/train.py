@@ -87,17 +87,12 @@ def resolve_device(args):
 
 
 def gpu_usage(idx=0):
-    """Live GPU utilization + memory, robust across environments.
+    """GPU utilization + memory string, robust across environments.
 
-    Fields emitted (best effort):
-      `gpu% NNN`               utilization
-      `mem <used>/<total>MiB`  DEVICE-WIDE (nvidia-smi). Informational only; kept because
-                               every pre-2026-09-13 script parses this exact token.
-      `self <peak_alloc>/<peak_reserved>MiB`  PER-PROCESS peaks (torch caching allocator).
-
-    D9 (2026-09-13): `nvidia-smi memory.used` is device-wide, so any co-tenant process
-    (another arm, a diagnostic probe, a desktop app) inflates it. The VRAM-cliff guard
-    may therefore only decide on the `self` field.
+    Fields: `gpu% NNN` utilization; `mem u/t MiB` device-wide via nvidia-smi
+    (informational only -- co-tenant processes inflate it, and legacy scripts
+    parse this token); `self a/r MiB` per-process torch peaks -- AUTHORITATIVE
+    for the VRAM-cliff guard (D9, 2026-09-13).
     """
     parts = []
     try:

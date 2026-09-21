@@ -77,7 +77,11 @@ class MultiTaskLoss(nn.Module):
         l_budget = torch.zeros(1, device=da_logits.device).squeeze()
         if routing is not None and self.lambda_budget > 0:
             probs = routing["probs"]                       # (B, 3, K)
-            width_vec = torch.linspace(0.25, 1.0, probs.shape[-1], device=probs.device)
+            # actual budget values from the router (fallback keeps the old
+            # 0.25..1.0 assumption for routing dicts built by hand in tests)
+            width_vec = routing.get("budgets")
+            if width_vec is None or len(width_vec) != probs.shape[-1]:
+                width_vec = torch.linspace(0.25, 1.0, probs.shape[-1], device=probs.device)
             exp_width = (probs * width_vec).sum(-1)        # (B, 3)
             if self.budget_type == "expected_width":
                 if self.budget_target is not None:

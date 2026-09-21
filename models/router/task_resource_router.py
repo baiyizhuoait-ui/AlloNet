@@ -74,6 +74,7 @@ class TaskResourceRouter(nn.Module):
             "logits": logits,
             "probs": probs,
             "one_hot": one_hot,
+            "budgets": self.budgets.to(logits.device),
             "widths": widths,          # (B,3): alpha_det, alpha_da, alpha_lane
             "assignments": assignments,  # (B,3): budget indices
         }
