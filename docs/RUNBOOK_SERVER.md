@@ -72,7 +72,7 @@ git clone --depth 1 https://github.com/hustvl/YOLOP.git YOLOP
 # 校验 baseline 权重能加载（读 trac/weights/，无需任何额外下载）
 cd /home/cmu/Desktop/trac
 python3 -c "
-from scripts.load_baseline_weights import load_baseline
+from scripts.phase2_load_baseline_weights import load_baseline
 for n, ps in [('TwinLiteNet',[None]),('TwinLiteNetPlus',['nano','large']),('TriLiteNet',['tiny','base'])]:
     m = load_baseline(n, ps[0] if n!='TwinLiteNetPlus' else ps[-1], 'cpu')
     print(n, 'OK', sum(x.numel() for x in m.parameters())/1e6, 'M')

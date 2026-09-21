@@ -96,7 +96,6 @@ baselines/
 experiments/**/*.partial_*
 experiments/**/clean_master_chain.log
 
-experiments/phase6/round4/.round4b_chain.lock
 data/bdd100k/official_eval/
 experiments/phase6/official_gt_audit/
 .commit_msg_*.txt

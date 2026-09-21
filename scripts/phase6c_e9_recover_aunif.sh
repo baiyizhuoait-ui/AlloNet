@@ -2,7 +2,7 @@
 # EXP-09 cell-1 (aunif_km) eval recovery -- one-off, self-terminating.
 #
 # Why: the 2026-09-10 naming-v3 commit b0f8d4c renamed
-#   scripts/load_baseline_weights.py -> scripts/phase2_load_baseline_weights.py
+#   rename applied earlier: load_baseline_weights.py -> phase2_load_baseline_weights.py
 # without resyncing the module-name imports. Module names are not paths, so
 # refs_pass2.py and check_naming.sh CHK11 (which both match PATH references)
 # could not see them: every eval after 16:52 died with ModuleNotFoundError.

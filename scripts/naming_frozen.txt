@@ -58,3 +58,26 @@ docs/NAMING_ALIASES.csv
 
 # ---------- 5. 运行中链脚本 (执行器动态替换为具体文件名; 链结束后清空) ----------
 # __RUNNING_CHAIN_GUARD__
+
+# ---------- 6. 已封版的 Phase 2-6 历史记录（预注册/审计/决策/登记册） ----------
+# 这些文件是审计链的原始记录，含旧式叙述性引用（H-M / STEP2 / Round N / H<n>）。
+# 按仓库纪律不回改已封版记录，统一冻结（2026-09-21，与 check_naming 的冻结机制一致）。
+docs/PHASE6_FINAL_ARCHITECTURE.md
+docs/PHASE6_FINAL_DECISION.md
+docs/PHASE6_TECHNICAL_REPORT.md
+experiments/phase6/phase6_architecture_hypotheses.csv
+experiments/phase6/phase6_experiment_registry.csv
+experiments/phase6/phase6_novelty_matrix.csv
+experiments/phase6/phase6_round3_architecture_audit.md
+experiments/phase6/phase6_round3_preregistration.md
+experiments/phase6/phase6_round4_preregistration.md
+experiments/phase6/round4_register.py
+experiments/phase6c/phase6c_exp9_decision.md
+scripts/phase6_resume_selftest2.sh
+scripts/phase6_round3_assignment.py
+scripts/phase6c_e9_report.py
+experiments/phase6/phase6_round3_decision.md
+experiments/phase6/phase6_round3_statistics.csv
+experiments/phase6/round3_invalid_evidence/README.md
+scripts/phase6_round3_verdict.py
+scripts/phase6_round4b_registry_sync.py

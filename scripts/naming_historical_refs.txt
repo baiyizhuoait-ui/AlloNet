@@ -40,10 +40,7 @@ experiments/phase6/final/g1_budget200.log
 experiments/phase6/final/seeds_resume.log
 experiments/phase6/phase6_paper_main_table_dualprotocol.csv
 experiments/phase6/round3_chain.log
-experiments/phase6c/exp9_aunif_km_eval.log
-experiments/phase6c/phase6c_e9_decision.md
 models/TriLiteNet.py
-models/YOLOP.py
 scripts/_probe_rng.py
 scripts/phase6_round4_verdict.py
 scripts/random_router_eval.py

@@ -21,7 +21,7 @@
 # assertion is the only machine-checkable defence.
 # ---------------------------------------------------------------------------
 
-# YOLOP -- the H1 second architecture for Phase 6 Round 3.  Model code; the
+# YOLOP -- the Round-3 hypothesis-1 second architecture.  Model code; the
 # checkpoint is in-repo (weights/YOLOP_End-to-end.pth, registered separately in
 # hygiene_exceptions.txt).
 ../YOLOP 8d8f68df318c71f01d6f813c024df646c7d1978f https://github.com/hustvl/YOLOP
