@@ -24,10 +24,12 @@ class MultiTaskLoss(nn.Module):
     def __init__(self, anchors, nc=1, lambda_da=1.0, lambda_lane=1.0,
                  lambda_budget=0.0, budget_target=None, budget_type="expected_width",
                  lambda_det=1.0,
-                 width_penalty=1.0, img_size=640):
+                 width_penalty=1.0, img_size=640, strides=None):
         super().__init__()
         from losses.yolo_loss import YOLOLoss
-        self.det_loss = YOLOLoss(anchors, nc=nc, img_size=img_size)
+        # strides: pass the det head's strides through when available so the
+        # loss and the head share one anchor/stride set (2026-09-23 audit fix).
+        self.det_loss = YOLOLoss(anchors, nc=nc, img_size=img_size, strides=strides)
         self.lambda_det = lambda_det
         self.lambda_da = lambda_da
         self.lambda_lane = lambda_lane

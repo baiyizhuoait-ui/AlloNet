@@ -349,9 +349,31 @@ def main():
     print(f"[train] stage={stage} adaptive={adaptive} params={n_params/1e6:.3f}M", flush=True)
 
     tr = cfg["train"]
-    anchors = torch.tensor(tr.get("anchors", DEFAULT_ANCHORS.tolist()), dtype=torch.float32)
+    # 2026-09-23 FIX (audit): the det head and the loss used to read anchors from
+    # two different config locations (model.detection.anchors vs train.anchors)
+    # and derived strides independently on each side.  Single source of truth is
+    # now the head itself -- the module that actually decodes boxes -- and a
+    # startup check fails the run on any mismatch instead of silently training
+    # against a mis-assigned anchor set.
+    det_head = getattr(model, "det_head", None)
+    strides = None
+    if det_head is not None and hasattr(det_head, "anchors"):
+        anchors = det_head.anchors.detach().cpu().clone().float()
+        strides = [float(s) for s in
+                   det_head.stride.detach().cpu().flatten().tolist()]
+    else:
+        anchors = torch.tensor(
+            cfg["model"].get("detection", {}).get(
+                "anchors", tr.get("anchors", DEFAULT_ANCHORS.tolist())),
+            dtype=torch.float32)
+    if "anchors" in tr:
+        tr_anchors = torch.tensor(tr["anchors"], dtype=torch.float32)
+        if tr_anchors.shape != anchors.shape or not torch.allclose(tr_anchors, anchors):
+            sys.exit("[FATAL] anchor mismatch at startup: train.anchors "
+                     f"{tr_anchors.tolist()} vs det head {anchors.tolist()} -- "
+                     "fix the config; refusing to train on inconsistent assignment")
     loss_fn = MultiTaskLoss(
-        anchors, nc=cfg["model"].get("detection", {}).get("nc", 1),
+        anchors, strides=strides, nc=cfg["model"].get("detection", {}).get("nc", 1),
         lambda_da=tr.get("lambda_da", 1.0), lambda_lane=tr.get("lambda_lane", 1.0),
         lambda_budget=tr.get("lambda_budget", 0.0),
         budget_target=tr.get("budget_target"),
@@ -408,7 +430,11 @@ def main():
                 p.requires_grad = False
     opt = optim.AdamW([p for p in model.parameters() if p.requires_grad], lr=lr,
                       weight_decay=float(tr.get("weight_decay", 5e-4)))
-    sched = optim.lr_scheduler.CosineAnnealingLR(opt, T_max=epochs * max(len(loader), 1))
+    # 2026-09-23 FIX: sched.step() is called once per EPOCH (below), but T_max
+    # used to be epochs * len(loader), so the cosine cycle completed only 1/B
+    # of the way and the LR stayed near its initial value for the whole run.
+    # T_max must be expressed in the same units as the step cadence: epochs.
+    sched = optim.lr_scheduler.CosineAnnealingLR(opt, T_max=max(epochs, 1))
 
     # ---- resume from latest completed checkpoint (stop -> continue) ----
     # Restores model weights, optimizer, LR scheduler and the full RNG state
